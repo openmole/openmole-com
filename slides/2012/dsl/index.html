@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mah (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<!-- 
+pattern matching
+-->
+
+<html>
+    <head>
+        <title>OpenMOLE a DSL to explore complex-system models</title>
+
+        <meta charset='utf-8' />
+
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushScala.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushCpp.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushJava.js"></script>
+        <link href="js/syntaxhighlighter_3.0.83/styles/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+        <link href="js/syntaxhighlighter_3.0.83/styles/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript">SyntaxHighlighter.all()</script>
+
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+        <script src='slides.js'></script>
+    </head>
+
+    <body style='display: none'>
+
+        <section class='slides layout-regular template-default'>
+            <article>
+                <img class="centered" style="height: 300px" src="images/openmole-logo.png" />
+                <h1 style="margin-top: 50px">OpenMOLE a DSL to explore complex-system models</h1>
+                <p>Romain Reuillon
+                <br/>
+                Clasyco
+                </p>         
+            </article>
+            
+            <article class="fill"> 
+                <div style="margin-top: 450px"><h3> Complex-systems models are not invertible in general.</h3></div>
+                <p>
+                    <img style="width: 100%" src='images/oneway.jpg'>
+                </p>
+            </article>
+
+            <article>        
+                <img class="centered" style="margin-top: 20px; height: 70%" src="images/toy.jpg">
+                <br/>
+                <h3> That's why numerical experimentation on models is a widespread tool.</h3>
+            </article>
+
+
+            <article>
+                <img class="centered" style="height: 350px" src="images/computerFire.jpg"/>
+                <br />
+                It is very CPU consuming:
+                <ul>
+                    <li>calibration,</li>
+                    <li>exploration,</li>
+                    <li>sensitivity analysis...</li>
+                </ul> 
+            </article>
+
+            <article > 
+                <h3>As a matter of fact many experiments exhibit naturally parallel aspects:</h3> 
+                <ul>
+                    <li>stochastic simulation,</li>
+                    <li>design of experiments,</li>
+                    <li>genetic algorithms,</li>
+                    <li>sensitivity analysis,</li>
+                    <li>robustness study,</li>
+                    <li>...</li>
+                </ul>      
+               
+            </article>
+            
+            <article class="fill">
+                <img src="images/egi.png"/>
+                <h3 style="margin-top: 500px">OpenMOLE proposes a naturally parallel DSL to design model experiments.</h3>
+            </article>
+            
+            <article> 
+                <br /> <br />
+                <img style="height: 400px" src="images/scale.jpg"/> <br/> <br />
+                <h3>Prototype small and scale transparently.</h3>
+            </article>
+            
+            <article>
+                <img style="width: 800px; margin-top: 100px" src="images/workflow.png"/> <br/> <br />
+                <h3>The OpenMOLE DSL is workflow oriented.</h3>
+                <p>The OpenMOLE exposes both a graphical DSL as well as a scripted one.</p>
+            </article>
+            
+            <article> 
+                <h3>The central component: the task</h3>
+                <img class="centred" style="width: 460px; float: right; margin-top: 80px" src="images/task.png"/>
+                <br />Black box:
+                <ul>
+                    <li>launching command,</li>
+                    <li>inputs, outputs,</li>
+                    <li>resources.</li>
+                </ul>
+                <br />Tasks are:             
+                <ul>
+                    <li>executable,</li>
+                    <li>portable,</li>
+                    <li>composable.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Tasks</h3> 
+                <br />
+                <img style="width: 460px; margin-left: 170px" src="images/tasks.png"/>
+                <ul>
+                    <li>java byte code,</li>
+                    <li>netlogo 4 and 5,</li>
+                    <li>native executable,</li>
+                    <li>methods: statistics, genetic algorithm, sensitivity...</li>
+                </ul>
+            </article>
+            
+            <article>
+                <h3>Scripted DSL: a task</h3>
+                <pre class="brush: scala">// Declare the variable
+val i1 = new Prototype[Int]("i1")
+val i2 = new Prototype[Int]("i2")
+val j = new Prototype[Int]("j")
+
+// Hello task
+val hello = GroovyTask("hello", "j = Model.compute(i1, i2)")
+
+hello addInput i1
+hello addInput i2
+hello addOutput j
+hello addLib "/path/to/model.jar"</pre>
+            </article>
+            
+            <article> 
+                <h3>Transition</h3>
+                <br />
+                <img style="height: 100px; float: right; margin-top: 20px" src="images/transition.svg"/>
+                <ul>
+                    <li>Precedence relationship</li>
+                    <li>Data transfer</li>
+                </ul>   
+                <br /><br />
+                
+                <img style="height: 300px; float: right" src="images/parallel.svg"/>
+                
+                <ul style="margin-top: 120px">
+                    <li>Naturally parallel representation</li>
+                </ul>   
+            </article>
+            
+            <article> 
+                <h3>Exploration transition</h3>
+                <br />
+                <img class="centered" style="width: 90%; margin-top: 100px" src="images/explo-desc.svg"/>
+                <br />
+        	<p>The exploration transition unrolls a design of experiment.</p> <br />
+            </article>
+
+            <article> 
+                <img class="centered" style="height: 500px" src="images/explo-exec.svg"/> 
+                <p>It creates one execution stream by sample in the design of experiment.</p> <br />
+            </article>
+            
+            
+            <article> 
+                <h3>Aggregation transition</h3>
+                <br />
+                <img class="centered" style="width: 90%; margin-top: 100px" src="images/agg-desc.svg"/>
+                <br />
+        	<p>The aggregation transition gathers the results of a model exploration.</p> <br />
+            </article>
+
+            <article> 
+                <img class="centered" style="height: 500px" src="images/agg-exec.svg"/> 
+                <p>It allows to compute global indicators upon multiple parallel execution streams.</p> <br />
+            </article>
+            
+            <article>
+                <h3>Scripted DSL: exploration</h3>
+                <pre class="brush: scala">val exploration = 
+  ExplorationTask(
+    "exploration",
+    Factor(i1, 0 to 100 by 2 toDomain) x 
+    Factor(i2, new UniformIntDistribution take 10)
+  )
+
+val ex = exploration -< hello toExecution
+                
+//execute the workflow locally
+ex.start               
+                </pre>
+            </article>
+            
+              <article>
+                <h3>Scripted DSL: delegate to a cluster</h3>
+                <pre class="brush: scala">val pbs = new PBSEnvironment(
+  "rreuillo",
+  "avakas.mcia.univ-bordeaux.fr",
+  "/home/rreuillo/tmp/")
+
+val ex = exploration -< (hello on pbs by 10) toExecution
+
+//execute the workflow on a PBS cluster
+ex.start</pre>
+            </article>  
+            
+            <article>
+                <h3>Environments</h3>        
+                <p>Scale declaratively at a multi-thread, multiple desktop, multi-core server, cluster, grid, cloud level.</p><br/>
+                <div style="margin-left: 100px">
+                    <img style="height: 200px" src="images/serveur.jpg"/> 
+                    <img style="height: 200px" src="images/supercomputer.jpg"/> 
+                    <img style="height: 200px" src="images/egi.png"/>
+                    <img style="height: 200px" src="images/cloud.jpg"/>
+                </div>
+            </article> 
+            
+
+            
+            <article class="fill">   
+                <img src="images/stallman.jpg"/>
+            </article> 
+            
+            
+            <article>
+                <h3>State of the development:</h3>
+                <ul>
+                    <li>Version 0.5 is available: www.openmole.org,</li>
+                    <li>GUI and scripted interfaces are available,</li>
+                    <li>has been used for many model exploration (arround 30 different models),</li>
+                    <li>used daily by arround 10 to 20 researchers,</li>
+                    <li>3 full time developpers + ocasional external commiters,</li>
+                    <li>OpenMOLE is extensible (OSGi),</li>
+                    <li>novel methods to explore models are being developped and will be integrated,</li>
+                    <li>a new release every 2 mounths with new functionnalities.</li>
+                </ul> 
+            </article> 
+                
+        </section>
+
+    </body>
+</html>

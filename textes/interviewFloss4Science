@@ -1,0 +1,73 @@
+F4S: What is OpenMOLE?
+Complex-system models describe "multiple levels of collective structure and organization". Since such models are usually impossible to solve analytically, their analysis is often carried out with simulation on high performance computing environment. Cluster, grid and cloud computing are nowadays adopted, but their use still requires specific technical and methodological skills. That is why high performance computing is not yet part of the daily practices in numerous communities where it would be needed.
+OpenMOLE (Open MOdeL Experiment) propose a solution to this problem. It emphasizes on the easy integration of home-brewed models and on transparent scaling from a single computer up to a grid execution. It makes it possible for the modellers to build workflows for experimenting on their simulation model. OpenMOLE is based on a blackbox approach to embbed models based on very different technologies: java / scala / C / C++ / fortran / scilab / octave / netlogo... The user model is embedded in the platform and is executed according to a parameter sampling. OpenMOLE will then distribute the numerous executions of the model on a distributed environment  specified by the user. The platform takes care of software installation, files transfert, job failures...
+Even if the primary goal of OpenMOLE is "model exploration" it is also used to take advantage of other form of data-based parallelism such as processing images produced at high-throughput by 4D microscopes.
+
+
+F4S: Why and when did OpenMOLE come to be?
+OpenMOLE is a long standing effort. It as been derived from the SimExplorer platform for which the first scientific communication as been published in 2003. OpenMOLE was born in February 2008 as an effort to re-design SimExplorer using masivelly parallel environments. It has been developped by two engineers at full time and few other occasionnal developers. Its requirements have emmerged from a tight collaboration with complex system scientists in diverse application fields such as biology, geography, neuro-science, food porcessing, physics...
+F4S: In which programming language(s) and platform(s) is the project developed?
+It is coded in Scala, a FOSS programming language unifying object oriented and functionnal programming in a strongly typed language. Scala runs on the JVM which eases the deployment of OpenMOLE on the widely distributed environments with heterogenous software and hardware.
+
+
+F4S: Does OpenMOLE have sponsors (private, academic, other)?
+OpenMOLE has been founded by several academic sponsors:
+  - the complex-system institute of Paris (www.iscpif.fr),
+  - the European research project DREAM (dream.aaeuropae.org),
+  - the European research project GeoDiverCity (geodivercity.parisgeo.cnrs.fr/blog/),
+  - the French project France Bio Imaging and the bioemergences platfrom (bioemergences.iscpif.fr).
+
+
+F4S: How are the sponsors supporting the project?
+They pay our salaries and communication costs.
+
+
+F4S: How many users you estimate OpenMOLE have?
+For now around 50. Originaly OpenMOLE provides a scripted interface. The development of a user-friendly Graphical User Interface since last year is enlarging the community. OpenMOLE is also beeing integrated in other platforms as a generic worflow engine for distributed computing.
+
+
+F4S: Do you know where is OpenMOLE used (corporations, universities, other)?
+It is mosly used in research centers in the complex-system community.
+F4S: How many team members does the project have?
+For now, we are 2 developpers. A new full time developper will join the project in next October to developp a web API, making it possible to control OpenMOLE from an html frontend.
+
+
+F4S: In what areas of OpenMOLE development do you currently need help?
+All! And all the ideas, comments and brains are welcome ! We are really convinced that OpenMOLE brings a very attractive tool for modellers and its developement is now mature enough to start a large communication campaign. That is why, helping in communicating on it is certainly the most important support we need today!
+
+
+F4S: How can people get involved with the project?
+There are many ways. The most obvious ones are to improve the documentation or to code a plugin. Several users have already contributed that way. For a platform with an original approach like OpenMOLE the quality of the documentation is crutial for it's success. Furthermore OpenMOLE has been designed in a very modular and extensible manner. Therefore intergrating new exploration methods or new execution environments is quite feasible for a user. 
+F4S: What features are in the roadmap?
+
+
+The roadmap is redefined every 2 months in sync with the release cycle. The requirements are based on a long term view of the platform and adapted to immediate needs of the user community.
+We are working hard for the 0.7 version (Daddy Django) scheduled for end October in which :
+- we refactor entirely the Sampling aspect of OpenMOLE. It will be possible to design more complex Samplings in a more flexible manner. 
+- the stabilization of the serialization format will be upgrade : the goal is to obtain in few versions a backward compatible format reusable from a version to another.
+In the next version (0.8), we plan to design workflow builders in order to place the model at the heart of OpenMOLE and to reduce the complexity to explore it. This way, it will be possible to propose advanced state-of-the-art methods, such as sensitivity analysis or genetic algorithms, to non expert users.
+
+
+F4S: Which projects, blogs or sites related to open source software
+for science can you recommend?
+
+
+F4S: Why do you consider free/libre open source software important for
+the advancement of your field?
+We think that only free sofware (and open data) can garanty the reproducibility of numerical experiments imposed by the scientific approach. Also we have reused a lot existing components in OpenMOLE .
+
+
+F4S: Is there any other topic you would like our readers to know about?
+Scala
+EGI
+ISC
+Design of Experiments
+
+
+F4S: Where people can contact you and learn more about OpenMOLE
+(website, blog, email, twitter, identi.ca, Facebook, etc.)?
+www.openmole.org
+mathieu.leclaire@iscpif.fr
+romain.reuillon@iscpif.fr
+Suscribe to the mailing list : http://fedex.iscpif.fr/mailman/listinfo/openmole-users
+

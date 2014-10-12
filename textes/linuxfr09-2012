@@ -1,0 +1,18 @@
+La taupe a le look Coco !
+
+La dernière mouture d'OpenMOLE, répondant au doux nom de code Crazy Coconut, est arrivé. Grâce à un mode de développement agile, nous vous livrons en effet tous les deux mois les primeurs de la plus célèbre des plateformes taupe.
+
+Pour rappel OpenMOLE, met à profit les environnements de calcul intensif pour l'expérimentation sur les modèles et permet aux modélisateurs de concevoir des workflows d'étude pour des modèles de simulation. Pour ce faire l'utilisateur embarque son modéle (en java / scala / C / C++ / fortran / scilab / octave / netlogo...) dans la plateforme puis il conçoit l'étude qu'il souhaite en faire et spécifie l'environnement de calcul auquel il souhaite déléguer la charge de travail.
+
+Pour cette version l'interface graphique a été largement remaniée. Parmi les nouveautés graphiques, notons un look épuré et intuitif pour le paramétrage des tâches, une aide intégrée, un copié / collé des tâches, etc
+
+De plus il est maintenant possible de tirer partie de la puissance de divers environnements comme :
+- les multiple cœurs d'une machine,
+- une ferme de calcul de type PBS,
+- un serveur accessible en SSH,
+- une grappe d'ordinateurs de bureaux mis à disposition pour l'occasion,
+- la grille de calcul européenne EGI.
+
+Les innovations sous le capot ne sont pas en reste : la charge processeur liée à l’exécution de l'application a été revue à la baisse et consomme jusqu'à 10 fois moins de ressources CPU en local. De nombreux bogues ont également été corrigés. Le changelog est disponible  XXXX ICI XXXXX.
+
+Le format de sérialisation a été modifié afin de découpler le chargement des différents composants de la plateforme, et ce afin de la rendre moins vulnérable aux changements d'API. C'est un premier pas vers une version 1.0. Dans la prochaine version prévue pour fin Octobre, les efforts seront surtout centrés sur les plans d'expérience et sur la possibilité de les créer de manière plus souple et graphiquement. Le plan de bataille est disponible XXXX LÀ XXXX

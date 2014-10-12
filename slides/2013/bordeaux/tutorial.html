@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mah (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<!-- 
+pattern matching
+-->
+
+
+<html>
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Mouse Memoirs">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rambla">
+
+    <head>
+        <title>OpenMOLE a DSL to explore complex-system models</title>
+
+        <meta charset='utf-8' />
+
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushScala.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushCpp.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushJava.js"></script>
+        <link href="js/syntaxhighlighter_3.0.83/styles/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+        <link href="js/syntaxhighlighter_3.0.83/styles/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript">SyntaxHighlighter.all()</script>
+
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+
+        <style type="text/css">
+            table td{
+                border:none;
+                vertical-align: middle;
+            }
+        </style>
+
+        <script src='slides.js'></script>
+    </head>
+
+    <body style='display: none'>
+
+        <section class='slides layout-regular template-default'>
+            <article>
+                <img class="centered" style="height: 300px" src="../../images/openmole-logo.png" />
+                <h1 style="margin-top: 50px">Getting started with OpenMOLE</h1><br>
+                <h2><p>Romain Reuillon, Mathieu Leclaire
+                    <br/>
+                    Institut des Systémes Complexes, Paris Île de France
+                    </p> </h2>        
+            </article>
+
+            <!--<article class="fill"> 
+                <div style="margin-top: 450px"><h3>What are complex systems?</h3></div>
+                <p><img style="width: 100%" src='../../images/care.png'></p>
+            </article>-->
+
+		<article class="fill">    
+                <h1>Java7 installation</h1>
+		
+<h3 style="margin-top:10px">Linux</h3> Get it from prebuilt OpenJDK packages // <a  target="_blank" href=http://openjdk.java.net/install/index.html> details </a><br><br>
+		
+<h3 style="margin-top:10px">Windows & Mac</h3>
+<ul style="margin-top:-10px">
+<li>Install <a target="_blank" href=http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html>Java 7 by Oracle</a></li>
+<li>From path/to/jdk/jre/lib/security/, overwrite <i>US_export_policy.jar</i> and <i>local_policy.jar</i> with the <a target="_blank" href=http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html>Cryptography extension</a></li>
+</ul>
+            </article>
+<article>    
+                <h1>OpenMOLE installation</h1>
+<ul>		
+<li><h3 style="margin-top:10px">Download  <a href="http://www.openmole.org/files/openmole-0.8.0-RC3.jar"> OpenMOLE installer </a></h3></li>
+<li><h3 style="margin-top:10px"> launch the installer<br> <i style="color:grey;">java -jar openmole-0.8.0-RC3.jar</i></h3></li>
+<li><h3 style="margin-top:10px"> follow the install instructions</h3><br>
+<img class="centered" style="width: 600px;" src="../../../../images/tuto/install-openmole.png"/>
+</ul>
+
+            </article>
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/start.png"/>
+		<h2 style="margin-top:450px; margin-left:450px">Getting started</h2>
+            </article>
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/001.png"/>
+		<h2 style="margin-top:450px; margin-left:350px">Create a new <a target="_blank" href="http://www.openmole.org/documentation/concepts/tasks/the-groovy-task/"> Groovy Task</a></h2>
+            </article>
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/002.png"/>
+		<h2 style="margin-top:550px; margin-left:150px">Name it javaTask and click on <span style="color: #b1c436;">create</span></h2>
+            </article>
+
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/003.png"/>
+		<h2 style="margin-top:550px; margin-left:150px">Set the <a href="http://www.openmole.org/files/pi.jar">pi.jar</a> path in the library tab</h2>
+            </article>
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/004.png"/>
+		<h2 style="margin-top:450px; margin-left:400px">Input the command line with a string <i>seed</i></h2>
+            </article>
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/005.png"/>
+		<h2 style="margin-top:450px; margin-left:370px">Create the <i>seed</i> <a target="_blank" href="http://www.openmole.org/documentation/concepts/prototypes/">Prototype</a> (Int): click on <span style="color: #b1c436;">> prototype</span> from the Groovy Task panel</h2>
+            </article>
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/006.png"/>
+		<h2 style="margin-top:450px; margin-left:357px">Create the <i>pi</i> Prototype (Double): click on <span style="color: #b1c436;">> prototype</span> from the Groovy Task panel</h2>
+            </article>
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/007.png"/>
+		<h2 style="margin-top:370px; margin-left:370px">Set <i>seed</i> as input and <i>pi</i> as output of the Task from the <span style="color: #b1c436;">Inputs / Outputs</span> tab</h2>
+            </article>
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/008.png"/>
+		<h2 style="margin-top:400px; margin-left:320px">Set a value for <i>seed</i></h2> 
+		
+            </article>
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/009.png"/>
+		<h2 style="margin-top:350px; margin-left:450px">The icon turn from white to green (the value is valid)</h2>
+            </article>
+
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/010.png"/>
+		<h2 style="margin-top:450px; margin-left:350px">Add the Task on the Scene (right click on the scene)</h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/011.png"/>
+		<h2 style="margin-top:450px; margin-left:350px">
+Create a <a target="_blank" href="http://www.openmole.org/documentation/concepts/1683-2/the-display-prototype-hook/">Display Hook</a> (for displaying the output)</h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/012.png"/>
+		<h2 style="margin-top:450px; margin-left:350px">Call it <i>disp</i>, add the <i>pi</i> Prototype (with the + button) and click on <span style="color: #b1c436;">create</span></h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/013.png"/>
+		<h2 style="margin-top:250px; margin-left:350px">Add the previously created Hook to the Task by 
+<ul>
+<li>clicking on the right circle of the Task and</li>
+<li>selecting the <i>disp</i> Hook in the Capsule panel</li>
+</ul></h2>
+
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/014.png"/>
+		<h2 style="margin-top:250px; margin-left:350px">A <span style="background:rgb(73,90,105); color:white;"> blue </span> circle appears on the right circle (meaning that at least one Hook is set)</h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/015.png"/>
+		<h2 style="margin-top:130px; margin-left:0px">Build the Mole</h2>
+
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/016.png"/>
+		<h2 style="color:white; margin-top:250px; margin-left:150px">Click on <span style="color: #b1c436;">start</span></h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/017.png"/>
+		<h2 style="margin-top:450px; margin-left:350px">Create now a new <a target="_blank" href="http://www.openmole.org/documentation/concepts/tasks/the-exploration-task/">Exploration Task</a></h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/018.png"/>
+		<h2 style="margin-top:450px; margin-left:350px">Name it <i>explore</i> and click on <span style="color: #b1c436;">create</span></h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/019.png"/>
+		<h2 style="margin-top:450px; margin-left:350px">Click on <span style="color: #b1c436;">sampling</span>. A new <a target="_blank" href="">Sampling Compositon</a> shows up and name it <i>replication</i></h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/020.png"/>
+		<h2 style="color: white;margin-top:405px; margin-left:220px; width:300px;">Right click on the Sampling scene and add a new <a target="_blank" href="http://www.openmole.org/documentation/concepts/the-samplings/the-domains/">Domain</a>.</h2>
+<h2 style="margin-top:-165px; margin-left:550px; width:280px;">Click on the domain box that appears: a panel for the domain configuration shows up</h2>
+            </article>
+<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/020.png"/>
+<h2 style="margin-top:430px; margin-left:550px; width:280px;">Set the Type to <span style="color: #b1c436;">Int</span> and the maximum value to <span style="color: #b1c436;">100</span> and close this panel.</h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/021.png"/>
+		<h2 style="margin-top:150px; margin-left:550px; width:250px;">Create a connection from the Domain box the Final stone (Shift + drag)</h2>
+		<h2 style="margin-top:50px; margin-left:550px; width:250px;">Click on the <span style="color: #b1c436;">?</span> and select the Prototype <i>seed</i> to make it vary on this range</h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/022.png"/>
+		<h2 style="margin-top:550px; margin-left:200px; width:600px;">The Prototype <i>seed</i> now varies on [0; 100]</h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/023.png"/>
+		<h2 style="margin-top:450px; margin-left:350px">Select the <i>replication</i> Sampling on the <i>explore</i> Task</h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/024.png"/>
+		<h2 style="margin-top:450px; margin-left:350px">Add the explore Task on the Scene and set it as <span style="color: #b1c436;">Starting Capsule</span> (right click on it)</h2>
+            </article>
+		<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/025.png"/>
+		<h2 style="margin-top:450px; margin-left:350px;">Draw a Transition between the <i>explore</i> Task to the input slot of the <i>java</i> Task (Shift + drag)</h2>
+            </article>
+<article class="fill">    
+                <img src="../../images/tuto/026.png"/>
+		<h2 style="margin-top:150px; margin-left:350px; color: white;">Build and start the Mole again.<br><br>The <i>javaTask</i> is now executed 100 times.</h2>
+            </article>
+<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/027.png"/>
+		<h2 style="margin-top:300px; margin-left:350px">Create a  <a href="http://www.openmole.org/documentation/concepts/the-environments/the-multithread-environment/">Multi-thread environment</a> to share the <i>JavaTask</i> execution on several threads</h2>
+            </article>
+<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/028.png"/>
+		<h2 style="margin-top:300px; margin-left:350px">Click on the environment link on the <i>JavaTask</i> (grey cross) and set the threads environment.</h2>
+            </article>
+<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/029.png"/>
+		<h2 style="margin-top:300px; margin-left:350px">The grey cross turns to the green label of the multi-thread environment.</h2>
+            </article>
+            </article>
+<article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="../../images/tuto/030.png"/>
+		<h2 style="color:white;margin-top:50px; margin-left:420px;width:400px;">Build and run the Mole again.<br>An <span style="color: #b1c436;"> environment panel</span> appears (it is too fast in this example to notice the activity on the environment graph)</h2>
+            </article>            </article>
+
+		<article class="fill">    
+                <h1>Desktop Grid daemon installation</h1>
+<ul>		
+<li><h3 style="margin-top:10px">Download  <a href="http://www.openmole.org/files/openmole-daemon-0.8.0-RC3.tar.gz"> the daemon archive</a></h3></li>
+<li><h3 style="margin-top:10px"> extract the archive<br> <i style="color:grey;">tar -xvzf openmole-daemon-0.8.0-RC3.tar.gz</i></h3></li>
+<li><h3 style="margin-top:10px"> move to the openmole-deamon directory<br> <i style="color:grey;">cd openmole-daemon</i>
+<li><h3 style="margin-top:10px"> join a running simulation<br> <i style="color:grey;">./openmole-daemon -h test@192.168.1.82:2222 -p test -w 2</i></h3></li>
+</ul>
+
+            </article>
+        </section>
+
+    </body>
+</html>

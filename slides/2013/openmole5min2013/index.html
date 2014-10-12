@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mah (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<!-- 
+pattern matching
+-->
+
+
+<html>
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Mouse Memoirs">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rambla">
+
+    <head>
+        <title>OpenMOLE a DSL to explore complex-system models</title>
+
+        <meta charset='utf-8' />
+
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushScala.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushCpp.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushJava.js"></script>
+        <link href="js/syntaxhighlighter_3.0.83/styles/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+        <link href="js/syntaxhighlighter_3.0.83/styles/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript">SyntaxHighlighter.all()</script>
+
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+
+        <style type="text/css">
+            table td{
+                border:none;
+                vertical-align: middle;
+            }
+        </style>
+
+        <script src='slides.js'></script>
+    </head>
+
+    <body style='display: none'>
+
+        <section class='slides layout-regular template-default'>
+            <article>
+                <img class="centered" style="height: 300px" src="images/openmole-logo.png" />
+                <h1 style="margin-top: 50px">Experimenting on complex-system models in the cloud</h1>
+                <p>Mathieu Leclaire
+                    <br/>
+                    Institut des Systémes Complexes, Paris Île de France
+                </p>         
+            </article>
+
+            <!--<article class="fill"> 
+                <div style="margin-top: 450px"><h3>What are complex systems?</h3></div>
+                <p><img style="width: 100%" src='images/care.png'></p>
+            </article>-->
+
+            <article> 
+                <div style="top: 30px">           
+                    <img style="margin:0px auto; margin-top: 0px; display:block; height: 530px" src="images/monkey.png"/><br/>
+                    <h2 style="margin-top: -20px; text-align: center"><span style="color: #b1c436"><strong>Large scale experimentations</strong></span> on models</h2> <br /> 
+                </div>
+            </article>
+            
+                        <article>  
+            <h1> Methods </h1> 
+                <table style="margin-top: 50px">
+                    <tr align='center'>
+                        <td><h2>Design of experiments on a space of parameters.</h2></td>
+                        <td><img style="width: 200px;" src='images/exploration.jpeg'></td>
+                    </tr>
+                    <tr align='center'>
+                        <td><h2>Calibration.</h2></td>
+                        <td><img style="width: 200px;  margin-top: -40px" src='images/calibration.jpeg'></td>
+                    </tr>
+                </table>
+            </article>
+            
+            <article>   
+            <h1> Methods </h1>  
+                <table style="margin-top: 50px">
+             <tr align='center'>
+                        <td><h2>Genetic algorithms.</h2></td>
+                        <td><img style="width: 200px;" src='images/genetics.jpeg'></td>
+                    </tr>
+                    <tr align='center'>
+                        <td><img style="width: 200px; margin-top: 20px; margin-bottom: 0px" src='images/sensitivity.jpg'></td>
+                        <td><h2>Sensitivity analysis.</h2></td>
+                    </tr>
+                    </table>
+            </article>
+
+            <article class="fill">    
+                <img style="margin:0px auto; display:block;height:600px;" src="images/skeleton-computer.jpg"/>
+            </article>
+            
+            <article class="fill"> 
+                <div style="margin-top: 150px"><h3>Naturally parallel algorithms => leverage parallelism.</h3></div>
+                <img src="images/clones.jpg"/>
+            </article>
+
+
+
+            <article> 
+                <div class="center" style="top: 20px">    
+                    <h1>What does <span style="color: #b1c436;"><strong>OpenMOLE</strong></span> do ?</h1>
+                </div>
+                <table>
+                    <tr align='center'>
+                        <td><h2>It implements <span style="color: #b1c436;"><strong> exploration algorithms</strong></span>.</h2></td>
+                        <td><img style="width: 200px; margin-top: 20px; margin-bottom: 20px" src='images/algorithms.png'></td>
+                    </tr>
+                    <tr align='center'>
+                        <td><h2>It <span style="color: #b1c436;"><strong>transparently delegates</strong></span> computational loads to massively parallel environments.</h2></td>
+                        <td><img style="width: 200px; margin-top: 20px; margin-bottom: 20px" src='images/supercomputer.jpg'></td>
+                    </tr>
+                </table>
+            </article>
+
+            <article class="fill">    
+				<h1 style="margin-top:250px; margin-right:-350px">Upscaling</h1>
+                <img style="width: 100%; margin-top: 0px" src="images/scale.jpg"/>
+				<h2 style="margin-top:40px; margin-left:450px">Prototype small<br><span style="color: #b1c436;"><strong>Experiment large</strong></span></h2>
+            </article>
+            
+            <article class="fill">    
+                <img style="width: 100%; margin-top: 0px" src="images/egi.png"/>
+            </article>
+
+            <article>    
+                <img style="margin:0px auto; margin-top: 80px; display:block; height: 50%;" src="images/wfExample.png"/>
+                <div style="margin-top: 20px; text-align: center"><h2>A <span style="color: #b1c436;"><strong>naturally parallel formalism</strong></span> to design experiments.</h2></div>
+            </article>
+
+            <article class="fill">    
+                <img style="margin:0px auto; display:block; wid" src="images/blackbox.jpg"/>
+                <h1 style="color:white">Embed <span style="color: #b1c436;"> <strong>your model</strong></span> as a black box</h1>
+                    <h2 style=" margin-top: 140px;color:white">C<br>R<br>C++<br>Java<br>Scala<br>Scilab<br>Octave<br>Python<br>Netlogo<br>...</h2>
+            </article>
+
+
+            <article>    
+                <img style="margin:0px auto; margin-top: 100px; display:block; height: 50%;" src="images/envExample.png"/>
+                <h2><div style="margin-top: 30px; text-align: center">Assign <span style="color: #b1c436;"><strong>execution environments</strong></span> to tasks.</div></h2>
+            </article>
+
+            <article>    
+                <img style="margin:0px auto; margin-top: 70px; display:block; height: 60%;" src="images/runExample.jpg"/>
+                <h2><div style="margin-top: 30px; text-align: center"><span style="color: #b1c436;"><strong>Run and control </strong></span> the workflow execution.</div></h2>
+            </article>
+
+            <article class="fill"> 
+                <div style="margin-top: 500px"><h3>Download: <span style="color: #b1c436;"><strong>http://www.openmole.org</strong></span></h3></div>
+                <p>
+                    <img style="width: 100%" src='images/stallman.jpg'>
+                </p>
+            </article>
+
+            <article> 
+                <table>
+                    <tr align='center'>
+                        <td><h1><span style="color: #b1c436;"><strong>Chromosome structuring</strong></span></h1></td>
+                        <td><img style="width: 120px" src='images/explorationStamp.png'></td>
+                    </tr>
+                    <tr align='center'>
+                        <td><img style="height: 220px" src="images/chromosome.png"/></td>
+                        <td><h2>C++<br/>2 days per simulation<br/>1600 simulations<br/>8.5 years / CPU</h2></td>
+                    </tr>
+                </table>
+                <div style="margin-top: 30px; font-style:italic"><span style="color: #b1c436;"><strong>Junier et al.</strong></span>, CTCF-mediated transcriptional regulation through cell type-specific chromosome organization in the β-globin locus, Nucleic Acids Research, 2012.</div>
+            </article>
+
+            <article> 
+                <table>
+                    <tr align='center'>
+                        <td><h1><span style="color: #b1c436;"><strong>SimTRAP project</strong></span></h1></td>
+                        <td><img style="width: 120px" src='images/desStamp.png'></td>
+                    </tr>
+                    <tr align='center'>
+                        <td><img style="height: 220px" src="images/simTRAP.png"/></td>
+                        <td><h2>NetLogo<br/>5 minutes per simulation<br/>100000 simulations<br/>1 year / CPU</h2></td>
+                    </tr>
+                </table>
+                <div style="margin-top: 0px; font-style:italic;">PhD thesis of <span style="color: #b1c436;"><strong>J. Figuel</strong></span>, Modélisation et simulation des comportements piétonniers dans les espaces de transport – Application aux échanges quai / train de voyageurs.</div>
+            </article>
+
+            <article> 
+                <table>
+                    <tr align='center'>
+                        <td><h1><span style="color: #b1c436;"><strong>Simpop project</strong></span></h1></td>
+                        <td><img style="width: 120px" src='images/calineticsStamp.png'></td>
+                    </tr>
+                    <tr align='center'>
+                        <td><img style="height: 220px" src="images/simpop.png"/></td>
+                        <td><h2>Scala<br/>5 minutes per simulation<br/>360 000 000 simulations<br/>22 years / CPU</h2></td>
+                    </tr>
+                </table>
+                <div style="margin-top: 0px; font-style:italic;"><span style="color: #b1c436;"><strong>Reuillon et al.</strong></span>, Algorithmes évolutionnaires sur grille de calcul pour le calibrage de modéles géographiques, proceedings of France Grilles 2012.</div>
+            </article>
+
+            
+        </section>
+
+    </body>
+</html>

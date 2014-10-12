@@ -1,0 +1,19 @@
+Elle est finalement là !
+
+Après 6 ans de travail acharné nous sommes finalement parvenu à publier la version 1.0 (Heroic Hippo) d'OpenMOLE. Cette version combine stabilité et ergonomie pour fournir le meilleur outil d'exploration de modèle jamais proposé. OpenMOLE est un moteur de workflow conçu pour tirer avantage de la puissance d'environnements de calcul distribué en toute simplicité. Il permet de distribuer des processus naturellement parallèles ou parallèles par les données, c'est à dire qui nécessite la répétition d'opérations de calcul identiques pour un ensemble d'entrées différentes. C'est par exemple le cas de l'expérimentation sur les modèles ou le traitement de données volumineuses.
+
+Nous sommes très fier de ce succès permis grâce à l'effort et au support d'une communauté dynamique de développeurs et d'utilisateurs et aussi grâce à plusieurs financement académiques.
+
+Le travail de ce dernier cycle de développement s'est surtout concentré sur la production d'une version très stable d'OpenMOLE. Cependant Heroic Hippo présente aussi quelques nouveautés:
+* l'aspect calcul distribué a été rendu encore plus robuste et efficace,
+* l'API pour l'utilisation d'algorithmes évolutionnaires est devenue plus mature et est maintenant utilisable sous forme de script pour explorer vos modèles,
+* un nouveau plugin permettant l'utilisation de fermes de calcul SLURM a été intégré.
+
+Dans les prochaines versions:
+* l'interface graphique sera portée vers une version en ligne dans le navigateur,
+* de nouveaux environnements de calcul seront intégrés (Condor, SGE),
+* les méthodes d'exploration avancées (comme celles basée sur des algorithmes évolutionnaires) seront rendues accessibles depuis l'interface graphique,
+* la possibilité de générer des scripts depuis une version graphique d'un workflow sera implémentée,
+* des outils pour une intégration facilitée de vos modèles dans openmole seront intégrés,
+
+L'équipe OpenMOLE

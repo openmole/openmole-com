@@ -1,0 +1,16 @@
+The last version of OpenMOLE, aka Crazy Coconut (version 0.6), has just been released! Using an agile developement, we can now deliver the new features of the most famous Mole platform every 2 months.
+
+OpenMOLE (Open MOdeL Experiment), takes advantage of high-throughput computing environments to experiment on simulation models. It enables to the modellers to build complex study workflows around their simulation models. To do this, a user can embed its model (coded in java / scala / C / C++ / fortran / scilab / octave / netlogo…) in the platform and then conceives the study he wants to do on it and specifies the environment on which the workflow will be run.
+
+In this version, the Graphical User Interface has been widely refactored. Among the new features, let us notice a better ergonomy, a more intuitive parametrization of the Tasks, a built-in help, copy / paste, etc
+
+Moreover it is now possible to take advantage of several more computation environments:
+- the multi-core of a machine,
+- a PBS cluster,
+- a server accessible with SSH,
+- a desktop grid,
+- the EGI Grid.
+
+Under the hood, the innovations are also impressive : the processor load during the execution has dropped dramatically and now consumes up to 10 times less CPU resources localy. Numerous bugs have also been fixed. See the Changlog XXXXXXXXX here XXXXXXXXXX
+
+The serialization format has been changed in order to uncouple the loading of the different components of the platform, rendering it less vulnerable to the API changes. It is a first step toward the 1.0 version. In the next version scheduled next October, the focus will be set on the Samplings and on the ability to build them more easily and graphicaly. The roadmap is available XXXXXXXXX here XXXXXXXXX 

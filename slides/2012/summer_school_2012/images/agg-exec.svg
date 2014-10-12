@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1407.6246"
+   height="1339.9573"
+   id="svg8362"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="agg-exec.svg">
+  <defs
+     id="defs8364">
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker12503"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path12505"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8131"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8133"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8135"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8137"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8139"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8141"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3627-4"
+       id="linearGradient9811-2"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.34123111,0,0,-0.394144,452.12894,595.91552)"
+       x1="165.16362"
+       y1="334.92639"
+       x2="165.17453"
+       y2="193.23235" />
+    <linearGradient
+       id="linearGradient3627-4">
+      <stop
+         id="stop3629-35"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop3631-6"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3692-62"
+       id="linearGradient9809-4"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.32147547,0,0,-0.38071994,417.18533,502.33607)"
+       x1="98.895088"
+       y1="283.92084"
+       x2="99.208618"
+       y2="431.76785" />
+    <linearGradient
+       id="linearGradient3692-62"
+       inkscape:collect="always">
+      <stop
+         id="stop3694-1"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop3696-2"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker9516"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path9518"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8153"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8155"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8157"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8159"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8161"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8163"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3627-8-4"
+       id="linearGradient10011-1-2"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.34123111,0,0,-0.394144,452.12894,595.91552)"
+       x1="165.16362"
+       y1="334.92639"
+       x2="165.17453"
+       y2="193.23235" />
+    <linearGradient
+       id="linearGradient3627-8-4">
+      <stop
+         id="stop3629-4-9"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop3631-3-1"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3692-5-6"
+       id="linearGradient10009-8-8"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.32147547,0,0,-0.38071994,417.18533,502.33607)"
+       x1="98.895088"
+       y1="283.92084"
+       x2="99.208618"
+       y2="431.76785" />
+    <linearGradient
+       id="linearGradient3692-5-6"
+       inkscape:collect="always">
+      <stop
+         id="stop3694-8-5"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop3696-3-3"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3627-8-4"
+       id="linearGradient10000-1-9"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.34123111,0,0,-0.394144,452.12894,595.91552)"
+       x1="165.16362"
+       y1="334.92639"
+       x2="165.17453"
+       y2="193.23235" />
+    <linearGradient
+       id="linearGradient8174">
+      <stop
+         id="stop8176"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop8178"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3692-5-6"
+       id="linearGradient9998-3-3"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.32147547,0,0,-0.38071994,417.18533,502.33607)"
+       x1="98.895088"
+       y1="283.92084"
+       x2="99.208618"
+       y2="431.76785" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3627-8-4"
+       id="linearGradient9989-1-1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.34123111,0,0,-0.394144,452.12894,595.91552)"
+       x1="165.16362"
+       y1="334.92639"
+       x2="165.17453"
+       y2="193.23235" />
+    <linearGradient
+       id="linearGradient8188">
+      <stop
+         id="stop8190"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop8192"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3692-5-6"
+       id="linearGradient9987-3-6"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.32147547,0,0,-0.38071994,417.18533,502.33607)"
+       x1="98.895088"
+       y1="283.92084"
+       x2="99.208618"
+       y2="431.76785" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3627-8-4"
+       id="linearGradient9978-4-0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.34123111,0,0,-0.394144,452.12894,595.91552)"
+       x1="165.16362"
+       y1="334.92639"
+       x2="165.17453"
+       y2="193.23235" />
+    <linearGradient
+       id="linearGradient8202">
+      <stop
+         id="stop8204"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop8206"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3692-5-6"
+       id="linearGradient9976-5-2"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.32147547,0,0,-0.38071994,417.18533,502.33607)"
+       x1="98.895088"
+       y1="283.92084"
+       x2="99.208618"
+       y2="431.76785" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3627-5"
+       id="linearGradient10011-12"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.34123111,0,0,-0.394144,452.12894,595.91552)"
+       x1="165.16362"
+       y1="334.92639"
+       x2="165.17453"
+       y2="193.23235" />
+    <linearGradient
+       id="linearGradient3627-5">
+      <stop
+         id="stop3629-6"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop3631-09"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3692-9"
+       id="linearGradient10009-0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.32147547,0,0,-0.38071994,417.18533,502.33607)"
+       x1="98.895088"
+       y1="283.92084"
+       x2="99.208618"
+       y2="431.76785" />
+    <linearGradient
+       id="linearGradient3692-9"
+       inkscape:collect="always">
+      <stop
+         id="stop3694-9"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop3696-6"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3627-5"
+       id="linearGradient10000-6"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.34123111,0,0,-0.394144,452.12894,595.91552)"
+       x1="165.16362"
+       y1="334.92639"
+       x2="165.17453"
+       y2="193.23235" />
+    <linearGradient
+       id="linearGradient8224">
+      <stop
+         id="stop8226"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop8228"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3692-9"
+       id="linearGradient9998-0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.32147547,0,0,-0.38071994,417.18533,502.33607)"
+       x1="98.895088"
+       y1="283.92084"
+       x2="99.208618"
+       y2="431.76785" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3627-5"
+       id="linearGradient9989-2"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.34123111,0,0,-0.394144,452.12894,595.91552)"
+       x1="165.16362"
+       y1="334.92639"
+       x2="165.17453"
+       y2="193.23235" />
+    <linearGradient
+       id="linearGradient8238">
+      <stop
+         id="stop8240"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop8242"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3692-9"
+       id="linearGradient9987-5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.32147547,0,0,-0.38071994,417.18533,502.33607)"
+       x1="98.895088"
+       y1="283.92084"
+       x2="99.208618"
+       y2="431.76785" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3627-5"
+       id="linearGradient9978-1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.34123111,0,0,-0.394144,452.12894,595.91552)"
+       x1="165.16362"
+       y1="334.92639"
+       x2="165.17453"
+       y2="193.23235" />
+    <linearGradient
+       id="linearGradient8252">
+      <stop
+         id="stop8254"
+         offset="0"
+         style="stop-color:#ffdd55;stop-opacity:1;" />
+      <stop
+         id="stop8256"
+         offset="1"
+         style="stop-color:#ffdd55;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3692-9"
+       id="linearGradient9976-6"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.32147547,0,0,-0.38071994,417.18533,502.33607)"
+       x1="98.895088"
+       y1="283.92084"
+       x2="99.208618"
+       y2="431.76785" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="658.81232"
+     inkscape:cy="489.97864"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata8367">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(283.81232,317.61646)">
+    <rect
+       inkscape:export-ydpi="51.294067"
+       inkscape:export-xdpi="51.294067"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       style="fill:#ffeeaa;fill-opacity:1;stroke:none"
+       id="rect6826-2"
+       width="1407.6246"
+       height="1339.9573"
+       x="-283.81232"
+       y="-317.61646"
+       ry="42.137024" />
+    <path
+       transform="translate(-356.45042,-464.1388)"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       sodipodi:ry="122.85714"
+       sodipodi:rx="131.42857"
+       sodipodi:cy="300.93362"
+       sodipodi:cx="294.28571"
+       id="path6616-4"
+       style="fill:#d4ff2a;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#445500;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6620-5"
+       sodipodi:cx="294.28571"
+       sodipodi:cy="300.93362"
+       sodipodi:rx="131.42857"
+       sodipodi:ry="122.85714"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       transform="matrix(-1,0,0,1,232.79518,-464.1388)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <g
+       transform="matrix(-1.0248016,0.03578683,0.03409951,0.97648211,450.56788,-543.1029)"
+       id="g6622-8"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.9"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path6624-7"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient9976-6);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         id="path6626-6"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-ydpi="10.9" />
+    </g>
+    <g
+       transform="translate(-596.81142,-646.5348)"
+       id="g6628-6"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.7"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         id="path6630-9"
+         d="m 361.71769,502.17562 0,0.38023 48.45693,0 0,-38.45248 -48.45693,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         clip-path="none"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient9978-1);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         clip-path="none"
+         d="m 361.71769,502.17562 0,0.38023 48.45692,0 0,-38.45248 -48.45692,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         id="path6632-0"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-ydpi="10.7" />
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:#d4ff2a;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6720-56"
+       sodipodi:cx="294.28571"
+       sodipodi:cy="300.93362"
+       sodipodi:rx="131.42857"
+       sodipodi:ry="122.85714"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       transform="translate(-356.45042,-173.0399)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <path
+       transform="matrix(-1,0,0,1,232.79518,-173.0399)"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       sodipodi:ry="122.85714"
+       sodipodi:rx="131.42857"
+       sodipodi:cy="300.93362"
+       sodipodi:cx="294.28571"
+       id="path6724-8"
+       style="fill:none;stroke:#445500;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <g
+       id="g6726-8"
+       transform="matrix(-1.0248016,0.03578683,0.03409951,0.97648211,450.56788,-252.004)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         id="path6728-6"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-ydpi="10.9" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.9"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path6730-17"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         style="fill:url(#linearGradient9987-5);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <g
+       id="g6732-7"
+       transform="translate(-596.81142,-355.4359)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         clip-path="none"
+         d="m 361.71769,502.17562 0,0.38023 48.45693,0 0,-38.45248 -48.45693,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         id="path6734-98"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-ydpi="10.7" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.7"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         id="path6736-0"
+         d="m 361.71769,502.17562 0,0.38023 48.45692,0 0,-38.45248 -48.45692,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         clip-path="none"
+         style="fill:url(#linearGradient9989-2);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <path
+       transform="translate(-356.45042,118.0591)"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       sodipodi:ry="122.85714"
+       sodipodi:rx="131.42857"
+       sodipodi:cy="300.93362"
+       sodipodi:cx="294.28571"
+       id="path6660-9"
+       style="fill:#d4ff2a;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#445500;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6664-6"
+       sodipodi:cx="294.28571"
+       sodipodi:cy="300.93362"
+       sodipodi:rx="131.42857"
+       sodipodi:ry="122.85714"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       transform="matrix(-1,0,0,1,232.79518,118.0591)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <g
+       transform="matrix(-1.0248016,0.03578683,0.03409951,0.97648211,450.56788,39.095005)"
+       id="g6666-2"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.9"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path6668-3"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient9998-0);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         id="path6670-2"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-ydpi="10.9" />
+    </g>
+    <g
+       transform="translate(-596.81142,-64.336895)"
+       id="g6672-3"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.7"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         id="path6674-1"
+         d="m 361.71769,502.17562 0,0.38023 48.45693,0 0,-38.45248 -48.45693,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         clip-path="none"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient10000-6);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         clip-path="none"
+         d="m 361.71769,502.17562 0,0.38023 48.45692,0 0,-38.45248 -48.45692,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         id="path6676-66"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-ydpi="10.7" />
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:#d4ff2a;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6640-2"
+       sodipodi:cx="294.28571"
+       sodipodi:cy="300.93362"
+       sodipodi:rx="131.42857"
+       sodipodi:ry="122.85714"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       transform="translate(-356.45042,545.1579)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <path
+       transform="matrix(-1,0,0,1,232.79518,545.1579)"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       sodipodi:ry="122.85714"
+       sodipodi:rx="131.42857"
+       sodipodi:cy="300.93362"
+       sodipodi:cx="294.28571"
+       id="path6644-6"
+       style="fill:none;stroke:#445500;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <g
+       id="g6646-2"
+       transform="matrix(-1.0248016,0.03578683,0.03409951,0.97648211,450.56788,466.1938)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         id="path6648-6"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-ydpi="10.9" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.9"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path6650-1"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         style="fill:url(#linearGradient10009-0);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <g
+       id="g6652-2"
+       transform="translate(-596.81142,362.7619)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         clip-path="none"
+         d="m 361.71769,502.17562 0,0.38023 48.45693,0 0,-38.45248 -48.45693,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         id="path6654-69"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-ydpi="10.7" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.7"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         id="path6656-9"
+         d="m 361.71769,502.17562 0,0.38023 48.45692,0 0,-38.45248 -48.45692,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         clip-path="none"
+         style="fill:url(#linearGradient10011-12);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:95.08856201px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="580.45612"
+       y="71.481857"
+       id="text10224-0"
+       transform="matrix(0,1.0175276,-0.98277433,0,0,0)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"><tspan
+         sodipodi:role="line"
+         id="tspan10226-7"
+         x="580.45612"
+         y="71.481857">...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:50px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+       x="-171.70343"
+       y="-154.04175"
+       id="text10228-9"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10230-6"
+         x="-171.70343"
+         y="-154.04175">i = 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:50px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+       x="-176.12286"
+       y="142.05908"
+       id="text10232-3"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10234-2"
+         x="-176.12286"
+         y="142.05908">i = 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       x="-173.91339"
+       y="433.53076"
+       id="text10236-4"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10238-8"
+         x="-173.91339"
+         y="433.53076">i = 3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       x="-171.70392"
+       y="862.21436"
+       id="text10254-0"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10256-7"
+         x="-171.70392"
+         y="862.21436">i = 10</tspan></text>
+    <path
+       transform="translate(141.58318,-464.8588)"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       sodipodi:ry="122.85714"
+       sodipodi:rx="131.42857"
+       sodipodi:cy="300.93362"
+       sodipodi:cx="294.28571"
+       id="path6616-8-0"
+       style="fill:#d4ff2a;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#445500;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6620-9-8"
+       sodipodi:cx="294.28571"
+       sodipodi:cy="300.93362"
+       sodipodi:rx="131.42857"
+       sodipodi:ry="122.85714"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       transform="matrix(-1,0,0,1,730.82878,-464.8588)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <g
+       transform="matrix(-1.0248016,0.03578683,0.03409951,0.97648211,948.60148,-543.8229)"
+       id="g6622-7-6"
+       style="stroke-width:3.99616408;stroke-miterlimit:4;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.9"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path6624-2-1"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.99616408;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient9976-5-2);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.99616408;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         id="path6626-4-8"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-ydpi="10.9" />
+    </g>
+    <g
+       transform="translate(-98.777817,-647.2548)"
+       id="g6628-7-5"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.7"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         id="path6630-0-8"
+         d="m 361.71769,502.17562 0,0.38023 48.45693,0 0,-38.45248 -48.45693,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         clip-path="none"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient9978-4-0);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         clip-path="none"
+         d="m 361.71769,502.17562 0,0.38023 48.45692,0 0,-38.45248 -48.45692,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         id="path6632-5-2"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-ydpi="10.7" />
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:#d4ff2a;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6720-5-4"
+       sodipodi:cx="294.28571"
+       sodipodi:cy="300.93362"
+       sodipodi:rx="131.42857"
+       sodipodi:ry="122.85714"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       transform="translate(141.58318,-173.7599)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <path
+       transform="matrix(-1,0,0,1,730.82878,-173.7599)"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       sodipodi:ry="122.85714"
+       sodipodi:rx="131.42857"
+       sodipodi:cy="300.93362"
+       sodipodi:cx="294.28571"
+       id="path6724-2-0"
+       style="fill:none;stroke:#445500;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <g
+       id="g6726-7-4"
+       transform="matrix(-1.0248016,0.03578683,0.03409951,0.97648211,948.60148,-252.724)"
+       style="stroke-width:3.99616408;stroke-miterlimit:4;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.99616408;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         id="path6728-4-6"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-ydpi="10.9" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.9"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path6730-1-2"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         style="fill:url(#linearGradient9987-3-6);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.99616408;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0" />
+    </g>
+    <g
+       id="g6732-1-5"
+       transform="translate(-98.777817,-356.1559)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         clip-path="none"
+         d="m 361.71769,502.17562 0,0.38023 48.45693,0 0,-38.45248 -48.45693,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         id="path6734-9-7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-ydpi="10.7" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.7"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         id="path6736-5-4"
+         d="m 361.71769,502.17562 0,0.38023 48.45692,0 0,-38.45248 -48.45692,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         clip-path="none"
+         style="fill:url(#linearGradient9989-1-1);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <path
+       transform="translate(141.58318,117.3391)"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       sodipodi:ry="122.85714"
+       sodipodi:rx="131.42857"
+       sodipodi:cy="300.93362"
+       sodipodi:cx="294.28571"
+       id="path6660-4-7"
+       style="fill:#d4ff2a;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#445500;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6664-2-0"
+       sodipodi:cx="294.28571"
+       sodipodi:cy="300.93362"
+       sodipodi:rx="131.42857"
+       sodipodi:ry="122.85714"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       transform="matrix(-1,0,0,1,730.82878,117.3391)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <g
+       transform="matrix(-1.0248016,0.03578683,0.03409951,0.97648211,948.60148,38.375005)"
+       id="g6666-5-2"
+       style="stroke-width:3.99616408;stroke-miterlimit:4;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.9"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path6668-8-1"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.99616408;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient9998-3-3);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.99616408;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         id="path6670-5-8"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-ydpi="10.9" />
+    </g>
+    <g
+       transform="translate(-98.777817,-65.056895)"
+       id="g6672-5-5"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.7"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         id="path6674-6-0"
+         d="m 361.71769,502.17562 0,0.38023 48.45693,0 0,-38.45248 -48.45693,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         clip-path="none"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient10000-1-9);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         clip-path="none"
+         d="m 361.71769,502.17562 0,0.38023 48.45692,0 0,-38.45248 -48.45692,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         id="path6676-6-9"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-ydpi="10.7" />
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:#d4ff2a;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6640-8-3"
+       sodipodi:cx="294.28571"
+       sodipodi:cy="300.93362"
+       sodipodi:rx="131.42857"
+       sodipodi:ry="122.85714"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       transform="translate(141.58318,544.4379)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <path
+       transform="matrix(-1,0,0,1,730.82878,544.4379)"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       sodipodi:ry="122.85714"
+       sodipodi:rx="131.42857"
+       sodipodi:cy="300.93362"
+       sodipodi:cx="294.28571"
+       id="path6644-7-6"
+       style="fill:none;stroke:#445500;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <g
+       id="g6646-1-1"
+       transform="matrix(-1.0248016,0.03578683,0.03409951,0.97648211,948.60148,465.4738)"
+       style="stroke-width:3.99616408;stroke-miterlimit:4;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.99616408;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         id="path6648-9-0"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-ydpi="10.9" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.9"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path6650-2-4"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         style="fill:url(#linearGradient10009-8-8);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.99616408;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.99616404, 11.98849212;stroke-dashoffset:0" />
+    </g>
+    <g
+       id="g6652-5-4"
+       transform="translate(-98.777817,362.0419)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         clip-path="none"
+         d="m 361.71769,502.17562 0,0.38023 48.45693,0 0,-38.45248 -48.45693,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         id="path6654-6-7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-ydpi="10.7" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.7"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         id="path6656-2-6"
+         d="m 361.71769,502.17562 0,0.38023 48.45692,0 0,-38.45248 -48.45692,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         clip-path="none"
+         style="fill:url(#linearGradient10011-1-2);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:95.08856201px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="579.7486"
+       y="-435.28229"
+       id="text10224-6-4"
+       transform="matrix(0,1.0175276,-0.98277433,0,0,0)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"><tspan
+         sodipodi:role="line"
+         id="tspan10226-4-4"
+         x="579.7486"
+         y="-435.28229">...</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 12;stroke-dashoffset:0;marker-end:url(#marker9516)"
+       d="m 109.7298,-163.28607 176.88459,-0.63712"
+       id="path10823-8"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g6622-8"
+       inkscape:connection-end="#g6628-7-5"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 12;stroke-dashoffset:0;marker-end:url(#marker9516)"
+       d="m 109.7298,127.81283 176.88459,-0.63712"
+       id="path10825-2"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g6726-8"
+       inkscape:connection-end="#g6732-1-5"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 12;stroke-dashoffset:0;marker-end:url(#marker9516)"
+       d="m 109.7298,418.91183 176.88459,-0.63712"
+       id="path10827-1"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g6666-2"
+       inkscape:connection-end="#g6672-5-5"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 12;stroke-dashoffset:0;marker-end:url(#marker9516)"
+       d="m 109.7298,846.01063 176.88459,-0.63712"
+       id="path10829-6"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g6646-2"
+       inkscape:connection-end="#g6652-5-4"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="translate(648.96448,2.6786049)"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       sodipodi:ry="122.85714"
+       sodipodi:rx="131.42857"
+       sodipodi:cy="300.93362"
+       sodipodi:cx="294.28571"
+       id="path7332-2"
+       style="fill:#d4ff2a;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#445500;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path7336-0"
+       sodipodi:cx="294.28571"
+       sodipodi:cy="300.93362"
+       sodipodi:rx="131.42857"
+       sodipodi:ry="122.85714"
+       d="m 425.71428,300.93362 c 0,67.85213 -58.84258,122.85714 -131.42857,122.85714 -72.586,0 -131.42858,-55.00501 -131.42858,-122.85714 0,-67.85212 58.84258,-122.85714 131.42858,-122.85714 72.58599,0 131.42857,55.00502 131.42857,122.85714 z"
+       transform="matrix(-1,0,0,1,1238.2101,2.6786049)"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51" />
+    <g
+       transform="matrix(-1.0248016,0.03578683,0.03409951,0.97648211,1455.9828,-76.285495)"
+       id="g7338-8"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.9"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         sodipodi:nodetypes="ccccccccc"
+         id="path7340-0"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient9809-4);fill-opacity:1;stroke:#eb4d0c;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         d="m 389.28729,393.96856 0,-37.52471 -23.18727,0 -0.0494,0 -0.0581,0.0136 -21.91844,18.98496 21.86033,18.42923 0.11621,0.0969 23.23665,0 z"
+         id="path7342-5"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/outputSlot.png"
+         inkscape:export-xdpi="10.9"
+         inkscape:export-ydpi="10.9" />
+    </g>
+    <g
+       transform="translate(408.60348,-179.7174)"
+       id="g7344-4"
+       style="stroke-width:4;stroke-miterlimit:4;stroke-dasharray:4, 12;stroke-dashoffset:0"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51">
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="10.7"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         id="path7346-5"
+         d="m 361.71769,502.17562 0,0.38023 48.45693,0 0,-38.45248 -48.45693,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         clip-path="none"
+         style="fill:#ffffff;fill-opacity:1;stroke:#eb4d0c;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 12;stroke-dashoffset:0" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:url(#linearGradient9811-2);fill-opacity:1;stroke:#eb4d0c;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 12;stroke-dashoffset:0"
+         clip-path="none"
+         d="m 361.71769,502.17562 0,0.38023 48.45692,0 0,-38.45248 -48.45692,0 0,0.45382 23.71066,18.80308 -23.71066,18.81535 z"
+         id="path7348-8"
+         inkscape:export-filename="/home/mathieu/Work/OpenMole/simexplorer-ide/simexplorer-ide-ant/org.openmole.ui/src/resources/inputSlot.png"
+         inkscape:export-xdpi="10.7"
+         inkscape:export-ydpi="10.7" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 12;stroke-dashoffset:0;marker-end:url(#marker12503)"
+       d="M 585.62518,-179.3878 786.23321,284.38597"
+       id="path13142"
+       inkscape:connector-type="polyline"
+       inkscape:connection-end="#g7344-4"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 12;stroke-dashoffset:0;marker-end:url(#marker12503)"
+       d="M 596.61312,136.70891 771.74856,284.38597"
+       id="path13144"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g6726-7-4"
+       inkscape:connection-end="#g7344-4"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 12;stroke-dashoffset:0;marker-end:url(#marker12503)"
+       d="M 599.75455,410.35476 793.00122,304.4607"
+       id="path13146"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g6666-5-2"
+       inkscape:connection-end="#g7344-4"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 12;stroke-dashoffset:0;marker-end:url(#marker12503)"
+       d="M 590.96984,830.7046 787.12385,322.83845"
+       id="path13150"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g6646-1-1"
+       inkscape:connection-end="#g7344-4"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end-point="d4"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       x="442.41779"
+       y="-155.01797"
+       id="text10228-9-3"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10230-6-6"
+         x="442.41779"
+         y="-155.01797">v = 8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       x="442.73779"
+       y="141.08282"
+       id="text10232-3-2"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10234-2-9"
+         x="442.73779"
+         y="141.08282">v = 7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       x="443.13779"
+       y="434.5545"
+       id="text10236-4-5"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10238-8-6"
+         x="443.13779"
+         y="434.5545">v = 5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       x="442.41779"
+       y="863.23822"
+       id="text10254-0-4"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10256-7-0"
+         x="442.41779"
+         y="863.23822">v = 8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       x="840.33502"
+       y="297.1871"
+       id="text10228-9-3-2"
+       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/HPCS 2010/Slides/img/aggregation-exec.png"
+       inkscape:export-xdpi="51"
+       inkscape:export-ydpi="51"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="840.33502"
+         y="297.1871"
+         id="tspan3230">v = [8, 7, 5,</tspan><tspan
+         sodipodi:role="line"
+         x="840.33502"
+         y="347.1871"
+         id="tspan3238">              ... 8]</tspan></text>
+  </g>
+</svg>

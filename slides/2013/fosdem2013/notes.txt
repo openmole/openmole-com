@@ -1,0 +1,26 @@
+
+
+
+–  Complex systems are often difficult to tackle (either
+experimentally or by though experiments)
+–  Dynamic non-linear interactions may contradict our intuition
+–  We need tools to explore the behavior of the system and to
+explain the emergent comportment
+
+
+“To an observer B, an object A* is a model of an object A to the
+extent that B can use A* to answer questions that interest him
+about A.”
+(Marvin Minsky, 1995)
+
+
+The “model triad”: To be a model, an object (system, equations,
+software, ...) needs to be linked to a triplet of elements:
+–  <Objet, Question, Observer>
+–  The observer is the link between model domain to object domain
+•  The model must be used to answer questions: it is a scientific instrument
+–  It must be used like an instrument (experimental method)
+–  But models depend on the question more than on the object
+–  It is not an instrument “like the others” (e.g. a microscope)
+
+"The decisive thing with modeling is not the model per se, but what the model and working with the model does to our mind."

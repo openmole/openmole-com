@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mah (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<!-- 
+pattern matching
+-->
+
+
+<html>
+
+
+    <head>
+        <title>Simpop Local profils</title>
+
+        <meta charset='utf-8' />
+
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushScala.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushCpp.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushJava.js"></script>
+        <link href="js/syntaxhighlighter_3.0.83/styles/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+        <link href="js/syntaxhighlighter_3.0.83/styles/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript">SyntaxHighlighter.all()</script>
+
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+
+        <style type="text/css">
+            table td{
+                border:none;
+                vertical-align: middle;
+            }
+        </style>
+
+        <script src='slides.js'></script>
+    </head>
+
+    <body style='display: none'>
+
+        <section class='slides layout-regular template-default'>
+            <article>           
+                <h1 style="margin-top: 20px">Calibration profils</h1>  
+                <br/>               
+                <img class="centered" style="height: 340px" src="images/meaning.jpg" />
+                <p align="right" style="margin-top: 20px">Romain Reuillon, Géographie-cités</p>         
+            </article>
+
+            <article> 
+                <div align="center" style="margin-top: 120px"><p><img style="width: 100%" src='images/simpop.svg'></p></div>
+            </article>
+
+            <article> 
+                <div align="center" style="margin-top: 10px"><p><img style="width: 100%" src='images/nowheels.jpg'></p></div>
+            </article>
+
+                        
+            <article> 
+                <div align="center" style="margin-top: 100px"><p><img style="width: 100%" src='images/logStylise.png'></p></div>
+            </article>
+            
+            <article> 
+                <div align="center" style="margin-top: 70px"><p><img style="width: 100%" src='images/calibrationsimpop.svg'></p></div>
+            </article> 
+            
+            <article> 
+                <div align="center" style="margin-top: 0px"><p><img style="width: 100%" src='images/guided.jpg'></p></div>
+            </article>
+
+           
+            <article> 
+                <div align="center" style="margin-top: 70px"><p><img style="width: 100%" src='images/ga.png'></p></div>
+            </article>
+
+            <article> 
+                <div align="center" style="margin-top: 10px"><p><img style="width: 90%" src='images/hv.svg'></p></div>
+            </article>
+
+            <article> 
+                <div align="center" style="margin-top: 0px"><p><img style="width: 80%" src='images/result.svg'></p></div>
+            </article>
+
+            <article> 
+                <p>We have established that the modeling hypothesis are sufficient to reproduce the dynamic.</p>
+                <div align="center" style="margin-top: 30px"><p><img style="width: 75%" src='images/narowed.jpg'></p></div>
+            </article>
+            
+            <article> 
+                <div align="center" style="margin-top: 50px"><p><img style="width: 100%" src='images/narrow2.jpg'></p></div>
+            </article>
+            
+            <article>  
+                <div align="center" style="margin-top: 0px"><p><img style="width: 100%" src='images/algo.svg'></p></div>
+            </article>
+            
+            <article> 
+                <div align="center" style="margin-top: 100px"><p><img style="width: 100%" src='images/profils-simple.svg'></p></div>
+            </article>
+
+            <article>
+                <div class="center" style="margin-top: -50px">  
+                    <pre class="brush: scala">val evolution = GA (
+  algorithm = profile(1, 1000, max),
+  lambda = 1,
+  termination = timed(3600 * 1000),
+  cloneProbability = 0.01
+)
+
+val nsga2 = steadyGA(evolution)(
+  "calibrateModel", 
+  model = replicateModel -- relativizeTask, 
+  inputs = List(
+    rMax -> ("1.0", "20000.0"),
+    distanceDecay -> ("0.0", "4.0"),
+    ...,
+    innovationImpact -> ("0.0", "2.0")),
+  objectives = List(
+    sumKsFailValue -> "0",
+    medPop -> "0",
+    medTime -> "0")
+)
+
+val isl = islandGA(nsga2)("island", 2000, counter(100000), 500)</pre>
+            </article>
+        </section>
+
+    </body>
+</html>

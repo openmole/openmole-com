@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>OpenMOLE</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushScala.js"></script>
+        <link href="js/syntaxhighlighter_3.0.83/styles/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+        <link href="js/syntaxhighlighter_3.0.83/styles/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">SyntaxHighlighter.all()</script> 
+
+        <link rel="stylesheet" href="js/reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write('<link rel="stylesheet" href="js/reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <!--h1>OpenMOLE</h1-->
+                    <h1 style="width:1200px; margin-top:-100px;margin-left: -100px">Speed up your Data processing with OpenMOLE</h1>	
+                    <img src="images/openmole2.png" alt="Up arrow">
+
+                    <p style="margin-top:100px">
+                        <small> <a href="mailto:mathieu.leclaire@iscpif.fr">Mathieu Leclaire</a></small>
+                        <small>    //    <a href="mailto:romain.reuillon@iscpif.fr">Romain Reuillon</a></small>
+                        <small>    //    <a href="mailto:markehammons@gmail.com">Mark Hammons</a></small>
+                    </p>
+                    <p style="margin-top:-20px"><small>
+                            ISCPIF   // BioEmergences // FBI
+                        </small></p>
+                    <div style="margin-top:-320px;margin-left: -1200px;">      
+                        <img src="images/isc.jpeg" style="width:4%; text-align:left" alt="geod">  <br/>
+                        <img src="images/bioemergencesLogo.png " style="width:15%" alt="geod"> <br/>
+                        <img src="images/fbi.png " style="width:15%" alt="geod"> 
+                    </div>
+                </section>
+
+
+
+
+  		<section>
+                    <h2> The methods</h2>  
+                    <table style="margin-left:-300px;" cellspacing="50px" >
+                        <tr>
+                            <td> <img src='images/cloud.jpg' style="width:350px"> </td>
+                            <td> <img src='images/genetics.jpeg'> </td>
+                            <td> <img src='images/sensitivity.jpg' style="width: 200px"> </td>
+                            <td> <img  src='images/exploration.jpeg'> </td>
+                            <td> <img src='images/calibration.jpeg'> </td>
+                        </tr>
+
+                        <tr>
+                            <td>Data processing</td>
+                            <td>Optimization</td>
+                            <td>Sensitivity analysis</td>
+                            <td>Design of experiments</td>
+                            <td>Calibration</td>
+                        </tr>
+                    </table>                    
+                </section>
+
+
+                <section>
+                    <img style="margin-left: 200px; height:700px;margin-top:-100px" src="images/skeleton-computer.jpg"/>  
+                    <p style="margin-top: -300px; margin-left:-250px; width: 400px">  
+                        These processings are<span style="color: #b1c436"> time consuming</span>   
+                    </p>             
+                </section>
+
+
+
+
+                <section>
+                    <h2>Computing power</h2><br/>
+                    <ul style="margin-left: -300px;list-style: none;vertical-align: middle; padding-top: 10px">
+                        <li style="padding:15px;">Personal computer // 1 to 8 cores  <img style="margin-left: 50px; vertical-align: middle;" src="images/pccores.png"/></li>
+                        <li style="padding:15px;">Computing server // up to 50 cores <img style="margin-left: 25px; vertical-align: middle" src="images/servercores.png"/></li>
+                        <li style="padding:15px;">Cluster // up to 200 cores <img style="margin-left: 165px; vertical-align: middle" src="images/clustercores.png"/></li>
+                        <li style="padding:15px;">Grid // <span style="color: #b1c436"> > 2000 cores </span><img style="margin-left: 365px; vertical-align: middle; width:300px" src="images/gridcores.jpg"/></li>
+                    </ul>
+                </section>
+
+
+
+                <section> 
+                    <table style='margin-top:-80px;margin-left:-150px;width:1400px'>
+                        <tr align='center;'>
+                            <td><img style="vertical-align: middle;width: 200px;" src='images/egi.jpg'></td>
+                            <td><h2><span style="color: #a8aaad;">European Grid</span></span> <span style="color: #0068b6;">Infrastructure</span></h2></td>
+                        </tr>
+                    </table> 
+                    <img style="width: 100%; margin-top: 50px" src="images/egimap.jpg"/>
+                </section>
+
+
+
+
+                <section>  
+                    <h2 style="margin-top:-100px;margin-bottom: 200px">What does <span style="color: #b1c436;">OpenMOLE</span> do ?</h2>
+                    <table style="width: 150%; margin-left: -300px">
+                        <tr align='center;'>
+                            <td>It exposes a workflow formalism for describing an <span style="color: #b1c436;"><strong> experiment</strong></span></td>
+                            <td><img style="width: 550px; margin-top: 20px; margin-bottom: 20px;vertical-align: middle" src='images/wf.png'></td>
+                        </tr>
+                        <tr align='center;'>
+                            <td>It <span style="color: #b1c436;"><strong>transparently delegates</strong></span> computational loads to massively parallel environments</td>
+                            <td><img style="width: 350px; margin-top: 20px; margin-bottom: 20px;vertical-align: middle" src='images/supercomputer.jpg'></td>
+                        </tr>
+                    </table>
+                </section>
+
+
+
+                <section>    
+                    <h2>Upscaling</h2>
+                    <img style="width: 100%; margin-top: 0px" src="images/scale.jpg"/>
+                    <p style="margin-top:40px;">Prototype small<br><span style="color: #b1c436;"><strong>Experiment large</strong></span></p>
+                </section>
+
+
+
+
+
+                <section>
+                    <h2 style="width: 1400px; margin-left: -200px">Embed <span style="color: #b1c436;">your algorithm</span> as a black box</h2>
+                    <img src="images/blackbox.jpg" style="width:100%">
+                    <h3 style="margin-top:-600px; margin-left:40px; width: 220px">
+                        C<br>R<br>C++<br>Java<br>Scala<br>Scilab<br>Octave<br>Python<br>Netlogo<br>...
+                    </h3>
+                </section>
+
+
+
+
+                <section> 
+                    <h2 style="margin-top: -100px">Workflow topology</h2>
+                    <table style="color: #777;background: #ffffff; height: 110%;">
+                        <tr class="fragment" style="border-top: -100px;">
+                            <td><img style="vertical-align: middle;" src="images/processingTaskNoIO.png"/></td>
+                            <td>A <span style="color: #b1c436;">Task</span> runs an executable,</td>
+                        </tr>
+                        <tr class="fragment" style="border-top: -100px;">
+                            <td><img src="images/processingTask.png"/></td>
+                            <td style="vertical-align: middle;">receives and produces <span style="color: #b1c436;">Variables</span>.</td>
+                        </tr>
+                        <tr class="fragment" style="border-top: -100px;">
+                            <td><img src="images/transition.png"/></td>
+                            <td style="vertical-align: middle;">Variables navigate from one Task to another by means of <span style="color: #b1c436;">Transitions</span></td>
+                        </tr>
+                        <tr class="fragment"style="border-top: -10px;" >
+                            <td><img src="images/transitionLoop.png"/></td>
+                            <td style="vertical-align: middle;">eventually doing <span style="color: #b1c436;">Loops</span>.</td>
+                        </tr>
+                    </table>
+                </section>
+
+
+
+
+                <section>
+                    <h2 style="margin-top:-100px;"> The design of experiments </h2> 
+                    <table style="margin-left:-300px; margin-top: 100px" cellspacing="5px" >
+                        <tr>
+                            <td><img src="images/imageSampling.png" style="width: 800px" alt="mozaique"></td>
+                            <td><img src="images/imageSamplingTable.png" alt="parameters"> </td>
+                        </tr>
+                        <tr>
+                            <td>Design you <span style="color: #b1c436">experiment</span> in OpenMOLE</td>
+                            <td>At runtime</td>
+                        </tr>
+                    </table>
+                </section>
+
+
+
+                <section> 
+                    <h2 style="margin-top: -100px">Computing environments</h2>
+                    <table style="color: #777;background: #ffffff; height: 110%;">
+                        <tr class="fragment">
+                            <td><img style="vertical-align: middle;" src="images/processingTask.png"/></td>
+                            <td>The same Task can be run localy</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td><img style="margin-top: 0px; margin-left: 5px; vertical-align: middle;" src="images/taskOnMultiCore.png"/></td>
+                            <td> or by taking leverage of the local <span style="color: #b1c436;">multicores</span></td>
+                        </tr>
+                        <tr class="fragment">
+                            <td><img style="margin-top: 0px; margin-left: 10px; vertical-align: middle;" src="images/taskOnPBS.png"/></td>
+                            <td> or on a <span style="color: #b1c436;">Cluster (PBS for instance)</span></td>
+                        </tr>
+                        <tr class="fragment">
+                            <td><img style="margin-top: 0px; margin-left: 5px; vertical-align: middle;" src="images/taskOnGrid.png"/></td>
+                            <td> or on the <span style="color: #b1c436;">Grid.</span></td>
+                        </tr>
+                        <tr class="fragment">
+                            <td></td>
+                            <td> ...</td>
+                        </tr>
+                    </table>
+                </section>
+
+
+                
+                <section style="margin-top: -70px">
+                    <h2>OpenMOLE from the <span style="color: #b1c436;">GUI</span></h2>
+                    <img src="images/gui.png" style="width:1100px">
+                </section>
+                
+                
+                
+                <section style="width:1700px;margin-left:-350px; margin-top: -90px">
+                    <h2>OpenMOLE from a <span style="color: #b1c436;">DSL</span></h2>
+                    <div>  
+                        <pre class="brush: scala">val i1 = Prototype[Int]("i1")
+val i2 = Prototype[Int]("i2")
+val j = Prototype[Int]("j")
+
+val hello = GroovyTask("hello", "j = Model.compute(i1, i2)")
+
+hello addInput i1
+hello addInput i2
+hello addOutput j
+hello addLib "/path/to/model.jar"
+
+val exploration = ExplorationTask(
+    "exploration",
+    Factor(i1, 0 to 100 by 2 toDomain) x 
+    Factor(i2, new UniformIntDistribution take 10)
+  )
+
+val ex = exploration -< (hello by 10 on biomed) toExecution        
+ex.start</pre>
+                    </div>
+                </section>
+
+                
+                
+                <section style="margin-top: -120px ; width: 1100px">
+                    <h2>OpenMOLE from a <span style="color: #b1c436;">Web server</span></h2>
+                    <img src="images/web.png" style="width:800px">
+                </section>
+                
+
+                <section class="fill"> 
+                    <img style="width: 100%" src='images/stallman.jpg'>
+                    <div style="margin-top: 50px">Download: <span style="color: #b1c436;"><strong>http://www.openmole.org</strong></span></div><br/>
+
+
+		    <table style="margin-left: 300px;">
+<tr>
+                    <td> <img  style="width: 60px" src='images/twitter.png'> </td>
+		    <td style= "vertical-align: middle">@OpenMOLE</td>
+</tr>
+</table>
+                </section>
+
+<section>
+  <td> <img  style="width: 600px" src='images/since2008.png'> </td>
+</section>
+
+                <section> 
+                    <table style="margin-top:-200px; padding-top: 100px">
+                        <tr >
+                            <td><h2 style="width: 1000px">The Bioemergences project</h2></td>
+                            <td><img style="width: 120px; vertical-align: middle" src='images/dataProcessingStamp.png'></td>
+                        </tr>
+                        <tr >
+                            <td><img style="height: 600px; vertical-align: middle" src="images/BioEmergencesCaptureWKF.png"/></td>
+                            <td style="height: 400px; vertical-align: middle">C<br/>Image processing<br/><br/><span style="color: #b1c436;">portal access</span><br/><br/>daily productions<br/>10000 jobs / day</td>
+                        </tr>
+                    </table>
+                    <div style="margin-top: 30px; font-style:italic;"><span style="color: #b1c436;"><strong>Ralf Mikut et al</strong></span>, Automated Processing of Zebrafish Imaging Data: A Survey, Zebrafish, 2013 </div>
+                </section>
+
+                <section> 
+                    <h2 style="width: 1000px;margin-top: -140px;">The Bioemergences project</h2>
+                    <div><img style="width: 300%;margin-top: 90px;" src='images/bioEmergencesWF.png'></div>
+                </section>
+            </div>
+
+            <script src="js/reveal.js/lib/js/head.min.js"></script>
+            <script src="js/reveal.js/js/reveal.min.js"></script>
+
+            <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+
+            </script>
+
+    </body>
+</html>

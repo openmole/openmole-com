@@ -1,0 +1,95 @@
+plan
+1
+Logo OpenMOLE
+<tagLine>
+
+
+
+2
+Already used in various scientific fields (biology, image processing, geography, food processing, neuroscience, environmental science, ...).
+
+Short term release cycle (3 months).
+Information, downloads, documentation: www.openmole.org
+
+Reference paper: Romain Reuillon et al, OpenMOLE, a workflow engine specifically tailored for the distributed exploration of simulation models, Future Generation Computer Systems, vol 29, num 8, pp. 1981-1990, 2013
+
+Project supported by 
+- the Complex System Institute and 
+- the project Geodivercity
+
+<logo ISC> <logo CNRS> <logo Geodiversity>
+
+
+3
+			A free and open-source project
+
+OpenMOLE is developped by the Complex System community. It relies on the 4 pilars of the open-source movement, meaning that the code can freely be executed, studied, modified and redistributed.
+
+This choice is part of the open science trend that we defend and which promotes the sharing and the reusabilty of code in scientific publications.
+As it is usually the case in the open-source movement, OpenMOLE invites anyone to contribute to the project by:
+- proposing helpful enhancements or use cases (shared with the community on the website),
+- proposing development features,
+- reporting bugs,
+- developing plugins.
+
+Access to: 
+- the source code and the bug tracker (www.openmole.org),
+- the user mailing list: users@list.openmole.org
+- the development mailing list: devs@list.openmole.org
+
+
+
+
+4
+                             Large scale computing
+
+- Compute transparently on multi-core machines, clusters, and grids: no particular knowledge is required to access massively parallel environments.
+
+- Embed your own programs in less than 5 clicks (C, C++, Java, Scala, Scilab, R, Python, Netlogo, ...),
+ 
+- Design your distributed process using a powerful workflow approach (loops, alternative processing, massive parallelism)
+
+- Prototype your workflow locally and take advantage of the parallelism with no extra effort: the Zero-deployment approach does not require any installation step on remote machines.
+
+- Use OpenMOLE as a scalable computing engine for your web portal (ex: bioemergences.eu is powered by OpenMOLE).
+
+
+
+
+5
+                            Explore your models
+
+- Embed your model
+
+- design your model exploration :
+	+ design of experiments, 
+	+ stochastic model replication,
+	+ calibration, 
+	+ sensitivity analysis,
+	+ ...
+
+- distribute the numerous executions of your model to explore it
+	+ on your multi-core computer // Speed up around 4
+	+ on a multi-core server // Speed up around 50
+	+ on a cluster           // Speed up arround 200
+	+ on a grid 		// Speed up > 1000
+
+- reuse your experiments on several models
+
+
+
+
+6
+                              OpenMOLE: For whom?
+			      OpenMOLE: For what?
+
+Are you a computer scientist? => Script your workflow!
+          <script screenshot>
+
+Do you make typos, or do you prefer graphical applications? => Use the click and run Application!
+		<gui screenshot>
+
+Do you need large scale computing facilities for your web site? Use the OpenMOLE web-server! 
+		<webserver screenshot>
+
+

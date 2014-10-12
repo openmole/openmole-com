@@ -1,0 +1,55 @@
+The calibration of complex system models with OpenMOLE
+
+A complex-system can be defined as a “system comprised of a great number of heterogeneous entities, among which
+local interactions create multiple levels of collective structure and organization”[1]. Using simulation models is required to observe the emergence of a collective structure from numerous local interactions since it is generally not predictable analytically. 
+
+The calibration of such models, representing multi-scale, stochastic and individual centered processes is computationally intensive. A numerical experimentation on these models (using the genetic algorithms, the sensitivity analysis, the viability approach, etc) might imply million of executions.
+
+This huge computational load can only be carried out by high performance computing environments, which are however tricky to access and use.
+
+OpenMOLE is born in the context of adressing this issue: how to run very large sets of experiments on the complex-system models ? OpenMOLE represents a large effort of simplification of the access of state of the art optimization and calibration models. It gives tools to modelers to easily access to large computing resources without being an expert in computer sciences.
+
+OpenMOLE offers a rich workflow system approach to design large scale optimization experiments. The naturally parallel aspects of the workflow structure enables to simply define independant replications of a model. OpenMOLE proposes: 
+- a simple workflow description embedding models as black boxes,
+- a transparent access to massively parallel computing environments (such as culsters, european computing Grid EGI, ...). 
+
+OpenMOLE is mature and has already helped modellers in the production of significant scientific results in various
+application fields: 
+- food processing [2], [3], 
+- biology [4],
+- bayesian networks [5],
+- environmental sciences [6], 
+- and recently in geography [7] in the context of the Geodivercity ERC
+
+[1] P. Bourgine, P. Chavalarias, E. Perrier, F. Amblard, F. Arlabosse, et al.
+French roadmap for complex systems 2008-2009. 2009.
+
+[2] Salma Mesmoudi, Nathalie Perrot, Romain Reuillon, Paul Bourgine, and
+Evelyne Lutton. Optimal viable path search for a cheese ripening process
+using a multi-objective ea. In ICEC 2010, International Conference on
+Evolutionary Computation, October 2010. 24-26 oct, Valencia, Spain.
+
+[3] M. Sicard, N. Perrot, S. Mesmoudi, S. Martin, R. Reuillon, and I. Al-
+varez. Development of a viability approach for reverse engineering in
+complex food processes: Application to a camembert cheese ripening
+process. adaptation of the viability theory. Journal of Food Engeneering
+(EFG), page submitted, 2011.
+
+[4] I. Junier, R. K. Dale, C. Hou, F. Kepes, and A. Dean. CTCF-mediated
+transcriptional regulation through cell type-specific chromosome orga-
+nization in the beta-globin locus. Nucleic Acids Research, 40(16):7718–
+7727, June 2012.
+
+[5] A. Tonda, E. Lutton, R. Reuillon, G. Squillero, and P. H. Wuillemin.
+Bayesian network structure learning from limited datasets through graph
+evolution. Genetic Programming, page 254–265, 2012.
+
+[6] Romain Lardy, Anne-Isabelle Graux, Bruno Bachelet, David R.C. Hill,
+and Gianni Bellocchi. Steady-state soil organic matter approximation
+model: application to the pasture simulation model. In International
+Environmental Modelling and Software Society, pages 769–776, 2012
+
+[7] Romain Reuillon, Sébastien Rey, Clara Schmitt, Mathieu Leclaire, and
+Denise Pumain. Algorithmes évolutionnaires sur grille de calcul pour le calibrage de mod ́
+eles géographiques. In Conférence France-Grilles, pages 12–16, 2012.
+

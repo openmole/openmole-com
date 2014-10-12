@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>OpenMOLE</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushScala.js"></script>
+        <link href="js/syntaxhighlighter_3.0.83/styles/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+        <link href="js/syntaxhighlighter_3.0.83/styles/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">SyntaxHighlighter.all()</script> 
+
+        <link rel="stylesheet" href="js/reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write('<link rel="stylesheet" href="js/reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <img src="images/cover.png" width="100%"/>
+                </section>
+
+
+                                
+                <section>
+                    <h2>2003 to 2008</h2>
+                    <img src ="images/foundation.png"/>
+                </section>
+                
+                <section> 
+                    <img src ="images/logosimexplorer.jpeg"/><br/><br/>
+                    <p><i>F. Amblard et al., MDA Compliant Design of SimExplorer A Software Tool to Handle Simulation Experimental Frameworks</i></p> 
+                    <br/>
+                    <p>"ergonomic interface for the specification of the experimental designs and the distribution of computations to launch the
+corresponding simulation experiments on parallel machines"</p>
+                </section>
+                
+                <section> 
+                    <img src="images/simexplorer.png"/>
+                </section>
+                
+                
+                <section> 
+                    <h2>Principles</h2>
+                    <ul>
+                        <li>Black box components</li>
+                        <li>Low coupling between the model and the design of experiments</li>
+                        <li>Chains of experiments</li>
+                    </ul>
+                </section>
+                
+                 <section> 
+                    <h2>Limitations</h2>
+                    <img src="images/trial-and-errorInverse.gif"/>
+                    <ul>
+                        <li>Distributed computing not included from the ground up</li>
+                        <li>No language to express design of experiments</li>
+                        <li>Very few applications</li>
+                    </ul>
+                    <br/><br/>
+                    <p style="text-align: center"><b>No wide adoption</b></p>
+                </section>
+                
+                <section>
+                    <h2>2008</h2>
+                    <img width="90%" src ="images/dynamite.jpg"/>
+                </section>
+
+                <section>
+                    <h2>Computing power</h2><br/>
+                    <ul style="margin-left: -300px;list-style: none;vertical-align: middle; padding-top: 10px">
+                        <li style="padding:15px;">Personal computer // 1 to 8 cores  <img style="margin-left: 50px; vertical-align: middle;" src="images/pccores.png"/></li>
+                        <li style="padding:15px;">Computing server // up to 50 cores <img style="margin-left: 25px; vertical-align: middle" src="images/servercores.png"/></li>
+                        <li style="padding:15px;">Cluster // up to 200 cores <img style="margin-left: 165px; vertical-align: middle" src="images/clustercores.png"/></li>
+                        <li style="padding:15px;">Grid // <span style="color: #b1c436"> > 2000 cores </span><img style="margin-left: 365px; vertical-align: middle; width:300px" src="images/gridcores.jpg"/></li>
+                    </ul>
+                </section>
+
+                <section> 
+                    <table style='margin-left:-150px;width:1400px'>
+                        <tr align='center;'>
+                            <td><img style="vertical-align: middle;width: 200px;" src='images/egi.jpg'></td>
+                            <td><h2><span style="color: #a8aaad;">European Grid</span></span> <span style="color: #0068b6;">Infrastructure</span></h2></td>
+                        </tr>
+                    </table> 
+                    <img style="width: 100%; margin-top: 50px" src="images/egimap.jpg"/>
+                </section>
+
+                <section>
+                    <h2>The mined road to the Grid</h2><br/>
+                    <img width="90%" src="images/cords.jpg"/>
+                    <!--<ul style="margin-left: -300px;">
+                        <li> how to <span style="color: #b1c436;"><strong>discover and reach</strong></span> all the machines of a VO ?</li>
+                        <li> how to deal with the <span style="color: #b1c436;"><strong>failing jobs</strong></span> ?</li>
+                        <li> what is the <span style="color: #b1c436;"><strong>OS</strong></span> on the remote machines ?</li>
+                        <li> what kind of <span style="color: #b1c436;"><strong>software</strong></span> are still installed on the remote machines ?</li>
+                        <li> what are the <span style="color: #b1c436;"><strong>software versions</strong></span> on the remote machines ?</li>
+                    </ul>
+                    <img src="images/dangerMine.png" alt="dboard" style="margin-left: 800px;">-->
+                </section>
+
+                <section>
+                    <h2>How to make it simple ?</h2>
+                    <img width="60%" src="images/toy.jpg"/>            
+                </section>    
+                
+                <section>
+                    <h2>The DREAM project</h2>
+                    <img  src="images/Camembert.jpg"/>   
+                </section>
+          
+                <section>
+                    <img width="100%" src="images/wfviab.png"/>            
+                </section>
+                
+                
+                <section> 
+                    <h2 style="margin-top: -100px">Formalism</h2>
+                    <table style="color: #777;background: #ffffff; height: 110%;">
+                        <tr style="border-top: -100px;">
+                            <td><img style="vertical-align: middle;" src="images/processingTaskNoIO.png"/></td>
+                            <td>A <span style="color: #b1c436;">Task</span> runs an executable,</td>
+                        </tr>
+                        <tr class="fragment" style="border-top: -100px;">
+                            <td><img src="images/processingTask.png"/></td>
+                            <td style="vertical-align: middle;">receives and produces <span style="color: #b1c436;">Variables</span>.</td>
+                        </tr>
+                        <tr class="fragment" style="border-top: -100px;">
+                            <td><img src="images/transition.png"/></td>
+                            <td style="vertical-align: middle;">Variables navigate from one Task to another by means of <span style="color: #b1c436;">Transitions</span></td>
+                        </tr>
+                        <tr class="fragment"style="border-top: -10px;" >
+                            <td><img src="images/transitionLoop.png"/></td>
+                            <td style="vertical-align: middle;">eventually doing <span style="color: #b1c436;">Loops</span>.</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>     
+                    <h2>A bottom up process</h2>
+                    <img width="100%" src="images/consulting.jpg"/>   
+                </section>
+                
+                <section>     
+                    <img width="100%" src="images/projectsNeurone.png"/>   
+                    <br/><br/>
+                    <p>Gilles: <i>"Hey guys, I would like to lauch 2 000 000 simulations?"</i></p>            
+                </section> 
+                                
+                <section>
+                    <p>The OpenMOLE team:</p>
+                    <img width="100%" src="images/scalability.jpg"/>            
+                </section> 
+                
+                <section>
+                    <img width="100%" src="images/tractor.jpg"/>
+                    <p style="margin-top: 10px">And OpenMOLE became scalable!</p>
+                </section> 
+                
+                 <section>     
+                     <img width="100%" src="images/simTRAP.png"/>   
+                    <br/><br/>
+                    <p>Jeremy <i>"Hey guys, I would like to run my NetLogo simulations!"</i></p>            
+                </section>
+                
+                <section>
+                    <img width="90%" src="images/lego.jpg"/> <br/>
+                    <p>OpenMOLE team: <i>"What is a Net Lego?"</i></p>
+                </section>
+                
+                <section>
+                    <img width="80%" src="images/geographerWord.jpg"/> <br/><br/>
+                    <p>And OpenMOLE discovered the  <span style="color: #b1c436;">geographer's world!</span></p>                  
+                </section> 
+                
+                <section>
+                    <img width="60%" src="images/biologist.jpg"/> <br/> 
+                    <p>The BioEmergences team <i>"Hey guys, the biologists need to do data processing on the Grid and do not want to download OpenMOLE "</i></p>
+                </section> 
+                
+                <section>
+                    <img width="90%" src="images/docteurmaboul.jpg"/> <br/>
+                    <p>OpenMOLE team: <i>"Biolo what?"</i></p>
+                </section> 
+                
+                <section>
+                    <img width="60%" src="images/BioEmergencesCaptureWKF.png"/> 
+                    <p>And OpenMOLE became <span style="color: #b1c436;">accessible through the web</span></p>                  
+                </section> 
+                
+                <section>
+                    <h2>Where is OpenMOLE now?</h2>
+                    <img height="520px" src="images/present-building.jpg"/>
+                </section>
+                
+                <section>
+                    <img src="images/openmoleversions.png" alt="dboard">
+                </section>
+               
+                <section>
+                    <h2>Fully functionnal application</h2>
+                    <img src="images/gui.png" alt="dboard" style="width: 600px"><br/><br/>
+                    Ergonomic and Scalable
+                </section>
+
+                
+                <section>
+                    <h2>Many methods</h2>
+                    <table style="margin-left:-300px;" cellspacing="50px" >
+                        <tr>
+                            <td> <img src='images/cloud.jpg' style="width:350px"> </td>
+                            <td> <img src='images/genetics.jpeg'> </td>
+                            <td> <img src='images/sensitivity.jpg' style="width: 200px"> </td>
+                            <td> <img  src='images/exploration.jpeg'> </td>
+                            <td> <img src='images/calibration.jpeg'> </td>
+                        </tr>
+
+                        <tr>
+                            <td>Data processing</td>
+                            <td>Optimization</td>
+                            <td>Sensitivity analysis</td>
+                            <td>Design of experiments</td>
+                            <td>Calibration</td>
+                        </tr>
+                    </table>
+                </section>
+
+                 <section>
+                    <h2>Widely adopted</h2>
+                    <table style="margin-left:-230px;" cellspacing="50px" >
+                        <tr>
+                            <td> <img src='images/oldmap.jpg' style="width:290px"> </td>
+                            <td> <img src='images/economy.jpg'> </td>
+                            <td> <img src='images/hamburger.jpg' style="width: 250px"> </td>
+                            <td> <img  src='images/biology.jpg' style="width: 300px"> </td>
+                        </tr>
+                        <tr>
+                            <td>Geography</td>
+                            <td>Economy</td>
+                            <td>Food processing</td>
+                            <td>Biology</td>
+                        </tr>
+                    </table>
+                        
+                  </section>  
+                
+               <section>
+                    <h2>Future</h2>
+                    <img src="images/futurebuilding.png" alt="dboard" style="width:500px">
+                </section>
+                
+                <section>
+                    <h2>Advanced methods</h2><br/><br/>
+                    <ul>
+                        <li>Integrate existing methods</li>
+                        <li>Design new methods</li>
+                    </ul><br/><br/>
+                    Create a dynamic on concieving large scale DoE
+                </section>
+                
+                
+                <!--<section>
+                    <h2>Focus on models</h2>
+                    <img src="images/tuto/042.png" alt="dboard">
+                </section>-->
+                
+                <section>
+                    <h2>Focus on model</h2>
+                    <img src="images/focusModel.png" alt="dboard">
+                </section>
+                
+                <section>
+                    <h2>Collaborative platform</h2>
+                    
+                    <img style="float: left" width="500px" src="images/collab.jpeg"/>
+                    <ul style="float: right; margin-top: 60px">
+                        <li>Share data</li>
+                        <li>Share models</li>
+                        <li>Share explorations</li>
+                        <li>Share results</li>
+                        <li>Publish / reproduce</li>
+                    </ul>
+                </section>
+                
+
+                <section>
+                    <h2 style="margin-bottom: 60px">Address multi-modeling</h2>
+                    <img style="float: left" width="500px" src="images/crocket.jpg"/>
+                    <ul style="float: right; margin-top: 150px">
+                        <li>Compare several models</li>
+                        <li>Explore model familly</li>
+                    </ul>
+                </section>
+                
+                <!--<section>
+                    <h2>Model fitnesses</h2>
+                    <img src="images/dartBoard.jpg" alt="dboard" style="width: 800px">
+                </section>
+
+                <section>
+                    <h2 >Model fitnesses : How to reach my target ?</h2><br/>
+                    <img src="images/dartNewbie.jpg" alt="geod" style="width: 800px">
+                </section>
+
+                <section>
+                    <h2>Model fitnesses : let's start smooth !</h2><br/>
+                    <img src="images/dartChild.jpg" alt="geod">
+                </section>
+
+                <section>
+                    <h2>Modelers empowerment</h2><br/>
+                    <img src="images/dartPlayer.jpeg" alt="geod" style="width: 600px"><br/>
+                    An autonmous modeler
+                </section>-->
+
+            </div>
+
+            <script src="js/reveal.js/lib/js/head.min.js"></script>
+            <script src="js/reveal.js/js/reveal.min.js"></script>
+
+            <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+
+            </script>
+
+    </body>
+</html>

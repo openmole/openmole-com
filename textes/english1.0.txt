@@ -1,0 +1,22 @@
+It’s finally there!
+
+After 6 years of hard work we made it to 1.0 (Heroic Hypo). It combines stability and ergonomic interfaces to provide the best model exploration tool ever made. OpenMOLE is a workflow engine designed to leverage the computing power of distributed execution environments for naturally parallel processes. A process is told naturally parallel if the same computation runs many times for a set of different inputs, such as model experiment or data processing…
+
+We are very proud of this success, that has been made possible thanks to the effort and support of a dynamic community of developers, users and also several academic funding.
+
+This version has mostly focus on stabilization, with some novelties nevertheless:
+* the distributed computing feature of OpenMOLE are now very robust and efficient,
+* the evolutionary algorithm part has matured and is usable to explore models from the console API,
+* a new distributed environments (SLURM) is now available.
+
+In the next versions:
+* the graphical interface will be muti-user, web based and run in the browser,
+* new environments will be provided (Condor, SGE),
+* advanced methods such as genetic algorithm will be usable from the graphical interface,
+* it will be possible to generate console scripts from a graphical workflow,
+* bootstrapping methods that quickly and automatically embed your models in OpenMOLE will be implemented.
+
+The OpenMOLE team.
+
+
+
