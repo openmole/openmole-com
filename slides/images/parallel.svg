@@ -104,7 +104,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -119,19 +119,28 @@
        height="1877.066"
        width="1062.7816"
        id="rect4274"
-       style="fill:#ffe6d5;fill-opacity:1;stroke:#483737;stroke-width:2.93390369;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+       style="fill:#ffe6d5;fill-opacity:1;stroke:#483737;stroke-width:2.93390369;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <rect
        style="fill:#ffe6d5;fill-opacity:1;stroke:#483737;stroke-width:2.93390346;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4267"
        width="1062.2699"
        height="1877.066"
        x="-3016.7354"
-       y="-481.1788" />
+       y="-481.1788"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <path
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 2;stroke-dashoffset:0"
        d="m -1151.1168,-419.36834 c -3.1767,1340.67674 -3.1767,1340.67674 -3.1767,1340.67674"
        id="path3973"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <path
        transform="translate(-1994.2412,-68.309635)"
        d="m 425.71428,300.93362 a 131.42857,122.85714 0 1 1 -262.85715,0 131.42857,122.85714 0 1 1 262.85715,0 z"
@@ -141,7 +150,10 @@
        sodipodi:cx="294.28571"
        id="path6634-5-7"
        style="fill:#d4ff2a;fill-opacity:1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       sodipodi:type="arc" />
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <path
        sodipodi:type="arc"
        style="fill:#e9afaf;fill-opacity:1;stroke:#5c1900;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
@@ -151,7 +163,10 @@
        sodipodi:rx="131.42857"
        sodipodi:ry="122.85714"
        d="m 425.71428,300.93362 a 131.42857,122.85714 0 1 1 -262.85715,0 131.42857,122.85714 0 1 1 262.85715,0 z"
-       transform="matrix(-1,0,0,1,-1405.6698,-59.06603)" />
+       transform="matrix(-1,0,0,1,-1405.6698,-59.06603)"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;fill:#5c1900;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
@@ -159,9 +174,9 @@
        y="260.32556"
        id="text8703-0"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/reuillon/Documents/Vie/Recherche/Communications/OpenMOLE/egee user forum 2010/egee10Uppsala/img/parallel.png"
-       inkscape:export-xdpi="81.309624"
-       inkscape:export-ydpi="81.309624"><tspan
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534"><tspan
          sodipodi:role="line"
          id="tspan8705-5"
          x="-1770.8458"
@@ -174,10 +189,16 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        inkscape:connection-end="#g3891"
-       inkscape:connection-end-point="d4" />
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <g
        transform="translate(-1706.4484,-399.9921)"
-       id="g3891">
+       id="g3891"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534">
       <g
          id="g3919">
         <g
@@ -231,7 +252,10 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        inkscape:connection-end="#g3996"
-       inkscape:connection-end-point="d4" />
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <path
        style="fill:none;stroke:#5c1900;stroke-width:17.71699905;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:177.17;display:inline"
        d="m -1568.5806,236.17049 284.7498,18.25624"
@@ -239,7 +263,10 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        inkscape:connection-end="#g4014"
-       inkscape:connection-end-point="d4" />
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <path
        style="fill:none;stroke:#5c1900;stroke-width:17.71653557;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:35.43307087, 17.71653543;stroke-dashoffset:177.16534409;display:inline"
        d="m -1616.0283,327.17395 373.7813,375.41417"
@@ -247,10 +274,16 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        inkscape:connection-end="#g4032"
-       inkscape:connection-end-point="d4" />
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <g
        id="g3996"
-       transform="translate(-1706.4484,-107.8046)">
+       transform="translate(-1706.4484,-107.8046)"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534">
       <g
          id="g3998">
         <g
@@ -299,7 +332,10 @@
     </g>
     <g
        transform="translate(-1706.4484,184.3829)"
-       id="g4014">
+       id="g4014"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534">
       <g
          id="g4016">
         <g
@@ -348,7 +384,10 @@
     </g>
     <g
        id="g4032"
-       transform="translate(-1706.4484,714.0704)">
+       transform="translate(-1706.4484,714.0704)"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534">
       <g
          id="g4034">
         <g
@@ -401,7 +440,10 @@
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        transform="matrix(0.91958985,-0.87728121,0.87728121,0.91958985,-373.6673,-1156.1046)"
        inkscape:transform-center-x="571.65"
-       inkscape:transform-center-y="-158.83362"><flowRegion
+       inkscape:transform-center-y="-158.83362"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534"><flowRegion
          id="flowRegion4056"><rect
            id="rect4058"
            width="335.87573"
@@ -414,7 +456,10 @@
        transform="matrix(1.1409484,-0.55991466,0.55991466,1.1409484,-34.528822,-665.49813)"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        id="flowRoot4062"
-       xml:space="preserve"><flowRegion
+       xml:space="preserve"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534"><flowRegion
          id="flowRegion4064"><rect
            y="-4.5060501"
            x="-1281.631"
@@ -427,7 +472,10 @@
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        transform="matrix(1.2688882,0.07204573,-0.07204573,1.2688882,163.66116,261.90594)"
        inkscape:transform-center-x="274.2982"
-       inkscape:transform-center-y="-525.84267"><flowRegion
+       inkscape:transform-center-y="-525.84267"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534"><flowRegion
          id="flowRegion4072"><rect
            id="rect4074"
            width="335.87573"
@@ -441,7 +489,10 @@
        transform="matrix(0.90740653,0.88987709,-0.88987709,0.90740653,-303.11606,1501.5193)"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        id="flowRoot4080"
-       xml:space="preserve"><flowRegion
+       xml:space="preserve"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534"><flowRegion
          id="flowRegion4082"><rect
            y="-4.5060501"
            x="-1281.631"
@@ -458,10 +509,16 @@
        inkscape:connection-end="#g4100"
        inkscape:connection-end-point="d4"
        inkscape:connection-start="#g4138"
-       inkscape:connection-start-point="d4" />
+       inkscape:connection-start-point="d4"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <g
        id="g4100"
-       transform="translate(-2788.7753,162.12877)">
+       transform="translate(-2788.7753,162.12877)"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534">
       <g
          id="g4102">
         <g
@@ -518,10 +575,16 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        inkscape:connection-end="#g4138"
-       inkscape:connection-end-point="d4" />
+       inkscape:connection-end-point="d4"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <g
        id="g4138"
-       transform="translate(50,-193.34523)">
+       transform="translate(50,-193.34523)"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534">
       <path
          sodipodi:type="arc"
          style="fill:#e9afaf;fill-opacity:1;stroke:#5c1900;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
@@ -555,12 +618,18 @@
        height="118.36754"
        x="-2938.989"
        y="443.59717"
-       ry="11.048544" />
+       ry="11.048544"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot4153"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       transform="matrix(1.13285,0,0,1.13285,273.52612,-312.14181)"><flowRegion
+       transform="matrix(1.13285,0,0,1.13285,273.52612,-312.14181)"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534"><flowRegion
          id="flowRegion4155"><rect
            id="rect4157"
            width="303.125"
@@ -571,7 +640,10 @@
        xml:space="preserve"
        id="flowRoot4249"
        style="font-size:63.78369141000000297px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#483737;fill-opacity:1;stroke:none;font-family:Bitter;-inkscape-font-specification:Bitter"
-       transform="matrix(1.2519618,0,0,1.2519618,731.69925,-212.36587)"><flowRegion
+       transform="matrix(1.2519618,0,0,1.2519618,731.69925,-212.36587)"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534"><flowRegion
          id="flowRegion4251"><rect
            id="rect4253"
            width="771.875"
@@ -584,7 +656,10 @@
        transform="matrix(22.659999,0,0,22.659999,60869.177,-23486.513)"
        style="font-size:3.53045033999999980px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#483737;fill-opacity:1;stroke:none;font-family:Bitter;-inkscape-font-specification:Bitter"
        id="flowRoot4257"
-       xml:space="preserve"><flowRegion
+       xml:space="preserve"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/staticRuntime.png"
+       inkscape:export-xdpi="49.027534"
+       inkscape:export-ydpi="49.027534"><flowRegion
          id="flowRegion4259"><rect
            y="1089.9167"
            x="-2753.125"
