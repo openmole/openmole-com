@@ -15,7 +15,10 @@
    inkscape:version="0.48.4 r9939"
    width="1500"
    height="182"
-   sodipodi:docname="wires.png">
+   sodipodi:docname="wires.svg"
+   inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/envs.png"
+   inkscape:export-xdpi="60"
+   inkscape:export-ydpi="60">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -44,8 +47,8 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="0.64111015"
-     inkscape:cx="865.32566"
-     inkscape:cy="252.90451"
+     inkscape:cx="809.3597"
+     inkscape:cy="-33.921471"
      inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -3760,7 +3763,10 @@ t8+P04wf7+vKoVVD+gyCbe/G+fTAA87/B6Lt4IteRtrXAAAAAElFTkSuQmCC
 "
      id="image10"
      x="1.5338761"
-     y="3.1195812" />
+     y="3.1195812"
+     inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/envs.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
   <rect
      style="fill:#502d16;fill-opacity:1;stroke:none"
      id="rect2987"
@@ -3773,7 +3779,7 @@ t8+P04wf7+vKoVVD+gyCbe/G+fTAA87/B6Lt4IteRtrXAAAAAElFTkSuQmCC
      xml:space="preserve"
      id="flowRoot2989"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-     transform="translate(-51.588877,-90.854403)"><flowRegion
+     transform="matrix(0.92191223,0,0,0.92191223,-46.077284,-81.707555)"><flowRegion
        id="flowRegion2991"><rect
          id="rect2993"
          width="143.38235"
@@ -3790,7 +3796,7 @@ t8+P04wf7+vKoVVD+gyCbe/G+fTAA87/B6Lt4IteRtrXAAAAAElFTkSuQmCC
      id="rect3774"
      style="fill:#502d16;fill-opacity:1;stroke:none" />
   <flowRoot
-     transform="translate(-49.831064,-45.575733)"
+     transform="matrix(0.92191223,0,0,0.92191223,29.543265,-36.449456)"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
      id="flowRoot3776"
      xml:space="preserve"><flowRegion
@@ -3813,7 +3819,7 @@ t8+P04wf7+vKoVVD+gyCbe/G+fTAA87/B6Lt4IteRtrXAAAAAElFTkSuQmCC
      xml:space="preserve"
      id="flowRoot3786"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-     transform="translate(-49.440439,-0.70801335)"><flowRegion
+     transform="matrix(0.92191223,0,0,0.92191223,185.90339,8.3907976)"><flowRegion
        id="flowRegion3788"><rect
          id="rect3790"
          width="143.38235"
@@ -3823,14 +3829,14 @@ t8+P04wf7+vKoVVD+gyCbe/G+fTAA87/B6Lt4IteRtrXAAAAAElFTkSuQmCC
          style="fill:#ffffff" /></flowRegion><flowPara
        id="flowPara3792">Cluster</flowPara></flowRoot>  <rect
      ry="0"
-     y="138.64635"
+     y="137.54341"
      x="1.5338761"
-     height="47.426136"
+     height="48.529076"
      width="1500.1216"
      id="rect3794"
      style="fill:#502d16;fill-opacity:1;stroke:none" />
   <flowRoot
-     transform="translate(-49.440439,45.839067)"
+     transform="matrix(0.92191223,0,0,0.92191223,647.90339,54.386407)"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
      id="flowRoot3796"
      xml:space="preserve"><flowRegion
