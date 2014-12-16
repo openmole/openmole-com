@@ -15,22 +15,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 
-        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-        <script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushScala.js"></script>
-        <link href="js/syntaxhighlighter_3.0.83/styles/shCoreEclipse.css" rel="stylesheet" type="text/css" />
-        <link href="js/syntaxhighlighter_3.0.83/styles/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/syntaxhighlighter/scripts/shCore.js"></script>
+        <script type="text/javascript" src="js/syntaxhighlighter/scripts/shBrushScala.js"></script>
+        <link href="js/syntaxhighlighter/styles/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+        <link href="js/syntaxhighlighter/styles/shThemeEclipse.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript">SyntaxHighlighter.all()</script> 
 
-        <link rel="stylesheet" href="reveal.js/css/reveal.min.css">
-        <link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="js/reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/default.css" id="theme">
 
         <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
 
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
-            document.write('<link rel="stylesheet" href="reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+            document.write('<link rel="stylesheet" href="js/reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
         </script>
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
@@ -314,13 +314,13 @@ ex.start</pre>
 
         </div>
 
-        <script src="reveal.js/lib/js/head.min.js"></script>
-        <script src="reveal.js/js/reveal.min.js"></script>
+        <script src="js/reveal.js/lib/js/head.min.js"></script>
+        <script src="js/reveal.js/js/reveal.min.js"></script>
 
         <script>
 
             // Full list of configuration options available here:
-            // https://github.com/hakimel/reveal.js#configuration
+            // https://github.com/hakimel/js/reveal.js#configuration
             Reveal.initialize({
                 controls: true,
                 progress: true,
@@ -329,24 +329,24 @@ ex.start</pre>
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
                 transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-                // Optional libraries used to extend on reveal.js
+                // Optional libraries used to extend on js/reveal.js
                 dependencies: [
-                    {src: 'reveal.js/lib/js/classList.js', condition: function() {
+                    {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
                             return !document.body.classList;
                         }},
-                    {src: 'reveal.js/plugin/markdown/marked.js', condition: function() {
+                    {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
                             return !!document.querySelector('[data-markdown]');
                         }},
-                    {src: 'reveal.js/plugin/markdown/markdown.js', condition: function() {
+                    {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
                             return !!document.querySelector('[data-markdown]');
                         }},
-                    {src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                    {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
                             hljs.initHighlightingOnLoad();
                         }},
-                    {src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+                    {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
                             return !!document.body.classList;
                         }},
-                    {src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+                    {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
                             return !!document.body.classList;
                         }}
                 ]
