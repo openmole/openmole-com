@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <link rel="stylesheet" href="js/reveal.js-min/css/reveal.min.css">
-        <link rel="stylesheet" href="js/reveal.js/css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/white.css" id="theme">
 
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
@@ -44,6 +44,14 @@
             border:none; 
             box-shadow:none;
           }
+          
+          #logos { 
+            width: 960px; // Change this according to the width you want. 
+            height: 500px; // Change this as well 
+            margin: 0 auto 0 auto; 
+            text-align: center; // Will center the images contained in the div 
+          } 
+
         </style>
     </head>
 
@@ -56,23 +64,30 @@
  
     <section>
         <img src="./images/openmole.png"/> <br/><br/>
-        <q><b>Open MO</b>de<b>L</b> <b>E</b>xperiment</q>
+        <h2>Open MOdeL Experiment</h2>
     </section>
  
     <section>
         <q><b>Mathieu Leclaire</b><br/>
             <b> Romain Reuillon</b><br/>
             <b> Jonathan Passerat-Palmbach</b><br/>
-        </q> <br/><br/>
-        <img src="./images/isc_vert.png" style="position: absolute;bottom:-250px;left: -180px"/>
-        <img src="./images/geocite.png" style="position: absolute;bottom:-250px;left: 240px"/>
-        <img src="./images/geoDiverCity.jpg" width="55%" style="position: absolute;bottom:-150px;left: 600px"/>
-        <img src="./images/Biomedia_blue_M_IC.png" width="35%" style="position: absolute;bottom:+0px;left: 0px"/>
-        <img src="./images/dHCP_official.png" width="25%" style="position: absolute;bottom:+0px;left: 500px"/>
+        </q> 
+        <table>
+          <tr>
+            <td><img src="./images/isc_vert.png" /></td>
+            <td><img src="./images/Biomedia_blue_M_IC.png"  /></td>
+            <td><img src="./images/geocite.png" /></td>
+          </tr>
+      </table>
+      <div id="logos">
+          <img src="./images/dHCP_official.png"  width="15%" />
+          <img src="./images/ERC_funders_logo.jpg" width="20%"/>
+          <img src="./images/geoDiverCity.jpg"   width="25%" />
+      </div>
     </section>
 
     <section>
-        <img src="./images/triangle.png" width="850px"/></q><br/><br/><br/>
+        <img src="./images/triangle.png" width="850px"/><br/><br/><br/>
         <q><b>The Complex system</b> modelisation<br/></q>
     </section>
 
@@ -96,53 +111,61 @@
 
 
     <section>
-        <img src="./images/wires.png " width="180%" style="position: absolute;bottom:200px;right: -380px"/> <br/>
+        <img src="./images/wires.png " width="180%"/> <br/>
         <q><b>Naturally parallel</b> algorithms permit to leverage parallelism</q>
     </section>
 
     <section>
-        <q><i> The Chromosome structuring</i></q>
-        <img src="./images/chromosome.png" width="85%" style="position: relative;bottom:-200px;right:320px;"><br>
-        <q style="position: relative;bottom:150px;right:-330px;">C++ model <br/>
-            2 days per simulation for 1600 simulations <br/>= <b>8.5 years CPU time</b></q><br/>
+        <h2>Chromosome structuring</h2>
+
+          <img src="./images/chromosome.png" width="70%" align="left"><br>
+        <div style="text-align: right">
+            C++ model <br/>
+            2 days per simulation for 1600 simulations <br/>= <b>8.5 years CPU time</b><br/>
+        </div>
     </section>
 
     <section>
-        <q><i>The SimTRAP project</i></q>
-        <img src="./images/simTRAP.png" width="85%" style="position: relative;bottom:-200px;right:320px;"><br>
-        <q style="position: relative;bottom:150px;right:-330px;">Netlogo model <br/>
-            5 mins per simulation for 100000 simulations <br/>= <b>1 year CPU time</b></q><br/>
+        <h2>The SimTRAP project</h2>
+        <img src="./images/simTRAP.png" width="60%" align="left"><br>
+        <div style="text-align: right">
+          Netlogo model <br/>
+          5 mins per simulation for 100,000 simulations <br/>= <b>1 year CPU time</b><br/>
+        </div>
     </section>
 
     <section>
-        <q><i>The Simpop project</i></q>
-        <img src="./images/simpop.png" width="85%" style="position: relative;bottom:-200px;right:320px;"><br>
-        <q style="position: relative;bottom:150px;right:-330px;">Scala model <br/>
-            2 secs per simulation for<br/> 500 000 000 simulations <br/>= <b>30 years CPU time</b></q><br/>
+        <h2>The Simpop project</h2>
+        <img src="./images/simpop.png" width="60%" align="left"><br>
+        <div style="text-align: right">
+          Scala model <br/>
+          2 secs per simulation for<br/> 500,000,000 simulations <br/>= <b>30 years CPU time</b><br/>
+        </div>
     </section>
 
 
     <section>
-        <q><i>The Bioemergences project</i></q>
-        <img src="./images/BioEmergencesCaptureWKF.png" width="60%"
-             style="position: relative;bottom:-100px;right:320px;"><br>
-        <q style="position: relative;bottom:270px;right:-330px;">C model - Portal access<br/>
-            Daily production<br/> <b>10000 hours / day</b></q><br/>
+      <h2>The Bioemergences project</h2>
+        <img src="./images/BioEmergencesCaptureWKF.png" width="70%" align="left"><br>
+        <div style="text-align: right">
+          C model - Portal access<br/>
+          Daily production<br/> <b>10,000 hours / day</b><br/>
+      </div>
     </section>
           
           
     <section>
-        <q> <i>What does <b>OpenMOLE</b> do ?</i><br/><br/></q>
+        <h2>OpenMOLE in 3 steps</h2>
         <img src="./images/openmoleGalRaw.png" width="135%"><br>
     </section>
-
+  
     <section>
+        <h3>Embed your model as a <b>black box</b></h3>
         <img src="./images/blackbox.png">
-        <q>Embed your model as a <b>black box</b></q>
     </section>
           
     <section>
-        <q><b>Zero deployment</b> approach:</q>
+        <h2><b>Zero deployment</b> approach</h2>
         <ul>
           <li>Code is embedded with runtime</li>
           <li>Ships to remote environment</li>
@@ -152,35 +175,37 @@
     </section>
 
     <section>
+        <h2>Naturally parallel formalism to design experiments</h2>
         <img src="./images/wf.png" width="120%"/><br/><br/>
-        <q>A <b>naturally parallel formalism</b> to design experiments</q>
-    </section>
-
-    
-    <section data-background-color="rgb(195, 1, 53)">
-        <img src="./images/mpi.gif" width="80%"/><br/><br/>
-      <q><b>Parallelisation by message / Task Parallelism</b></q><br/><br/>
-      Example: Spark, MPI, ...
     </section>
           
+    <section data-background-color="rgb(1, 195, 23)">
+      <h2>What OpenMOLE does</h2>
+      <img src="./images/staticRuntime.png" width="60%"/> <br/><br/>
+      <b>Data parallelism</b>
+    </section>
+
+    <section data-background-color="rgb(195, 1, 53)">
+      <h3>What OpenMOLE does not</h3>
+      <img src="./images/mpi.gif" width="60%"/><br/><br/>
+    <b>Parallelisation by message / Task Parallelism</b><br/>
+    <i>Example: Spark, MPI, ...</i>
+  </section>
+  
     <section>
-        <img src="./images/staticRuntime.png" width="100%" <br/>
-        <q><b>Data parallelism</b></q>
+        <h2>Powered by EGI</h2>
+        <h4>(and others)</h4>
+        <img src="./images/egi2.jpg" width="70%">
     </section>
 
     <section>
-        <img src="./images/egi2.jpg" width="110%">
-        <q>The <b>Grid</b></q>
-    </section>
-
-    <section>
-      <img src="./images/no_idea.jpg" width="110%">
-      <q>Hard to use...</b></q>
+      <h2>So hard to use...</h2>
+      <img src="./images/no_idea.jpg" width="70%">
     </section>
           
     <section>
       <img src="./images/data_transfers.svg" width="110%">
-      <q>Automatic data transfers and Replica management</b></q>
+      <q>Automatic data transfers and Replica management</q>
     </section>      
       
     <section>
@@ -188,6 +213,7 @@
     </section>
 
     <section>
+      <h2>A workflow</h2>
         <pre style="brush: scala"><code>
 val i   = Val[Double]        
 val res = Val[Double]        
@@ -204,47 +230,64 @@ val env = LocalEnvironment(5)
 
 val ex = exploration -< (model on env) start
         </code></pre><br>
-        <q>A workflow</q>
     </section>
     
     <section>
-        <img src="./images/guiwebscript.png" width="100%" style="position: relative;bottom:0px;right:0px;"><br>
-        <q>The application</q>
+        <h2>Web Application</h2>
+        <img src="./images/guiwebscript.png" width="100%" style="position: relative;bottom:0px;right:0px;">
     </section>
 
     <section>
+        <h2>Console interface</h2>
         <img src="./images/console.png" width="85%" style="position: relative;bottom:0px;right:0px;"><br>
-        <q>The console</q>
-        <q>The console</q>
     </section>
     
     <section>
+          <h2>Towards a <b>multi-user</b> web platform</h2>
          <img src="./images/multiuser.jpg" width="85%" style="position: relative;bottom:0px;right:0px;"><br>
-         <q>Towards a <b>multi-user</b> web platform</q>
     </section>
     
     <section>
+        <h2>Towards <b>graphical</b> workflows</h2>
         <img src="./images/gui.png" width="85%" style="position: relative;bottom:0px;right:0px;"><br>
-        <q>Towards <b>graphical</b> editing</q>
     </section> 
 
     <section>
-        <q><b>openmole.org</b><br/><br/>
-         OpenMOLE Mailing List: <b>list.openmole.org</b></q>
-    </section>
-
+      <h2>Useful Links</h2>
+      <table>
+        <tr>
+          <td>Documentation</td>
+          <td><a href="http://www.openmole.org">www.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Mailing-list</td>
+          <td><a href="http://list.openmole.org">list.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Development version</td>
+          <td><a href="http://next.openmole.org">next.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Source code</td>
+          <td><a href="https://github.com/openmole/openmole">github.com/openmole</a></td>
+        </tr>
+        <tr>
+          <td>Market place</td>
+          <td><a href="https://github.com/openmole/openmole-market">github.com/openmole-market</a></td>
+        </tr>
+      </table>
+    </section>  
+  
     <section>
-        <q><b>Hands-on</b><br/><br/>
+        <h2>Hands-on</h2>
           <a href="https://github.com/openmole/openmole-market">openmole-market</a><br/>
           Full examples available
-        </q>
     </section>
 
     <section>
-        <q><b>Setup your environment</b><br/><br/>
+        <h2>Setup your environment</h2>
          Download openmole: <a href="http://next.openmole.org">next.openmole.org</a><br/>
-         Don't close the tab you'll need it for the documentation ;)<br/>
-      </q>
+         <i>Don't close the tab you'll need it for the documentation ;)</i><br/>
       
         <pre><code>
 java -version
@@ -255,46 +298,49 @@ OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
     </section>
   
     <section>
-        <q><b>~/.openmole</b><br/><br/>
+        <h2>~/.openmole</h2>
          Stores your preferences<br/>
          Maintains a table of file locations<br/>
          Can grow rapidly in number of files<br/>
          => move it to a folder without quota restrictions<br/>
-      </q>
     </section>
                 
     <section>
-        Launch OpenMOLE<br/><br/>
+      <h2>Launch OpenMOLE</h2>
         Command-line console: openmole <b>-c</b><br/>
         Web UI: openmole<br/>
     </section>
   
     <section>
-        <q><b>1st example</b><br/><br/>
-         Pi Monte-Carlo calculation</q>
+        <h2>1st example</h2>
+         Pi Monte-Carlo calculation
         <a href="http://www.doc.ic.ac.uk/~jpassera/openmole-tutorial-material">www.doc.ic.ac.uk/~jpassera/openmole-tutorial-material</a>
     </section>
 
     <section>
-        <q><b>1st example</b><br/><br/>
-         DoE to achieve</q>
-        <img src="images/runtime_pi.png" />
+        <h2>1st example</h2>
+      DoE to achieve<br/>
+        <img src="images/runtime_pi.png" width="65%"/>
     </section>
             
     <section>
-        <q><b>1st example</b><br/><br/>
+        <h2>1st example</h2>
          Add variables declaration<br/>
          Define exploration<br/>  
          Define environment<br/>
-      </q>
     </section>
   
     <section>
-        <q><b>1st example</b><br/><br/>
+        <h2>1st example</h2>
          Remote environment?<br/>
-         PBS, Condor, Slurm, EGI, ...<br/>  
-         Define <b>Authentication</b><br/>
-      </q>
+        <ul>
+         <li>PBS</li>
+         <li>Slurm</li>
+         <li>Condor</li>
+         <li>EGI</li>
+         <li>...</li>
+        </ul><br/><br/>
+        Define <b>Authentication</b>
     </section>
   
     <section>
@@ -302,32 +348,29 @@ OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
     </section>  
       
     <section>
-         <h2>Hooks</h2><br/>
+         <h2>Hooks</h2>
          Tasks are mute<br/>  
          <b>Hooks</b> extract content from the dataflow<br/>
-          Send (intermediate) results to screen, or file, ...<br/>
-          
-        <img src="images/hook_model.svg" />
+      
+        <img src="images/hook_model.png" width="50%"/>
 
         <pre class="brush: scala"><code>
 exploration -< (model on env) >- (average hook ToStringHook())
         </code></pre>
-      </q>
     </section>                
       
     <section>
-         <h2>Grouping</h2><br/>
+         <h2>Grouping</h2>
          Short jobs don't cope well with distributed computing<br/>  
          Group <b>multiple tasks</b> in the <b>same batch job</b><br/>
 
         <pre class="brush: scala"><code>
 exploration -< (model on env by 10) >- (average hook ToStringHook())
         </code></pre>
-      </q>
     </section>          
 
     <section>
-         <h2>Errors</h2><br/>
+         <h2>Errors</h2>
         <pre class="brush: scala"><code>
 exploration -< (model on env by 10) >- (average hook ToStringHook())
 errors(env)
@@ -336,19 +379,18 @@ errors(env)
         <pre class="brush: scala"><code>
 logger.level("FINE")
         </code></pre>        
-      </q>
     </section>          
           
     <section>
-        <q><b>2nd example</b><br/><br/>
-         Tree leaves classifier</q>
+        <h2>2nd example</h2>
+         Tree leaves classifier
         <a href="http://www.doc.ic.ac.uk/~jpassera/openmole-tutorial-material">www.doc.ic.ac.uk/~jpassera/openmole-tutorial-material</a>
     </section>
   
     <section>
-        <q><i>Random Forest </i></q>
-        <img src="./images/DoE_random_forests.png" width="75%" style="position: relative;bottom:-200px;right:320px;"><br>
-        <q style="position: relative;bottom:150px;right:-330px;">Design<br/> of<br/> Experiments<br/>
+        <h2>Random Forest</h2>
+        <img src="./images/DoE_random_forests.png" width="65%" style="position: relative;right:320px;"><br>
+        <q style="position: relative;bottom:350px;right:-330px;"><h3>Design<br/> of<br/> Experiments<br/></h3>
     </section>
     
   
@@ -382,20 +424,22 @@ logger.level("FINE")
     </section>  
       
     <section>
-        <q><b>2nd hands-on</b><br/><br/>
-         Add variables declaration<br/>
-         Define exploration<br/>  
-         Define environment<br/>
-         Collect results as CSV<br/>
-      </q>
+      <h2>2nd hands-on</h2>
+        <ul>
+         <li>Add variables declaration</li>
+         <li>Define exploration</li>
+         <li>Define environment</li>
+         <li>Collect results as CSV</li>
+        </ul>
     </section>
   
     <section>
-        <q><b>Results visualisation?</b><br/><br/>
-         Add another task<br/>
-         Runnning locally<br/>  
-         Example: Python + Matplotlib scatter plot<br/>
-      </q>
+        <h2>Results visualisation?</h2>
+        <ul>
+          <li>Add another task</li>
+          <li>Runnning locally</li>
+          <li>Example: Python + Matplotlib scatter plot</li>
+        </ul>
     </section>
   
   </div>
