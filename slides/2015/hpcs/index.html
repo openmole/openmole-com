@@ -15,8 +15,8 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="js/reveal.js/css/reveal.min.css">
-        <link rel="stylesheet" href="js/reveal.js/css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="js/reveal.js-min/css/reveal.min.css">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/black.css" id="theme">
 
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
@@ -35,6 +35,16 @@
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
+      
+      
+<!--        remove default borders around images-->
+        <style>
+          .reveal section img {
+            background:none; 
+            border:none; 
+            box-shadow:none;
+          }
+        </style>
     </head>
 
     <body>
@@ -123,7 +133,7 @@
           
     <section>
         <q> <i>What does <b>OpenMOLE</b> do ?</i><br/><br/></q>
-        <img src="./images/openmoleGalRaw.png" width="135%" style="position: relative;bottom:50px;right:180px;"><br>
+        <img src="./images/openmoleGalRaw.png" width="135%"><br>
     </section>
 
     <section>
@@ -142,7 +152,7 @@
     </section>
 
     <section>
-        <img src="./images/wf.png" width="120%" style="position: relative;right:90px"/><br/><br/>
+        <img src="./images/wf.png" width="120%"/><br/><br/>
         <q>A <b>naturally parallel formalism</b> to design experiments</q>
     </section>
 
@@ -159,17 +169,22 @@
     </section>
 
     <section>
-        <img src="./images/egi2.jpg" width="110%" style="position: relative;right:30px">
+        <img src="./images/egi2.jpg" width="110%">
         <q>The <b>Grid</b></q>
     </section>
 
     <section>
-      <img src="./images/no_idea.jpg" width="110%" style="position: relative;right:30px">
+      <img src="./images/no_idea.jpg" width="110%">
       <q>Hard to use...</b></q>
     </section>
           
     <section>
-        <img src="./images/openmoleGal.png" width="150%" style="position: relative;bottom:0px;right:230px;"><br>
+      <img src="./images/data_transfers.svg" width="110%">
+      <q>Automatic data transfers and Replica management</b></q>
+    </section>      
+      
+    <section>
+        <img src="./images/openmoleGal.png" width="150%"><br>
     </section>
 
     <section>
@@ -236,7 +251,6 @@ java -version
 java version "1.7.0_75"
 OpenJDK Runtime Environment (IcedTea 2.5.4) (7u75-2.5.4-2)
 OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
-
         </code></pre>
     </section>
   
@@ -260,7 +274,13 @@ OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
          Pi Monte-Carlo calculation</q>
         <a href="http://www.doc.ic.ac.uk/~jpassera/openmole-tutorial-material">www.doc.ic.ac.uk/~jpassera/openmole-tutorial-material</a>
     </section>
-  
+
+    <section>
+        <q><b>1st example</b><br/><br/>
+         DoE to achieve</q>
+        <img src="images/runtime_pi.png" />
+    </section>
+            
     <section>
         <q><b>1st example</b><br/><br/>
          Add variables declaration<br/>
@@ -278,7 +298,24 @@ OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
     </section>
   
     <section>
-        <q><b>1st example</b><br/><br/>
+    <h1>Extra notions</h1>  
+    </section>  
+      
+    <section>
+         <h2>Hooks</h2><br/>
+         Tasks are mute<br/>  
+         <b>Hooks</b> extract content from the dataflow<br/>
+          Send (intermediate) results to screen, or file, ...<br/>
+          
+        <img src="images/hook_model.svg" />
+
+        <pre class="brush: scala"><code>
+exploration -< (model on env) >- (average hook ToStringHook())
+        </code></pre>
+      </q>
+    </section>                
+      
+    <section>
          <h2>Grouping</h2><br/>
          Short jobs don't cope well with distributed computing<br/>  
          Group <b>multiple tasks</b> in the <b>same batch job</b><br/>
@@ -290,14 +327,15 @@ exploration -< (model on env by 10) >- (average hook ToStringHook())
     </section>          
 
     <section>
-        <q><b>1st example</b><br/><br/>
          <h2>Errors</h2><br/>
-         Short jobs don't cope well with distributed computing<br/>  
-         Group <b>multiple tasks</b> in the <b>same batch job</b><br/>
-
         <pre class="brush: scala"><code>
 exploration -< (model on env by 10) >- (average hook ToStringHook())
+errors(env)
         </code></pre>
+        
+        <pre class="brush: scala"><code>
+logger.level("FINE")
+        </code></pre>        
       </q>
     </section>          
           
@@ -363,7 +401,7 @@ exploration -< (model on env by 10) >- (average hook ToStringHook())
   </div>
 
             <script src="js/reveal.js/lib/js/head.min.js"></script>
-            <script src="js/reveal.js/js/reveal.min.js"></script>
+            <script src="js/reveal.js-min/js/reveal.min.js"></script>
 
             <script>
 
