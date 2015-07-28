@@ -68,27 +68,42 @@
     </section>
  
     <section>
-        <q><b>Mathieu Leclaire</b><br/>
-            <b> Romain Reuillon</b><br/>
-            <b> Jonathan Passerat-Palmbach</b><br/>
-        </q> <br/>
+        <div class="title">Mathieu Leclaire<br/>
+            Romain Reuillon<br/>
+            Jonathan Passerat-Palmbach<br/>
+        </div> <br/>
             <img src="./images/allLogos.png" width="90%"/>
     </section>
 
     <section>
         <img src="./images/fullTriangle.png" width="1050px"/><br/>
-        <q>Model construction steps</q>
+        <div class="title">Model construction steps</div>
     </section>
-
+    
     <section>
-        <img src="./images/infinitetime.png" width="80%"/> <br/>
-        <q style="position: absolute;right: 20px;bottom: -30px">These methods are <b>time consuming</b></q>
+        <div>Bla bla triangle</div>
+    </section>
+    
+    <section>
+        <img src="./images/infinitetime.png" width="75%"/> <br/>
+        <div class="title">These methods are <b>time consuming</b></div>
     </section>
 
 
     <section>
         <img src="./images/wires.png " width="180%"/> <br/>
-        <q><b>Naturally parallel</b> algorithms permit to leverage parallelism</q>
+        <div class="title"><b>Naturally parallel</b> algorithms permit to leverage parallelism</div>
+    </section>
+    
+     <section>
+		 <h2>OpenMOLE through 4 examples</h2>
+		 <div class="title"> OpenMOLE is neither dedicated to a <b>scientific field </b> nor to a <b>language</b></div><br>
+		 <ul>
+        <li>Chromosome structuring: <b class="blue">Neuro Sciences</b>, <b class="red">C++</b></li>
+        <li>The SimTRAP project: <b class="blue">SSH Enginering</b>, <b class="red">Netlogo</b></li>
+        <li>The SimPOP project: <b class = "blue">Geography</b>, <b class="red">Scala</b></li>
+        <li>The BioEmergence project: <b class="blue">Biology</b>, <b class="red">C</b></li>
+        </ul>
     </section>
 
     <section>
@@ -122,7 +137,7 @@
 
     <section>
       <h2>The Bioemergences project</h2>
-        <img src="./images/BioEmergencesCaptureWKF.png" width="70%" align="left"><br>
+        <img src="./images/BioEmergencesCaptureWKF.png" width="65%" align="left"><br>
         <div style="text-align: right">
           C model - Portal access<br/>
           Daily production<br/> <b>10,000 hours / day</b><br/>
@@ -131,7 +146,7 @@
           
           
     <section>
-        <h2>OpenMOLE in 3 steps</h2>
+        <h2><b>OpenMOLE</b> in 3 steps</h2>
         <img src="./images/openmoleGalRaw.png" width="135%"><br>
     </section>
   
@@ -143,6 +158,7 @@
     <section>
         <h2><b>Zero deployment</b> approach</h2>
         <ul>
+          <li>The code is the user's code, not a web service</li>
           <li>Code is embedded with runtime</li>
           <li>Ships to remote environment</li>
           <li>No prior knowledge of remote environment needed</li>
@@ -151,8 +167,10 @@
     </section>
 
     <section>
-        <h2>Naturally parallel formalism to design experiments</h2>
-        <img src="./images/wf.png" width="120%"/><br/><br/>
+		<div class="title">
+        <h2>Naturally parallel formalism to design experiments: <b>a workflow</b></h2>
+        <img src="./images/workflowExplained.png" width="120%"/><br/><br/>
+		</div>
     </section>
           
     <section data-background-color="rgb(1, 195, 23)">
@@ -184,10 +202,7 @@
         Replica management</h3>
       <img src="./images/data_transfers.svg" width="110%">
     </section>      
-      
-    <section>
-        <img src="./images/openmoleGal.png" width="150%"><br>
-    </section>
+     
 
     <section>
       <h2>A workflow</h2>
@@ -211,7 +226,7 @@ val ex = exploration -< (model on env) start
     
     <section>
         <h2>Web Application</h2>
-        <img src="./images/guiwebscript.png" width="100%" style="position: relative;bottom:0px;right:0px;">
+        <img src="./images/guiwebscript.png" width="120%" style="position: relative;bottom:0px;right:0px;">
     </section>
 
     <section>
@@ -229,6 +244,16 @@ val ex = exploration -< (model on env) start
         <img src="./images/gui.png" width="85%" style="position: relative;bottom:0px;right:0px;"><br>
     </section> 
 
+    <section>
+      <h2>Market place</h2>
+      <ul>
+		<li>Full workflows describing various experiments from real cases.</li>
+		<li>It containts a scripts and all the required resources. Just download and play it !</li>
+		<li>Users can proposes their own workflow through github</li>
+		 </ul>
+		 <img src="./images/market.png" width="60%">
+      </section>
+    
     <section>
       <h2>Useful Links</h2>
       <table>
@@ -256,71 +281,6 @@ val ex = exploration -< (model on env) start
     </section>  
   
     <section>
-        <h2>Hands-on</h2>
-          <a href="https://github.com/openmole/openmole-market">openmole-market</a><br/>
-          Full examples available
-    </section>
-
-    <section>
-        <h2>Setup your environment</h2>
-         Download openmole: <a href="http://next.openmole.org">next.openmole.org</a><br/>
-         <i>Don't close the tab you'll need it for the documentation ;)</i><br/>
-      
-        <pre><code>
-java -version
-java version "1.7.0_75"
-OpenJDK Runtime Environment (IcedTea 2.5.4) (7u75-2.5.4-2)
-OpenJDK 64-Bit Server VM (build 24.75-b04, mixed mode)
-        </code></pre>
-    </section>
-  
-    <section>
-        <h2>~/.openmole</h2>
-         Stores your preferences<br/>
-         Maintains a table of file locations<br/>
-         Can grow rapidly in number of files<br/>
-         => move it to a folder without quota restrictions<br/>
-    </section>
-                
-    <section>
-      <h2>Launch OpenMOLE</h2>
-        Command-line console: openmole <b>-c</b><br/>
-        Web UI: openmole<br/>
-    </section>
-  
-    <section>
-        <h2>1st example</h2>
-         Pi Monte-Carlo calculation
-        <a href="http://www.doc.ic.ac.uk/~jpassera/openmole-tutorial-material">www.doc.ic.ac.uk/~jpassera/openmole-tutorial-material</a>
-    </section>
-
-    <section>
-        <h2>1st example</h2>
-      DoE to achieve<br/>
-        <img src="images/runtime_pi.png" width="65%"/>
-    </section>
-            
-    <section>
-        <h2>1st example</h2>
-         Add variables declaration<br/>
-         Define exploration<br/>  
-         Define environment<br/>
-    </section>
-  
-    <section>
-        <h2>1st example</h2>
-         Remote environment?<br/>
-        <ul>
-         <li>PBS</li>
-         <li>Slurm</li>
-         <li>Condor</li>
-         <li>EGI</li>
-         <li>...</li>
-        </ul><br/><br/>
-        Define <b>Authentication</b>
-    </section>
-  
-    <section>
     <h1>Extra notions</h1>  
     </section>  
       
@@ -345,36 +305,6 @@ exploration -< (model on env) >- (average hook ToStringHook())
 exploration -< (model on env by 10) >- (average hook ToStringHook())
         </code></pre>
     </section>          
-
-    <section>
-         <h2>Errors</h2>
-        <pre class="brush: scala"><code>
-exploration -< (model on env by 10) >- (average hook ToStringHook())
-errors(env)
-        </code></pre>
-        
-        <pre class="brush: scala"><code>
-logger.level("FINE")
-        </code></pre>        
-    </section>          
-          
-    <section>
-        <h2>2nd example</h2>
-         Tree leaves classifier
-        <a href="http://www.doc.ic.ac.uk/~jpassera/openmole-tutorial-material">www.doc.ic.ac.uk/~jpassera/openmole-tutorial-material</a>
-    </section>
-  
-    <section>
-        <h2>Output</h2>
-        <img src="./images/output_randomforest.png"><br>
-    </section>    
-      
-    <section>
-        <h2>Random Forest</h2>
-        <img src="./images/DoE_random_forests.png" width="60%" style="position: relative;right:120px;"><br>
-        <q style="position: relative;bottom:350px;right:-330px;"><h3>Design<br/> of<br/> Experiments<br/></h3>
-    </section>
-    
   
     <section>
       <h2>Packaging an application</h2>
@@ -389,51 +319,7 @@ logger.level("FINE")
       <br/>
       <b>Capture</b> these dependencies and <b>transfer</b> along with the application
     </section>  
-    
-    <section>
-      <h2>CARE</h2>
-      <a href="http://reproducible.io/">http://reproducible.io/</a>
-      <el>
-        <li>Run against your application</li>
-        <li>Transfer archive</li>
-        <li>Re-execute</li>
-        <li>Change the parameters</li>
-      </el>
-      
-      <pre><code>care -r ~ -o archive.bin python script.py 42</code></pre>
-      
-      <b>Only from Linux to Linux</b>
-    </section>  
-      
-    <section>
-      <h2>2nd example</h2>
-        <ul>
-         <li>Add variables declaration</li>
-         <li>Define exploration</li>
-         <li>Define environment</li>
-         <li>Collect results as CSV</li>
-        </ul>
-    </section>
-  
-    <section>
-        <h2>Results visualisation?</h2>
-        <ul>
-          <li>Add another task</li>
-          <li>Runnning locally</li>
-          <li>Example: Python + Matplotlib scatter plot</li>
-        </ul>
-    </section>
-  
-    <section>
-        <h2>Going further</h2>
-        <ul>
-          <li>Sources</li>
-          <li>Advanced DoE</li>
-          <li>Desktop Grid</li>
-          <li>Plugins</li>
-          <li>Strainer Pattern</li>
-        </ul>
-    </section>
+ 
         
     <section>
       <h1>Thanks!</h1>
