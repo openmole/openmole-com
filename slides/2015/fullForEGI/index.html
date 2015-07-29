@@ -81,70 +81,28 @@
     </section>
     
     <section>
-        <div>Bla bla triangle</div>
+        <div>Many scientists use naturally parallel methods daily:</div>
+        <ul>
+            <li>Data reconstruction</li>
+            <li>Parameter estimation</li>
+            <li>Sensitivity analysis</li>
+            <li>Optimisation</li>
+            <li>Replication</li>
+            <li>...</li>
+        </ul>
+        <div>Execution on the same program with different parameters and/or datasets.</div>
     </section>
     
     <section>
         <img src="./images/infinitetime.png" width="75%"/> <br/>
-        <div class="title">These methods are <b>time consuming</b></div>
+        <div>These methods are <b>time consuming</b>, yet generally executed in a sequential manner.</div>
     </section>
 
-
-    <section>
-        <img src="./images/wires.png " width="180%"/> <br/>
-        <div class="title"><b>Naturally parallel</b> algorithms permit to leverage parallelism</div>
-    </section>
-    
      <section>
-		 <h2>OpenMOLE through 4 examples</h2>
-		 <div class="title"> OpenMOLE is neither dedicated to a <b>scientific field </b> nor to a <b>language</b></div><br>
-		 <ul>
-        <li>Chromosome structuring: <b class="blue">Neuro Sciences</b>, <b class="red">C++</b></li>
-        <li>The SimTRAP project: <b class="blue">SSH Enginering</b>, <b class="red">Netlogo</b></li>
-        <li>The SimPOP project: <b class = "blue">Geography</b>, <b class="red">Scala</b></li>
-        <li>The BioEmergence project: <b class="blue">Biology</b>, <b class="red">C</b></li>
-        </ul>
+      <img src="./images/toy.jpg" width="50%" /> <br/>
+      <div>OpenMOLE fills the gap. It provides an easy way to describe and distribute naturally parallel processes.</div>
     </section>
 
-    <section>
-        <h2>Chromosome structuring</h2>
-
-          <img src="./images/chromosome.png" width="70%" align="left"><br>
-        <div style="text-align: right">
-            C++ model <br/>
-            2 days per simulation for 1600 simulations <br/>= <b>8.5 years CPU time</b><br/>
-        </div>
-    </section>
-
-    <section>
-        <h2>The SimTRAP project</h2>
-        <img src="./images/simTRAP.png" width="60%" align="left"><br>
-        <div style="text-align: right">
-          Netlogo model <br/>
-          5 mins per simulation for 100,000 simulations <br/>= <b>1 year CPU time</b><br/>
-        </div>
-    </section>
-
-    <section>
-        <h2>The Simpop project</h2>
-        <img src="./images/simpop.png" width="60%" align="left"><br>
-        <div style="text-align: right">
-          Scala model <br/>
-          2 secs per simulation for<br/> 500,000,000 simulations <br/>= <b>30 years CPU time</b><br/>
-        </div>
-    </section>
-
-
-    <section>
-      <h2>The Bioemergences project</h2>
-        <img src="./images/BioEmergencesCaptureWKF.png" width="65%" align="left"><br>
-        <div style="text-align: right">
-          C model - Portal access<br/>
-          Daily production<br/> <b>10,000 hours / day</b><br/>
-      </div>
-    </section>
-          
-          
     <section>
         <h2><b>OpenMOLE</b> in 3 steps</h2>
         <img src="./images/openmoleGalRaw.png" width="135%"><br>
@@ -159,19 +117,36 @@
         <h2><b>Zero deployment</b> approach</h2>
         <ul>
           <li>The code is the user's code, not a web service</li>
-          <li>Code is embedded with runtime</li>
+          <li>User code is automatically deployed at runtime</li>
           <li>Ships to remote environment</li>
           <li>No prior knowledge of remote environment needed</li>
           <li>No installation required on any machine</li>
         </ul>
     </section>
+                
+    <section>
+        <h2>Port (almost) any program to the grid in 3 simple steps</h2>
+        <ul>
+            <li>Archive it with CARE [1] <=> execute it on linux</li>
+            <li>Write your OpenMOLE workflow</li>
+            <li>Click the run button</li>
+        </ul>
+        <div>[1] http://reproducible.io</div>
+    </section> 
+               
 
     <section>
-		<div class="title">
+	<div class="title">
         <h2>Naturally parallel formalism to design experiments: <b>a workflow</b></h2>
         <img src="./images/workflowExplained.png" width="120%"/><br/><br/>
-		</div>
+	</div>
     </section>
+                
+    <section>
+      <h3>Automatic data transfers<br/> and<br/> Replica management</h3>
+      <img src="./images/data_transfers.svg" width="110%">
+      <div>Files and folders transfers are handeled transparently by OpenMOLE</div>
+    </section>    
           
     <section data-background-color="rgb(1, 195, 23)">
       <h2>What OpenMOLE does</h2>
@@ -191,17 +166,8 @@
         <h4>(and others)</h4>
         <img src="./images/egi2.jpg" width="70%">
     </section>
-
-    <section>
-      <h2>So hard to use...</h2>
-      <img src="./images/no_idea.jpg" width="70%">
-    </section>
           
-    <section>
-      <h3>Automatic data transfers<br/> and<br/>
-        Replica management</h3>
-      <img src="./images/data_transfers.svg" width="110%">
-    </section>      
+  
      
 
     <section>
@@ -254,6 +220,56 @@ val ex = exploration -< (model on env) start
 		 <img src="./images/market.png" width="60%">
       </section>
     
+                                
+     <section>
+		 <h2>OpenMOLE through 4 examples</h2>
+		 <div class="title"> OpenMOLE is neither dedicated to a <b>scientific field </b> nor to a <b>language</b></div><br>
+		 <ul>
+        <li>Chromosome structuring: <b class="blue">Neuro Sciences</b>, <b class="red">C++</b></li>
+        <li>The SimTRAP project: <b class="blue">SSH Enginering</b>, <b class="red">Netlogo</b></li>
+        <li>The SimPOP project: <b class = "blue">Geography</b>, <b class="red">Scala</b></li>
+        <li>The BioEmergence project: <b class="blue">Biology</b>, <b class="red">C</b></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Chromosome structuring</h2>
+
+          <img src="./images/chromosome.png" width="70%" align="left"><br>
+        <div style="text-align: right">
+            C++ model <br/>
+            2 days per simulation for 1600 simulations <br/>= <b>8.5 years CPU time</b><br/>
+        </div>
+    </section>
+
+    <section>
+        <h2>The SimTRAP project</h2>
+        <img src="./images/simTRAP.png" width="60%" align="left"><br>
+        <div style="text-align: right">
+          Netlogo model <br/>
+          5 mins per simulation for 100,000 simulations <br/>= <b>1 year CPU time</b><br/>
+        </div>
+    </section>
+
+    <section>
+        <h2>The Simpop project</h2>
+        <img src="./images/simpop.png" width="60%" align="left"><br>
+        <div style="text-align: right">
+          Scala model <br/>
+          2 secs per simulation for<br/> 500,000,000 simulations <br/>= <b>30 years CPU time</b><br/>
+        </div>
+    </section>
+
+
+    <section>
+      <h2>The Bioemergences project</h2>
+        <img src="./images/BioEmergencesCaptureWKF.png" width="65%" align="left"><br>
+        <div style="text-align: right">
+          C model - Portal access<br/>
+          Daily production<br/> <b>10,000 hours / day</b><br/>
+      </div>
+    </section>
+                
     <section>
       <h2>Useful Links</h2>
       <table>
@@ -325,7 +341,7 @@ exploration -< (model on env by 10) >- (average hook ToStringHook())
       <h1>Thanks!</h1>
       <table>
         <tr>
-          <td style="border-bottom: 0px"><img src="images/romain.png" /></td>
+          <td style="border-bottom: 0px"><img style="width: 100px" src="images/romain2.png" /></td>
           <td style="vertical-align: middle; border-bottom: 0px"><a mailto="romain.reuillon@iscpif.fr">romain.reuillon@iscpif.fr</a></td>
         </tr>
         <tr>
