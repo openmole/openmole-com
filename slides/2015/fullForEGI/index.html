@@ -126,15 +126,30 @@
                 
     <section>
         <h2>Port (almost) any program to the grid in 3 simple steps</h2>
+        <br>
         <ul>
-            <li>Archive it with CARE [1] <=> execute it on linux</li>
+            <li>Archive it with CARE* <=> execute it on linux</li>
             <li>Write your OpenMOLE workflow</li>
             <li>Click the run button</li>
-        </ul>
-        <div>[1] http://reproducible.io</div>
+        </ul><br><br>
+        <a class= "right" href="http://reproducible.io">* http://reproducible.io</a>
     </section> 
                
-
+  <section>
+      <h2>Packaging an application with <b>Care</b></h2>
+      Applications have dependencies:<br/>
+      <ul>
+        <li>Shared libraries</li>
+        <li>Packages</li>
+        <li>Low level system calls</li>
+        <li>Environment variables</li>
+        <li>...</li>
+      </ul>
+      <br/>
+      <b>Capture</b> these dependencies and <b>transfer</b> along with the application from Linux to Linux
+    </section>  
+    
+    
     <section>
 	<div class="title">
         <h2>Naturally parallel formalism to design experiments: <b>a workflow</b></h2>
@@ -151,7 +166,7 @@
     <section data-background-color="rgb(1, 195, 23)">
       <h2>What OpenMOLE does</h2>
       <img src="./images/staticRuntime.png" width="60%"/> <br/><br/>
-      <b>Data parallelism</b>
+      <i>Data parallelism</i>
     </section>
 
     <section data-background-color="rgb(195, 1, 53)">
@@ -322,21 +337,7 @@ exploration -< (model on env by 10) >- (average hook ToStringHook())
         </code></pre>
     </section>          
   
-    <section>
-      <h2>Packaging an application</h2>
-      Applications have dependencies:<br/>
-      <ul>
-        <li>Shared libraries</li>
-        <li>Packages</li>
-        <li>Low level system calls</li>
-        <li>Environment variables</li>
-        <li>...</li>
-      </ul>
-      <br/>
-      <b>Capture</b> these dependencies and <b>transfer</b> along with the application
-    </section>  
- 
-        
+         
     <section>
       <h1>Thanks!</h1>
       <table>
@@ -345,7 +346,7 @@ exploration -< (model on env by 10) >- (average hook ToStringHook())
           <td style="vertical-align: middle; border-bottom: 0px"><a mailto="romain.reuillon@iscpif.fr">romain.reuillon@iscpif.fr</a></td>
         </tr>
         <tr>
-          <td style="border-bottom: 0px"><img src="images/mathieu.jpg" /></td>
+          <td style="border-bottom: 0px"><img style="width: 100px" src="images/mathieu.jpg" /></td>
           <td style="vertical-align: middle; border-bottom: 0px"><a mailto="mathieu.leclaire@iscpif.fr">mathieu.leclaire@iscpif.fr</a></td>
         </tr>
         <tr valign="middle">
