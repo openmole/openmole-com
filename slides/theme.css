@@ -1,0 +1,20 @@
+b{
+	color: #8a0;
+}
+
+.blue{
+	color: #0cf;
+}
+
+.red{
+	color: #f55;
+}
+
+div.title{
+	text-align: center;
+	font-weight: bold;
+}
+
+.right{
+float: right;
+}
