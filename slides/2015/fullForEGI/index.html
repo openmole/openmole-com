@@ -204,6 +204,28 @@ val env = LocalEnvironment(5)
 val ex = exploration -< (model on env) start
         </code></pre><br>
     </section>
+        
+        
+    <section>
+      <h2>The same workflow <b>on the Grid !</b></h2>
+        <pre style="brush: scala"><code>
+val i   = Val[Double]        
+val res = Val[Double]        
+
+val exploration = ExplorationTask ( i in (0.0 to 10.0 by 1.0) )
+
+val model = 
+  ScalaTask ("val res = i * 2") set (
+    inputs  += i,
+    outputs += (i, res)
+  )
+  
+val env = EGIEnvironment("biomed")
+
+val ex = exploration -< (model on env) start
+        </code></pre><br>
+        <div>Switching to the <b>Grid Environment</b> is so easy !</div>
+    </section>
     
     <section>
         <h2>Web Application</h2>
