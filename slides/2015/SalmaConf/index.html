@@ -110,20 +110,9 @@
   
     <section>
         <h3>Embed your model as a <b>black box</b></h3>
-        <img src="./images/blackbox.png">
+        <img src="./images/blackbox.png" width="80%">
     </section>
           
-    <section>
-        <h2><b>Zero deployment</b> approach</h2>
-        <ul>
-          <li>The code is the user's code, not a web service</li>
-          <li>User code is automatically deployed at runtime</li>
-          <li>Ships to remote environment</li>
-          <li>No prior knowledge of remote environment needed</li>
-          <li>No installation required on any machine</li>
-        </ul>
-    </section>
-                
     <section>
         <h2>Port (almost) any program to the grid in 3 simple steps</h2>
         <br>
@@ -153,28 +142,15 @@
     <section>
 	<div class="title">
         <h3>Naturally parallel formalism to design experiments: <b>a workflow</b></h3>
-        <img src="./images/workflowExplained.png" width="120%"/><br/><br/>
+        <img src="./images/workflowExplained.png" width="120%", style="margin-top:-10px"/><br/><br/>
 	</div>
     </section>
-                
-    <section>
-      <h3>Automatic data transfers<br/> and<br/> Replica management</h3>
-      <img src="./images/data_transfers.svg" width="110%">
-      <div>Files and folders transfers are <b>handled transparently</b> by OpenMOLE</div>
-    </section>    
-          
+                    
     <section data-background-color="rgb(1, 195, 23)">
       <h2>What OpenMOLE does</h2>
       <img src="./images/staticRuntime.png" width="60%"/> <br/>
       <i>Data parallelism</i>
     </section>
-
-    <section data-background-color="rgb(195, 1, 53)">
-      <h3>What OpenMOLE does not</h3>
-      <img src="./images/mpi.gif" width="60%"/><br/><br/>
-    <b>Parallelisation by message / Task Parallelism</b><br/>
-    <i>Example: Spark, MPI, ...</i>
-  </section>
   
     <section>
         <h2>Powered by EGI</h2>
@@ -182,9 +158,6 @@
         <img src="./images/egi2.jpg" width="70%">
     </section>
           
-  
-     
-
     <section>
       <h2>A workflow</h2>
         <pre style="brush: scala"><code>
@@ -228,13 +201,8 @@ val ex = exploration -< (model on env) start
     </section>
     
     <section>
-        <h2>Web Application</h2>
+        <h2>The Application</h2>
         <img src="./images/guiwebscript.png" width="1200px">
-    </section>
-
-    <section>
-        <h2>Console interface</h2>
-        <img src="./images/console.png" width="85%" style="position: relative;bottom:0px;right:0px;"><br>
     </section>
     
     <section>
@@ -244,17 +212,8 @@ val ex = exploration -< (model on env) start
     
     <section>
         <h2>Towards <b>graphical</b> workflows</h2>
-        <img src="./images/gui.png" width="85%" style="position: relative;bottom:0px;right:0px;"><br>
+        <img src="./images/gui.png" width="85%" style="position: relative;bottom:35px;right:0px;"><br>
     </section> 
-
-    <section>
-      <h2>Market place</h2>
-      <ul>
-		<li>Full workflows describing various experiments from <b>real cases</b>.</li>
-        <li>It containts scripts and all the required resources. Just <b>download</b> and <b>run</b> it!</li>
-		<li><b>Community</b>: Users can <b>upload</b> their own workflow through <b>github</b></li>
-      </ul>
-    </section>
 
     <section>
       <h2>Market place</h2>
@@ -271,44 +230,6 @@ val ex = exploration -< (model on env) start
         <li>The SimPOP project: <b class = "blue">Geography</b>, <b class="red">Scala</b></li>
         <li>The BioEmergence project: <b class="blue">Biology</b>, <b class="red">C</b></li>
         </ul>
-    </section>
-
-    <section>
-        <h2>Chromosome structuring</h2>
-
-          <img src="./images/chromosome.png" width="70%" align="left"><br>
-        <div style="text-align: right">
-            C++ model <br/>
-            2 days per simulation for 1,600 simulations <br/>= <b>8.5 years CPU time</b><br/>
-        </div>
-    </section>
-
-    <section>
-        <h2>The SimTRAP project</h2>
-        <img src="./images/simTRAP.png" width="60%" align="left"><br>
-        <div style="text-align: right">
-          Netlogo model <br/>
-          5 mins per simulation for 100,000 simulations <br/>= <b>1 year CPU time</b><br/>
-        </div>
-    </section>
-
-    <section>
-        <h2>The Simpop project</h2>
-        <img src="./images/simpop.png" width="60%" align="left"><br>
-        <div style="text-align: right">
-          Scala model <br/>
-          2 secs per simulation for<br/> 500,000,000 simulations <br/>= <b>30 years CPU time</b><br/>
-        </div>
-    </section>
-
-
-    <section>
-      <h2>The Bioemergences project</h2>
-        <img src="./images/BioEmergencesCaptureWKF.png" width="65%" align="left"><br>
-        <div style="text-align: right">
-          C model - Portal access<br/>
-          Daily production<br/> <b>10,000 hours / day</b><br/>
-      </div>
     </section>
                 
     <section>
@@ -336,33 +257,6 @@ val ex = exploration -< (model on env) start
         </tr>
       </table>
     </section>  
-  
-    <section>
-    <h1>Extra notions</h1>  
-    </section>  
-      
-    <section>
-         <h2>Hooks</h2>
-         Tasks are mute<br/>  
-         Hooks <b>extract content</b> from the dataflow<br/>
-      
-        <img src="images/hook_model.png" width="50%"/>
-
-        <pre class="brush: scala"><code>
-exploration -< (model on env) >- (average hook ToStringHook())
-        </code></pre>
-    </section>                
-      
-    <section>
-         <h2>Grouping</h2>
-         Short jobs don't cope well with distributed computing<br/>  
-         Group <b>multiple tasks</b> in the <b>same batch job</b><br/>
-
-        <pre class="brush: scala"><code>
-exploration -< (model on env by 10) >- (average hook ToStringHook())
-        </code></pre>
-    </section>          
-  
          
     <section>
       <h1>Thanks!</h1>
