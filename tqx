@@ -1,0 +1,366 @@
+[33mcommit 58b7eb9f424fc0ca8457b6a9e64f0a32f138fff6[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Fri Sep 11 11:00:41 2015 +0200
+
+    Ugrade gui screenshot
+
+[33mcommit 082f0c3ad02fea54276faa118e82fb391dd08eb5[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Thu Sep 10 19:13:52 2015 +0200
+
+    Added presentation for the salma show
+
+[33mcommit 64a3c3232efd106482adf1576e12eab6d1f42c69[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Thu Jul 30 09:10:35 2015 +0200
+
+    Added some magic: switching environment !
+
+[33mcommit 985353c8193b4becf5969e4f530e7923b885a213[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Wed Jul 29 18:11:41 2015 +0200
+
+    Added pdf
+
+[33mcommit 7edd930c02039fc5d785f4ccd29ed91a60f09700[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Wed Jul 29 17:03:53 2015 +0100
+
+    [fullForEGI] fix: clarify SSH -> Social Sciences
+
+[33mcommit e949461485bc2ab87639440de12fad951855c16d[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Wed Jul 29 16:46:32 2015 +0100
+
+    [fullForEGI] enh: beautify
+
+[33mcommit fb566e7d84bdc371905e4a14b705c5954f439c36[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Wed Jul 29 16:40:04 2015 +0100
+
+    [fullForEGI] fix: Update theme.css location and create symlink
+
+[33mcommit a24594eee8f7d515231c8286325d39e52f852eae[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Wed Jul 29 16:31:46 2015 +0100
+
+    [fullForEGI] fix: Proofreading and a bit of layout
+
+[33mcommit 982578c7dfab09c07d39fada7c812992c6e3d190[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Wed Jul 29 17:37:58 2015 +0200
+
+    Update workflow
+
+[33mcommit 5f7d6be188e6f1a92d05f450f9ea1cd6c31285ee[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Wed Jul 29 17:32:39 2015 +0200
+
+    change workflow explained
+
+[33mcommit a2a2757ee3ee11785ac917bb4644b3401ec5e796[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Wed Jul 29 17:32:10 2015 +0200
+
+    Set theme.css
+
+[33mcommit 0e9d17f4986a09a9d358a76550b69dd22a5a80e2[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Wed Jul 29 11:45:23 2015 +0200
+
+    small modifications
+
+[33mcommit 48f7e5addd321195a2e1dc53d971d9a569c7b942[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Wed Jul 29 11:39:49 2015 +0200
+
+    Update EGI slide
+
+[33mcommit 2776f9ffe3d4a35a3ad8bb2d573b0f9196f5fe1a[m
+Author: Romain Reuillon <romain.reuillon@iscpif.fr>
+Date:   Wed Jul 29 11:18:57 2015 +0200
+
+    Update egi slides.
+
+[33mcommit 94ab2d4dde955923b855c3f61e50782ed85b59e0[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Jul 28 15:45:29 2015 +0200
+
+    Refres webgui image
+
+[33mcommit 2d2feb67f98ad5169a65f1a46ba9b78ef301b27a[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Jul 28 14:37:56 2015 +0200
+
+    Fix typos
+
+[33mcommit 3d48fea5f174058e831a0fc67fa7e6cf8e5fcabd[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Jul 28 14:33:55 2015 +0200
+
+    Fix typos
+
+[33mcommit 263ebb4524ba8415e2a81f31c9b7500da166f588[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Jul 28 14:21:52 2015 +0200
+
+    Added content to the fullForEGI
+
+[33mcommit 30ccd4602a76c9653e5933dd8e9962a9528aa50f[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Jul 28 10:02:09 2015 +0200
+
+    Initiate the full explanation slides for EGI
+
+[33mcommit f03c15f7d05fdf0af12d6d6f7b083f774ca416f1[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Thu Jul 23 22:32:30 2015 +0200
+
+    Updated svg with version name
+
+[33mcommit f84d5bc9b1875466ae324df0207fe10a5a613d6a[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Thu Jul 23 20:43:45 2015 +0200
+
+    Added Lovely Lobster svg
+
+[33mcommit 20b2f6e894b8412920d14b7ab0571811419dbe6e[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Wed Jul 22 16:08:28 2015 +0100
+
+    [reveal.js] fix: Change submodule clone URL from git to https
+
+[33mcommit ce3c834ae1aa34a47879ebe524bfd37e5a6d292f[m
+Author: jopasserat <jopasserat@users.noreply.github.com>
+Date:   Wed Jul 15 00:05:54 2015 +0100
+
+    add: README.md
+
+[33mcommit 18dc705ac88cd72e93689d6e2a3a7179256eba03[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Jul 14 23:36:38 2015 +0100
+
+    [hpcs2015] enh: Add final slides and team pictures :)
+
+[33mcommit 641035ce1178bd293d3ef1fa0c4e9dd8e12d3839[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Jul 14 17:25:29 2015 +0100
+
+    [HPCS] complete version, white background
+
+[33mcommit 5c1801a6c3c1b1b12ce22cdbfe35c5dd0e7cb51f[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Jul 14 15:24:54 2015 +0100
+
+    [hpcs]: 95% complete version
+
+[33mcommit 38e0fb8c572068a69aced1e8dd5795f307b93bf4[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Jul 14 15:24:13 2015 +0100
+
+    [hpcs] add: link to css to enable export to PDF feature
+
+[33mcommit 6fe6bef682e3ad5b267d464fa255a88e023f46ab[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Jul 14 15:23:28 2015 +0100
+
+    [hpcs] fix: Stop tracking useless files
+
+[33mcommit 6cce6aad16a28683924a1e4cba2c29cec4d7dd7a[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Jul 14 15:22:34 2015 +0100
+
+    [slides] fix: Update slides to reveal.js 3.1.0
+
+[33mcommit 1400182539051bb3a212c95d2c05d478736c25ab[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Jul 14 15:21:21 2015 +0100
+
+    [reveal.js] create minified versions of reveal.js core components (not tracked anymore in main branch)
+
+[33mcommit 64f467817a881d4d39db2bd9959c5e2847eb1c06[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Jul 14 15:12:37 2015 +0100
+
+    [reveal.js] move submodule to version 3.1.0
+
+[33mcommit a7e353456cee5720d6a70b2c637009be957f6329[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Mon Jul 13 18:39:22 2015 +0100
+
+    [HCPS2015] 1st version of the slides (WIP)
+
+[33mcommit 57e1c104b7207b2aebfe2477c667cb954329fd1b[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Wed Jul 8 13:07:12 2015 +0100
+
+    [Slides imperial] enh: Add hands-on slides
+
+[33mcommit c2e38938e148aed108a6783d78b30502ed8a0358[m
+Author: Romain Reuillon <romain.reuillon@iscpif.fr>
+Date:   Wed Jul 8 10:35:44 2015 +0200
+
+    Add imperial college slides.
+
+[33mcommit 44022dba6856e7463b452f5e87fbb6a3eb320aaf[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Thu Jun 18 12:13:37 2015 +0200
+
+    Added OpenMOLE in 5 minutes 2015
+
+[33mcommit c275d5e3317aff30c619c7d7742c7c5701ddbf63[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Jun 16 14:05:17 2015 +0200
+
+    Add presentation for InovativeSHS
+
+[33mcommit 14ed2032f26c09c19eaa5d24f2617c83ac4fc469[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Jun 16 10:20:48 2015 +0200
+
+    10 years GRIF
+
+[33mcommit 6ede259de8ad420ed57d17e00fc070f3735a5dff[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Wed Dec 17 16:54:21 2014 +0000
+
+    Temporary fix Chalearn tutorial until all the images are moved to the root folder
+
+[33mcommit 5dc613c2a4971a4771b5da96f7f7c6f496ba58d4[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Wed Dec 17 16:51:08 2014 +0000
+
+    Fix GREThA presentation
+
+[33mcommit fe8b919d34736b1d0cf01e13ef4fda6da0c5c711[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Wed Dec 17 16:45:50 2014 +0000
+
+    Fix SyntaxHighlighter on some presentations
+
+[33mcommit cc3461f582c56fc2a1d9e1c5c1dda2e741dd1325[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Dec 16 20:35:43 2014 +0000
+
+    Fix Reveal.js in EGI 2013
+
+[33mcommit 18ca2fa463497556d976026455b2436729d3b644[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Dec 16 20:30:52 2014 +0000
+
+    Replace folder by symlink in OpenMOLE in 5 mins 2013
+
+[33mcommit 1c3c26f0edc39570798de215ccb157288d518285[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Dec 16 20:30:12 2014 +0000
+
+    Slight fixes resulting from generification of SyntaxHighlighter path
+
+[33mcommit 771f8e57ff0e0cc0e1f5346fcae139e40496c3f9[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Dec 16 19:50:19 2014 +0000
+
+    Add symlink to quickly modify SyntaxHighlighter release in the future
+
+[33mcommit fb60c2ae0e6e0aa8912b86752f7b7c7e0c6b012b[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Dec 16 19:49:25 2014 +0000
+
+    Add symlink to quickly modify SyntaxHighlighter release in the future
+
+[33mcommit 2fede903c4d03c77bdae317c313e4222bc855d44[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Dec 16 19:18:15 2014 +0000
+
+    Add missing js symlinks to some presentations
+
+[33mcommit f5236406c6e8db694a22e0e3ca048d79aa77a79d[m
+Author: Jonathan Passerat-Palmbach <j.passerat-palmbach@imperial.ac.uk>
+Date:   Tue Dec 16 11:52:13 2014 +0000
+
+    Remove standalone reveal.js folder in favour of submodule
+
+[33mcommit 6f6f7c32957c18c61921f7912146188fa668add8[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Sun Dec 7 22:18:18 2014 +0100
+
+    add forcity presentation
+
+[33mcommit 0aac89782c342c7c5422a5470a13697dfa667e4d[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Thu Dec 4 11:22:06 2014 +0100
+
+    Add Future
+
+[33mcommit f78e3789d1130dc1b6a3f47cc0db50d4dd40c4fb[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Wed Dec 3 17:49:01 2014 +0100
+
+    save parallel
+
+[33mcommit 1b937192f2b1270fe7c411a0c8e746033500978b[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Wed Dec 3 17:48:45 2014 +0100
+
+    save wires
+
+[33mcommit 64744a832f019fb37422270444ec2963aa2eaae9[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Wed Dec 3 17:46:38 2014 +0100
+
+    update ICS pres
+
+[33mcommit c5e8d4cd1cb3575f17580de567b792fe7a44698c[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Wed Dec 3 17:18:28 2014 +0100
+
+    slides for ICS presentation
+
+[33mcommit 5b0fa3ef5a828ee617741966b797fd92664d6c65[m
+Merge: 6fe623e 7ced555
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Nov 25 11:31:05 2014 +0100
+
+    Merge branch 'master' of github.com:openmole/openmole-com
+
+[33mcommit 6fe623e574a466cd37fd205d2f26cbd3221fb921[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Nov 25 11:30:40 2014 +0100
+
+    Add OpenMOLE in 5 minutes 2014
+
+[33mcommit 7ced5550a31dda700b17de39c01a9b54af85563e[m
+Author: Romain Reuillon <romain.reuillon@iscpif.fr>
+Date:   Mon Oct 20 19:17:25 2014 +0200
+
+    Add slide on exploration with GA.
+
+[33mcommit 3cc4e06bd414d7c5c7ab3e38a84b98f5d2a8dac1[m
+Author: Romain Reuillon <romain.reuillon@iscpif.fr>
+Date:   Mon Oct 20 17:28:57 2014 +0200
+
+    RC2 button.
+
+[33mcommit 21505df5eb479f1c12f3ac58e398373cc711f55d[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Oct 14 16:33:34 2014 +0200
+
+    Add 3.0 images
+
+[33mcommit 258ea8d4560bc2232805f4605eb4c06ddb36e607[m
+Author: Mathieu Leclaire <mathieu.leclaire@iscpif.fr>
+Date:   Tue Oct 14 00:16:07 2014 +0200
+
+    add jazzy.svg
+
+[33mcommit f9d630b16a2bebfd8fb00b908db2563d2f1ee612[m
+Author: Romain Reuillon <romain.reuillon@iscpif.fr>
+Date:   Mon Oct 13 00:07:30 2014 +0200
+
+    Clean usless file.
+
+[33mcommit ebed814b60bd806ab22031e4a9677846671cffca[m
+Author: Romain Reuillon <romain.reuillon@iscpif.fr>
+Date:   Mon Oct 13 00:06:59 2014 +0200
+
+    Initial import.
