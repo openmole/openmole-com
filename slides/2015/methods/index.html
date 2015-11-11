@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>OpenMOLE: a Workflow Engine for Distributed Medical Image Analysis</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="mathieu" >
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="js/reveal.js-min/css/reveal.min.css">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/white.css" id="theme">
+        <link rel="stylesheet" href="custom_css/theme.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+      
+      
+<!--        remove default borders around images-->
+        <style>
+          .reveal section img {
+            background:none; 
+            border:none; 
+            box-shadow:none;
+          }
+          
+          #logos { 
+            width: 960px; // Change this according to the width you want. 
+            height: 500px; // Change this as well 
+            margin: 0 auto 0 auto; 
+            text-align: center; // Will center the images contained in the div 
+          }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+ 
+    <section>
+        <img src="./images/modelIO.png"/> <br/><br/>
+    </section>
+                
+                
+    <section>
+        <h2>Model, who are you ?</h2>
+        <ul>
+        <li>How the inputs participate to produce the outputs ?</li>
+        <li>Are all <b>inputs compulsory</b> to produce output dynamics ?</li>
+        <li>What are the <b>robustness</b> intervals for the inputs ?</li>
+        <li>What are <b>all possible dynamics</b> of the model ?</li>
+        <li>What are all possible inputs for generate a given <b>scenario</b> ?</li>
+        </ul>
+    </section>
+                
+              
+                             
+    <section>
+        <h2>Reverse problems</h2>
+        <img src="./images/inverseProblem.png" width="80%" style="position: relative; top: 50px;"/> <br/><br/>
+        <img src="./images/fitnessEval.png" width="60%" style="position: relative; top: 30px;"/>
+    </section>
+                             
+    <section>
+        <h2>Sensitivity analysis: Profiles</h2>
+        <img src="./images/sensitivityAnalysis.png" width="80%" style="position: relative; top: 50px;"/> <br/><br/>
+        <img src="./images/profiles.png" width="60%" style="position: relative; top: 30px;"/>
+    </section>
+                
+    <section>
+        <h2>Pattern Space Exploration</h2>
+        <img src="./images/modelO.png" width="80%" style="position: relative; top: 50px;right:200px"/> <br/><br/>
+        <img src="./images/modelOutputs.png" width="30%" style="position: relative; top: -300px; right:-370px"/>
+        <img src="./images/volumeDiscovered.png" width="60%" style="position: absolute; top: 450px; right:-50px"/>
+    </section>
+            
+      
+  </div>
+
+            <script src="js/reveal.js/lib/js/head.min.js"></script>
+            <script src="js/reveal.js-min/js/reveal.min.js"></script>
+
+            <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                slideNumber: true,
+                
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+
+
+            </script>
+
+    </body>
+</html>
