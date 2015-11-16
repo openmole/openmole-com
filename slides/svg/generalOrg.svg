@@ -1941,14 +1941,14 @@
      inkscape:groupmode="layer"
      inkscape:label="Calque 1">
     <rect
-       style="fill:#f9f9f9;fill-rule:evenodd;stroke:#000000;stroke-width:1.00455058px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:1.005;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect13660"
        width="1057.3929"
        height="741.85205"
        x="-1.6761333"
        y="312.18628"
        rx="8.0419559"
-       inkscape:export-filename="/tmp/om"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/omGal.png"
        inkscape:export-xdpi="170.07001"
        inkscape:export-ydpi="170.07001" />
     <path
