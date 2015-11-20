@@ -19,6 +19,26 @@
    sodipodi:docname="methods.svg">
   <defs
      id="defs4">
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4430"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4426"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4397"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4392"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4388"
+       is_visible="true" />
     <marker
        inkscape:isstock="true"
        style="overflow:visible;"
@@ -248,9 +268,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5518015"
-     inkscape:cx="-434.25585"
-     inkscape:cy="2191.1531"
+     inkscape:zoom="0.78036516"
+     inkscape:cx="211.22608"
+     inkscape:cy="-333.80694"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -831,5 +851,157 @@
            height="214.17805"
            width="1028.3566"
            id="rect4417" /></flowRegion><flowPara
-         id="flowPara4421">What are all possible inputs for generating a given scenario ?</flowPara></flowRoot>  </g>
+         id="flowPara4421">What are all possible inputs for generating a given scenario ?</flowPara></flowRoot>    <g
+       id="g4374"
+       transform="translate(87.574988,1198.3992)"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-ydpi="128.34">
+      <rect
+         ry="11.496394"
+         y="233.46523"
+         x="196.32303"
+         height="159.18083"
+         width="305.98096"
+         id="rect4376"
+         style="fill:#ffcc00;fill-rule:evenodd;stroke:#333333;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <flowRoot
+         transform="matrix(1.2438536,0,0,1.2438536,111.71318,-319.68059)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4378"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4380"><rect
+             style="fill:#333333;fill-opacity:1"
+             y="483.73288"
+             x="130.88202"
+             height="108.77357"
+             width="183.94231"
+             id="rect4382" /></flowRegion><flowPara
+           id="flowPara4384">Model</flowPara></flowRoot>    </g>
+    <path
+       inkscape:export-ydpi="128.34"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       style="fill:none;fill-rule:evenodd;stroke:#333333;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4608)"
+       d="m 255.3232,1543.9054 -117.61695,45.1012"
+       id="path4386"
+       inkscape:path-effect="#path-effect4388"
+       inkscape:original-d="m 255.3232,1543.9054 -117.61695,45.1012"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="128.34"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       inkscape:connector-curvature="0"
+       inkscape:original-d="m 264.02978,1512.0135 -125.96182,1.2196"
+       inkscape:path-effect="#path-effect4392"
+       id="path4390"
+       d="m 264.02978,1512.0135 -125.96182,1.2196"
+       style="fill:none;fill-rule:evenodd;stroke:#333333;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4532)" />
+    <path
+       inkscape:export-ydpi="128.34"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       style="fill:none;fill-rule:evenodd;stroke:#333333;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4690)"
+       d="M 255.3232,1480.9876 137.70625,1435.8864"
+       id="path4395"
+       inkscape:path-effect="#path-effect4397"
+       inkscape:original-d="M 255.3232,1480.9876 137.70625,1435.8864"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       inkscape:export-ydpi="128.34"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       xml:space="preserve"
+       id="flowRoot4399"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       transform="translate(134.34342,1208.1224)"><flowRegion
+         id="flowRegion4401"><rect
+           id="rect4403"
+           width="116.61208"
+           height="73.042732"
+           x="-90.983047"
+           y="197.63412"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;" /></flowRegion><flowPara
+         id="flowPara4405">i1 ?</flowPara></flowRoot>    <flowRoot
+       inkscape:export-ydpi="128.34"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       transform="translate(134.49967,1286.291)"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       id="flowRoot4407"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4409"><rect
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;"
+           y="197.63412"
+           x="-90.983047"
+           height="73.042732"
+           width="116.61208"
+           id="rect4411" /></flowRegion><flowPara
+         id="flowPara4413">i2 ?</flowPara></flowRoot>    <flowRoot
+       inkscape:export-ydpi="128.34"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       xml:space="preserve"
+       id="flowRoot4415"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       transform="translate(134.09928,1369.5853)"><flowRegion
+         id="flowRegion4417"><rect
+           id="rect4419"
+           width="116.61208"
+           height="73.042732"
+           x="-90.983047"
+           y="197.63412"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;" /></flowRegion><flowPara
+         id="flowPara4422">i3 ?</flowPara></flowRoot>    <path
+       style="fill:none;fill-rule:evenodd;stroke:#333333;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4392)"
+       d="m 740.23936,1475.0538 -125.96182,1.2196"
+       id="path4424"
+       inkscape:path-effect="#path-effect4426"
+       inkscape:original-d="m 740.23936,1475.0538 -125.96182,1.2196"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-ydpi="128.34" />
+    <path
+       inkscape:connector-curvature="0"
+       inkscape:original-d="m 740.23936,1549.0538 -125.96182,1.2196"
+       inkscape:path-effect="#path-effect4430"
+       id="path4428"
+       d="m 740.23936,1549.0538 -125.96182,1.2196"
+       style="fill:none;fill-rule:evenodd;stroke:#333333;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4456)"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-ydpi="128.34" />
+    <flowRoot
+       inkscape:export-ydpi="128.34"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       transform="translate(847.43767,1251.2408)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="flowRoot4432"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4434"><rect
+           style="fill:#333333;fill-opacity:1"
+           y="197.63412"
+           x="-90.983047"
+           height="73.042725"
+           width="141.98352"
+           id="rect4436" /></flowRegion><flowPara
+         id="flowPara4438">o1 = x</flowPara></flowRoot>    <flowRoot
+       inkscape:export-ydpi="128.34"
+       inkscape:export-xdpi="128.34"
+       inkscape:export-filename="/home/mathieu/Documents/openMOLE/openmole-com/slides/images/inverseProblem.png"
+       xml:space="preserve"
+       id="flowRoot4440"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(847.59392,1329.4094)"><flowRegion
+         id="flowRegion4442"><rect
+           id="rect4444"
+           width="134.73454"
+           height="73.042725"
+           x="-90.983047"
+           y="197.63412"
+           style="fill:#333333;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara4446">o2 = y</flowPara></flowRoot>  </g>
 </svg>
