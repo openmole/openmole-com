@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>OpenMOLE: a Workflow Engine for Distributed Medical Image Analysis</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="mathieu" >
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="js/reveal.js-min/css/reveal.min.css">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/white.css" id="theme">
+        <link rel="stylesheet" href="custom_css/theme.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+      
+      
+<!--        remove default borders around images-->
+        <style>
+          .reveal section img {
+            background:none; 
+            border:none; 
+            box-shadow:none;
+          }
+          
+          #logos { 
+            width: 960px; // Change this according to the width you want. 
+            height: 500px; // Change this as well 
+            margin: 0 auto 0 auto; 
+            text-align: center; // Will center the images contained in the div 
+          }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+ 
+    
+    <section>
+        <img src="./images/openmole3.png"/>
+    </section>
+ 
+    <section>
+        <div class="title">Mathieu Leclaire<br/>
+            Romain Reuillon<br/>
+            Jonathan Passerat-Palmbach<br/>
+        </div> <br/>
+            <img src="./images/allLogos.png" width="90%"/>
+    </section>
+
+    <section>
+        <img src="./images/fullTriangle.png" width="1050px"/><br/>
+        <div class="title">Model construction steps</div>
+    </section>
+    
+    <section>
+        <div>Many scientists use <b>naturally parallel methods</b> daily:</div>
+        <ul>
+            <li>Data reconstruction</li>
+            <li>Parameter estimation</li>
+            <li>Sensitivity analysis</li>
+            <li>Optimisation</li>
+            <li>Replication</li>
+            <li>...</li>
+        </ul>
+        <div>Execution on the <b>same program</b> with <b>different parameters</b> and/or <b>datasets</b>.</div>
+    </section>
+    
+    <section>
+        <img src="./images/infinitetime.png" width="75%"/> <br/>
+        <div>These methods are <b>time consuming</b>, but generally executed in a sequential manner.</div>
+    </section>
+
+     <section>
+      <img src="./images/toy.jpg" width="50%" /> <br/>
+       <div>OpenMOLE fills the gap. It provides an easy way to <b>describe</b> and <b>distribute</b> naturally parallel processes.</div>
+    </section>
+
+    <section>
+        <img src="./images/omGal.png" width="135%"><br>
+    </section>
+            
+    <section>
+        <h2><b>Zero deployment</b> approach</h2>
+        <ul>
+          <li>The code is the user's code, not a web service</li>
+          <li>User code is automatically deployed at runtime</li>
+          <li>Ships to remote environment</li>
+          <li>No prior knowledge of remote environment needed</li>
+          <li>No installation required on any machine</li>
+        </ul>
+    </section>
+          
+    <section>
+        <h2> Portable code ... or not</h2>
+        Codes running on <b>JVM</b> (Java, Scala, Netlogo)
+        <img src="./images/java.jpg" width="30%" style="position:absolute; top:20px; right:-200px"/><br/><br/>
+        And others ... C, C++, Python, R, Fortran, Octave, Scilab, Haskell, OCaml, etc
+    </section>
+                
+    <section>
+        <h2>Port (almost) any program to the grid in 3 simple steps</h2>
+        <br>
+        <ul>
+            <li>Archive it with CARE* <=> execute it on linux</li>
+            <li>Write your OpenMOLE workflow</li>
+            <li>Click the run button</li>
+        </ul><br><br>
+        <a class= "right" href="http://reproducible.io">* http://reproducible.io</a>
+    </section> 
+               
+  <section>
+      <h2>Packaging an application with <b>Care</b></h2>
+      Applications have dependencies:<br/>
+      <ul>
+        <li>Shared libraries</li>
+        <li>Packages (Python, R, ...)</li>
+        <li>Low level system calls</li>
+        <li>Environment variables</li>
+        <li>...</li>
+      </ul>
+      <br/>
+      <b>Capture</b> these dependencies and <b>transfer</b> along with the application from Linux to Linux
+    </section>  
+    
+    
+    <section>
+	<div class="title">
+        <h3>Naturally parallel formalism to design experiments:<b>a workflow</b></h3>
+        <img src="./images/workflowExplained.png" width="120%"/><br/><br/>
+	</div>
+    </section>
+                
+    <section>
+      <h3>Automatic data transfers<br/> and<br/> Replica management</h3>
+      <img src="./images/data_transfers.svg" width="110%">
+      <div>Files and folders transfers are <b>handled transparently</b> by OpenMOLE</div>
+    </section>    
+          
+    <section data-background-color="rgb(1, 195, 23)">
+      <h2>What OpenMOLE does</h2>
+      <img src="./images/staticRuntime.png" width="60%"/> <br/>
+      <i>Data parallelism</i>
+    </section>
+
+    <section data-background-color="rgb(195, 1, 53)">
+      <h3>What OpenMOLE does not</h3>
+      <img src="./images/mpi.gif" width="60%"/><br/><br/>
+    <b>Parallelisation by message / Task Parallelism</b><br/>
+    <i>Example: Spark, MPI, ...</i>
+  </section>
+  
+    <section>
+        <h2>Powered by EGI</h2>
+        <h4>(and others)</h4>
+        <img src="./images/egi2.jpg" width="70%">
+    </section>
+          
+  
+     
+
+    <section>
+      <h2>A workflow</h2>
+        <pre style="brush: scala"><code>
+val i   = Val[Double]        
+val res = Val[Double]        
+
+val exploration = ExplorationTask ( i in (0.0 to 10.0 by 1.0) )
+
+val model = 
+  ScalaTask ("val res = i * 2") set (
+    inputs  += i,
+    outputs += (i, res)
+  )
+  
+val env = LocalEnvironment(5)
+
+val ex = exploration -< (model on env) start
+        </code></pre><br>
+    </section>
+        
+        
+    <section>
+      <h2>The same workflow <b>on the Grid !</b></h2>
+        <pre style="brush: scala"><code>
+val i   = Val[Double]        
+val res = Val[Double]        
+
+val exploration = ExplorationTask ( i in (0.0 to 10.0 by 1.0) )
+
+val model = 
+  ScalaTask ("val res = i * 2") set (
+    inputs  += i,
+    outputs += (i, res)
+  )
+  
+val env = EGIEnvironment("biomed")
+
+val ex = exploration -< (model on env) start
+        </code></pre><br>
+        <div>Switching to the <b>Grid Environment</b> is so easy !</div>
+    </section>
+    
+    <section>
+        <h2>Web Application</h2>
+        <img src="./images/guiwebscript.png" width="1200px">
+    </section>
+
+    <section>
+        <h2>Console interface</h2>
+        <img src="./images/console.png" width="85%" style="position: relative;bottom:0px;right:0px;"><br>
+    </section>
+    
+    <section>
+          <h2>Towards a P2P web platform</h2>
+         <img src="./images/instances-p2p.png" width="85%" style="position: relative;bottom:0px;right:0px;"><br>
+    </section>
+    
+    <section>
+        <h2>Towards <b>graphical</b> workflows</h2>
+        <img src="./images/gui.png" width="85%" style="position: relative;bottom:40px;right:0px;"><br>
+    </section> 
+
+    <section>
+      <h2>Market place</h2>
+         <img src="./images/market.png">
+      </section>
+    
+                                
+     <section>
+		 <h2>OpenMOLE through 4 examples</h2>
+		 <div class="title"> OpenMOLE is neither dedicated to a <b>scientific field </b> nor to a <b>language</b></div><br>
+		 <ul>
+        <li>Chromosome structuring: <b class="blue">Neuro Sciences</b>, <b class="red">C++</b></li>
+        <li>The SimTRAP project: <b class="blue">Social Sciences</b>, <b class="red">Netlogo</b></li>
+        <li>The SimPOP project: <b class = "blue">Geography</b>, <b class="red">Scala</b></li>
+        <li>The BioEmergence project: <b class="blue">Biology</b>, <b class="red">C</b></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Chromosome structuring</h2>
+
+          <img src="./images/chromosome.png" width="70%" align="left"><br>
+        <div style="text-align: right">
+            C++ model <br/>
+            2 days per simulation for 1,600 simulations <br/>= <b>8.5 years CPU time</b><br/>
+        </div>
+    </section>
+
+    <section>
+        <h2>The SimTRAP project</h2>
+        <img src="./images/simTRAP.png" width="60%" align="left"><br>
+        <div style="text-align: right">
+          Netlogo model <br/>
+          5 mins per simulation for 100,000 simulations <br/>= <b>1 year CPU time</b><br/>
+        </div>
+    </section>
+
+    <section>
+        <h2>The Simpop project</h2>
+        <img src="./images/simpop.png" width="60%" align="left"><br>
+        <div style="text-align: right">
+          Scala model <br/>
+          2 secs per simulation for<br/> 500,000,000 simulations <br/>= <b>30 years CPU time</b><br/>
+        </div>
+    </section>
+
+
+    <section>
+      <h2>The Bioemergences project</h2>
+        <img src="./images/BioEmergencesCaptureWKF.png" width="65%" align="left"><br>
+        <div style="text-align: right">
+          C model - Portal access<br/>
+          Daily production<br/> <b>10,000 hours / day</b><br/>
+      </div>
+    </section>
+                
+    <section>
+      <h2>Useful Links</h2>
+      <table>
+        <tr>
+          <td>Documentation</td>
+          <td><a href="http://www.openmole.org">www.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Mailing-list</td>
+          <td><a href="http://list.openmole.org">list.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Development version</td>
+          <td><a href="http://next.openmole.org">next.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Source code</td>
+          <td><a href="https://github.com/openmole/openmole">github.com/openmole</a></td>
+        </tr>
+        <tr>
+          <td>Market place</td>
+          <td><a href="https://github.com/openmole/openmole-market">github.com/openmole-market</a></td>
+        </tr>
+      </table>
+    </section>  
+  
+    <section>
+    <h1>Extra notions</h1>  
+    </section>  
+      
+    <section>
+         <h2>Hooks</h2>
+         Tasks are mute<br/>  
+         Hooks <b>extract content</b> from the dataflow<br/>
+      
+        <img src="images/hook_model.png" width="50%"/>
+
+        <pre class="brush: scala"><code>
+exploration -< (model on env) >- (average hook ToStringHook())
+        </code></pre>
+    </section>                
+      
+    <section>
+         <h2>Grouping</h2>
+         Short jobs don't cope well with distributed computing<br/>  
+         Group <b>multiple tasks</b> in the <b>same batch job</b><br/>
+
+        <pre class="brush: scala"><code>
+exploration -< (model on env by 10) >- (average hook ToStringHook())
+        </code></pre>
+    </section>          
+  
+         
+    <section>
+      <h1>Thanks!</h1>
+      <table>
+        <tr>
+          <td style="border-bottom: 0px"><img style="width: 100px" src="images/romain2.png" /></td>
+          <td style="vertical-align: middle; border-bottom: 0px"><a mailto="romain.reuillon@iscpif.fr">romain.reuillon@iscpif.fr</a></td>
+        </tr>
+        <tr>
+          <td style="border-bottom: 0px"><img style="width: 100px" src="images/mathieu.jpg" /></td>
+          <td style="vertical-align: middle; border-bottom: 0px"><a mailto="mathieu.leclaire@iscpif.fr">mathieu.leclaire@iscpif.fr</a></td>
+        </tr>
+        <tr valign="middle">
+          <td><img src="images/jo.jpg" /></td>
+          <td style="vertical-align: middle"><a href="mailto:j.passerat-palmbach@imperial.ac.uk">j.passerat-palmbach@imperial.ac.uk</a></td>
+        </tr>
+      </table>
+    </section>  
+        
+    <section>
+        <h1><b>OpenMOLE advanced</b><br/><br/> January, 14th !</h1>  
+    </section>
+        
+    <section>
+        <img src="./images/jedi2-2.png" width="500px">
+    </section> 
+        
+        <section>
+        <img src="./images/modelIO.png"/> <br/><br/>
+    </section>
+                
+                
+    <section>
+        <img src="./images/methodIssues.png"/> <br/><br/>
+    </section>
+                               
+    <section>
+        <h2>Sensitivity analysis: <b style="color:#d45500;">Profiles</b></h2>
+        <img src="./images/sensitivityAnalysis.png" width="80%" style="position: relative; top: 50px;"/> <br/><br/>
+        <img src="./images/profiles.png" width="60%" style="position: relative; top: 30px; right:-150px"/>
+    </section>
+                
+    <section>
+        <h2>Reverse problems: <b style="color:#006680;">Genetic algorithms</b></h2>
+        <img src="./images/inverseProblem.png" width="80%" style="position: relative; top: 50px;"/> <br/><br/>
+        <img src="./images/fitnessEval.png" width="60%" style="position: relative; top: 0px; right: -300px;"/>
+    </section>
+       
+    <section>
+        <h2><b style="color:#677821;">Pattern Space Exploration</b></h2>
+        <img src="./images/modelO.png" width="55%" style="position: relative; top: 50px;right:200px"/> <br/><br/>
+        <img src="./images/modelOutputs.png" width="30%" style="position: relative; top: -230px; right:-270px"/>
+        <img src="./images/volumeDiscovered.png" width="60%" style="position: absolute; top: 450px; right:-120px"/>
+    </section>
+      
+  </div>
+
+            <script src="js/reveal.js/lib/js/head.min.js"></script>
+            <script src="js/reveal.js-min/js/reveal.min.js"></script>
+
+            <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                slideNumber: true,
+                
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+
+
+            </script>
+
+    </body>
+</html>
