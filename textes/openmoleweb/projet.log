@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.8)  3 NOV 2015 12:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.8)  30 NOV 2015 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -387,8 +387,7 @@ You need to specify a language, either as a global option
 or as an optional argument to the \usepackage command;
 You shouldn't try to proceed from here, type x to quit.
 
-)
-No file projet.aux.
+) (./projet.aux)
 \openout1 = `projet.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -403,7 +402,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count101
 \scratchdimen=\dimen121
@@ -511,24 +510,21 @@ Package pdftex.def Info: img/instances-p2p.png used on input line 52.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2 <./img/instances.png>] [3 <./img/instances-p2p.png>] (./projet.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[2 <./img/instances.png>] [3 <./img/instances-p2p.png>] (./projet.aux) ) 
 Here is how much of TeX's memory you used:
- 3729 strings out of 495020
- 53370 string characters out of 6181325
- 109980 words of memory out of 5000000
+ 3731 strings out of 495020
+ 53392 string characters out of 6181325
+ 110004 words of memory out of 5000000
  6889 multiletter control sequences out of 15000+600000
  9649 words of font info for 38 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,8n,38p,797b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr8.pfb>
 Output written on projet.pdf (3 pages, 425473 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)
