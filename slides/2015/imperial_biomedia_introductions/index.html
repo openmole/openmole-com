@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>OpenMOLE</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="mathieu" >
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="js/reveal.js-min/css/reveal.min.css">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/white.css" id="theme">
+        <link rel="stylesheet" href="custom_css/theme.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+      
+      
+<!--        remove default borders around images-->
+        <style>
+          .reveal section img {
+            background:none; 
+            border:none; 
+            box-shadow:none;
+          }
+          
+          #logos { 
+            width: 960px; // Change this according to the width you want. 
+            height: 500px; // Change this as well 
+            margin: 0 auto 0 auto; 
+            text-align: center; // Will center the images contained in the div 
+          }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+ 
+                <section>
+        <img src="./images/openmole3.png"/> <br/><br/>
+    </section>
+ 
+    <section>
+        <div class="title">Mathieu Leclaire<br/>
+            Romain Reuillon<br/>
+            Jonathan Passerat-Palmbach<br/>
+        </div> <br/>
+            <img src="./images/allLogos.png" width="90%"/>
+    </section>
+                
+    <section>
+        <img src="./images/modelIO.png"/> <br/><br/>
+    </section>
+                
+    <section data-background-color="rgb(1, 195, 23)">
+      <h2>What OpenMOLE does</h2>
+      <img src="./images/staticRuntime.png" width="60%"/> <br/>
+      <i>Data parallelism</i>
+    </section>
+
+    <section data-background-color="rgb(195, 1, 53)">
+      <h3>What OpenMOLE does not</h3>
+      <img src="./images/mpi.gif" width="60%"/><br/><br/>
+    <b>Parallelisation by message / Task Parallelism</b><br/>
+    <i>Example: Spark, MPI, ...</i>
+  </section>
+  
+              
+      <section>
+        <img src="./images/omGal.png"/>
+    </section>
+                
+                              
+    <section>
+        <h2><b>Zero deployment</b> approach</h2>
+        <ul>
+          <li>The code is the user's code, not a web service</li>
+          <li>User code is automatically deployed at runtime</li>
+          <li>Ships to remote environment</li>
+          <li>No prior knowledge of remote environment needed</li>
+          <li>No installation required on any machine</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2> Portable code ... or not</h2>
+        Codes running on <b>JVM</b> (Java, Scala, Netlogo)
+        <img src="./images/java.jpg" width="30%" style="position:absolute; top:20px; right:-200px"/><br/><br/>
+        And others ... C, C++, Python, R, Fortran, Octave, Scilab, Haskell, OCaml, etc
+    </section>
+                
+                
+                                
+     <section>
+         <h2>OpenMOLE for all communities, for all languages</h2>
+         <br>
+         <br>
+		 <div class="title"> OpenMOLE is neither dedicated to a <b>scientific field </b> nor to a <b>language</b></div><br><br>
+		 <ul>
+        <li>Chromosome structuring: <b class="blue">Neuro Sciences</b>, <b class="red">C++</b></li>
+        <li>The SimTRAP project: <b class="blue">Social Sciences</b>, <b class="red">Netlogo</b></li>
+        <li>The SimPOP project: <b class = "blue">Geography</b>, <b class="red">Scala</b></li>
+        <li>The BioEmergence project: <b class="blue">Biology</b>, <b class="red">C</b></li>
+        </ul>
+    </section>
+                
+                                     
+      <section>
+      <h2>Market place</h2>
+         <img src="./images/market.png">
+      </section>
+    
+              
+    <section>
+      <h2>Useful Links</h2>
+      <table>
+        <tr>
+          <td>Documentation</td>
+          <td><a href="http://www.openmole.org">www.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Mailing-list</td>
+          <td><a href="http://list.openmole.org">list.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Development version</td>
+          <td><a href="http://next.openmole.org">next.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Source code</td>
+          <td><a href="https://github.com/openmole/openmole">github.com/openmole</a></td>
+        </tr>
+        <tr>
+          <td>Market place</td>
+          <td><a href="https://github.com/openmole/openmole-market">github.com/openmole-market</a></td>
+        </tr>
+      </table>
+    </section>              
+                
+  </div>
+
+            <script src="js/reveal.js/lib/js/head.min.js"></script>
+            <script src="js/reveal.js-min/js/reveal.min.js"></script>
+
+            <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                slideNumber: true,
+                
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+
+
+            </script>
+
+    </body>
+</html>
