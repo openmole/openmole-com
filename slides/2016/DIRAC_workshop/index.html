@@ -8,7 +8,7 @@
         <title>OpenMOLE: a Workflow-based Exploration Platform</title>
 
         <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-        <meta name="author" content="mathieu" >
+        <meta name="author" content="romain" >
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -58,19 +58,18 @@
     <body>
 
         <div class="reveal">
-
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
  
     <section>
-        <img src="./images/openmole3.png"/> <br/><br/>
-        <h2>Open MOdeL Experiment</h2>
+        <img src="./images/openmole3.png"/>
+        <h2>Worflows for distributed computing</h2>
     </section>
  
     <section>
         <div class="title">Mathieu Leclaire<br/>
-            Romain Reuillon<br/>
             Jonathan Passerat-Palmbach<br/>
+            Romain Reuillon<br/>
         </div> <br/>
             <img src="./images/allLogos.png" width="90%"/>
     </section>
@@ -78,52 +77,61 @@
     <section>
         <h2>Context</h2>
         <ul>
-            <li>Complex-system community </li>
+            <li>Complex-system community</li>
             <li>Various scientific fields</li>
-            <li>Bring Distributed Computing / HPC resources to researchers</li>
+            <li>No standard practices, language, plateform..</li>
+            <li>Thematician PhDs (Geographers, Biologist, Scociologist...) with no technical support</li>
         </ul>
     </section>
-                
     
     <section>
-        <img src="./images/modelIO.png"/> <br/><br/>
-        <h3> / Application</h3>
-        <h3> / Program</h3>
-        <h3> / Call it whatever you want</h3>
-        <h3> / (stuff taking inputs and producing outputs)</h3>
+        <div>They use <b>naturally parallel methods</b> daily on their laptop:</div>
+        <ul>
+            <li>Data reconstruction</li>
+            <li>Parameter estimation</li>
+            <li>Sensitivity analysis</li>
+            <li>Optimisation</li>
+            <li>Replication</li>
+            <li>...</li>
+        </ul>
+        <div>Execution on the <b>same program</b> with <b>different parameters</b> and/or <b>datasets</b>.</div>
     </section>
+        
+    <section>
+        <div>How to bring Distributed Computing to theses researchers</div>
+        <img src="./images/scale.jpg" width="90%"/>
+        <div>Prototype Small, Scale for Free</div>
+    </section>          
                 
-                          
     <section>
-        <img src="./images/omGal.png"/>
+        <div>OpenMOLE articulate 3 orthogonal concepts</div>
+        <img src="./images/openmoleGalRaw.png" width="135%"><br>
+        <div>... and an expressive workflow formalism for distributed computing.</div>
     </section>
-  
+    
     <section>
-        <h3>Embed a model (/ application) as a <b>black box</b></h3>
-        <img src="./images/blackbox.png">
+        <h2>1 - Model?</h2>
+        <img src="./images/modelIO.png"/> <br/><br/>
+        <p>Stuff that you can launch, taking inputs and producing outputs</p>
     </section>
+            
               
     <section>
         <h2><b>Zero deployment</b> approach</h2>
         <ul>
-          <li>The code is the user's code, not a web service</li>
           <li>User code is automatically deployed at runtime</li>
-          <li>Ships to remote environment</li>
           <li>No prior knowledge of remote environment needed</li>
           <li>No installation required on any machine</li>
         </ul>
     </section>
              
-                
     <section>
-        <h2> Portable code ... or not</h2>
-        Codes running on <b>JVM</b> (Java, Scala, Netlogo)
-        <img src="./images/java.jpg" width="30%" style="position:absolute; top:20px; right:-200px"/><br/><br/>
-        And others ... C, C++, Python, R, Fortran, Octave, Scilab, Haskell, OCaml, etc
+        <div>Works with almost any language / plateform running on Linux</div>
+        <img src="./images/blackbox.png">
     </section>
-                   
-  <section>
-      <h2>Packaging an application with <b>Care</b></h2>
+                 
+    <section>
+      <h2>Packaging (non JVM) application with <b>Care</b></h2>
       Applications have dependencies:<br/>
       <ul>
         <li>Shared libraries</li>
@@ -136,136 +144,169 @@
       <b>Capture</b> these dependencies and <b>transfer</b> along with the application from Linux to Linux
     </section>  
                 
-        <section>
-        <h2>Distributed execution of (almost) any program to (pretty much) any computing environment in 3 simple steps</h2>
-        <br>
+    <section>
+        <div>Distributed execution of (almost) any program to (pretty much) any computing environment in 3 simple steps</div>
         <ul>
-            <li>Package it with CARE* &#8658; execute it on linux</li>
+            <li>Package it with CARE &#8658; execute it on linux</li>
             <li>Write your OpenMOLE workflow</li>
             <li>Click the run button</li>
-        </ul><br><br>
-        <a class= "right" href="http://reproducible.io">* http://reproducible.io</a>
+        </ul>
     </section> 
+             
+    <section>
+        <div>2 - Method?</div>
+        <img src="./images/openmoleGalRaw.png" width="135%"><br>
+    </section>
             
+    <section>
+      <h2>Map/reduce</h2>
+      <img src="./images/map-reduce.svg" width="100%"><br>
+    </section>                
                 
-    <section> 
-      <h2>Parameter tuning</h2>
-      <h3>Classic methods:</h3>
-      <ul>
-      <li>Grid Search</li>
-      <li>Random sampling</li>
-      <li>Latin Hypercube</li>
-      <li>...</li>
-      </ul>
-      
-      <h3>Not very dynamic</h3>
+    <section>
+      <h2>Map/reduce</h2>
+      <p>Grid Search</p>
+      <p>Random sampling</p>
+      <p>Latin Hypercube</p>
+      <p>Parallel data processing</p>
+      <p>...</p>
     </section>
               
     <section> 
-      <h2>Let's do some serious experiments</h2>
-      <img src="./images/monkey.png" width="35%" height="35%"/>
-    </section>
-              
-    <section>
-        <img src="./images/methodIssues.png"/> <br/><br/>
-    </section>
-                               
-    <section>
-        <h2>Sensitivity analysis: <b style="color:#d45500;">Profiles</b></h2>
-        <img src="./images/sensitivityAnalysis.png" width="80%" style="position: relative; top: 50px;"/> <br/><br/>
-        <img src="./images/profiles.png" width="60%" style="position: relative; top: 30px; right:-150px"/>
+      <h2>Master/slave</h2>
+      <img src="./images/island.png" width="60%">
+      <p>Example: genetic algorithm</p>
     </section>
                 
     <section>
-        <h2>Reverse problems: <b style="color:#006680;">Genetic algorithms</b></h2>
-        <img src="./images/inverseProblem.png" width="80%" style="position: relative; top: 50px;"/> <br/><br/>
-        <img src="./images/fitnessEval.png" width="60%" style="position: relative; top: 0px; right: -300px;"/>
+        <div>3 - Execution environment?</div>
+        <img src="./images/openmoleGalRaw.png" width="135%"><br>
     </section>
-       
+                     
     <section>
-        <h2><b style="color:#677821;">Pattern Space Exploration</b></h2>
-        <img src="./images/modelO.png" width="55%" style="position: relative; top: 50px;right:200px"/> <br/><br/>
-        <img src="./images/modelOutputs.png" width="30%" style="position: relative; top: -230px; right:-270px"/>
-        <img src="./images/volumeDiscovered.png" width="60%" style="position: absolute; top: 450px; right:-120px"/>
-    </section>
+        <h2>Today</h2>
         
-              
-    <section>
-        <h2>Powered by EGI</h2>
-        <h4>(and others)</h4>
-        <img src="./images/egi2.jpg" width="70%">
+        Multi-thread<br/>
+        Delegation through SSH<br/>
+        PBS (on ssh)<br/>
+        SLURM (on ssh)<br/>
+        Condor (on ssh)<br/>
+        SGE (on ssh)<br/>
+        OAR (on ssh)<br/>
+        DIRAC<br/>
+        Adhoc Desktop Grid<br/>
     </section>
-          
- <section>
-	<div class="title">
-        <h3>Naturally parallel formalism to design experiments: <b>a workflow</b></h3>
-        <img src="./images/workflowExplained.png" width="120%"/><br/><br/>
-	</div>
+              
+     <section>
+        <h2>Tomorow</h2>
+        
+        Commercial cloud providers<br/>
+        Academic cloud<br/><br/>
+        Volonteer computing?<br/>
+        Combination of environments?<br/>
+        Next docker-based computing plateform?<br/>
+    </section>               
+                              
+    <section>
+        <h2>Transparent access</h2>
+        <p>Access as the user would do it</p>
+        <p>Use user credential</p>
+        <p>No preliminary step</p>
+    </section>
+                
+    <section>
+        <h2>Automatic data transfers</br> (+ Replica management)</h2>
+      <img src="./images/data_transfers.svg" width="110%">
+      <div>Files and folders transfers are <b>handled transparently</b> by OpenMOLE</div>
+    </section>   
+                          
+    <section>
+        <h2>And now: examples!</h2>
+        <img src="./images/doc.jpg" width="80%">
+    </section>
+    
+    <section>
+        <div class="title">
+            <h2>The terminology</h2>
+            <img src="./images/workflowExplained.png" width="120%"/><br/><br/>
+        </div>
     </section>
                 
     <section>
       <h2>A workflow</h2>
-        <pre style="brush: scala"><code>
-val i   = Val[Double]        
-val res = Val[Double]        
+        <pre style="brush: scala"><code style="max-height: 600px">val input   = Val[File] 
+val inputFile   = Val[File] 
+val fileName    = Val[String]
+val outputFile  = Val[File]        
 
-val exploration = ExplorationTask ( i in (0.0 to 10.0 by 1.0) )
+val exploration = 
+  ExplorationTask ( 
+    inputFile in (workDirectory / "files") withName fileName 
+  )
 
-val model = 
-  ScalaTask ("val res = i * 2") set (
-    inputs  += i,
-    outputs += (i, res)
+val process = 
+  ScalaTask ("""
+    val outputFile = newFile()
+    outputFile < inputFile.content.toUpperCase""") set (
+    inputs  += inputFile,
+    outputs += outputFile,
+    (inputs, outputs) += fileName
   )
   
-val env = LocalEnvironment(5)
+val copy = CopyFileHook(outputFile, workDirectory / "results/${fileName}")
 
-val ex = exploration -< (model on env) start
-        </code></pre><br>
+exploration -< (process hook copy)</code></pre>
     </section>
         
         
     <section>
-      <h2>Same workflow <b>on the Grid !</b></h2>
-        <pre style="brush: scala"><code>
-val i   = Val[Double]        
-val res = Val[Double]        
+        <pre style="brush: scala"><code style="max-height: 700px">val input   = Val[File] 
+val inputFile   = Val[File] 
+val fileName    = Val[String]
+val outputFile  = Val[File]        
 
-val exploration = ExplorationTask ( i in (0.0 to 10.0 by 1.0) )
+val exploration = 
+  ExplorationTask ( 
+    inputFile in (workDirectory / "files") withName fileName 
+  )
 
-val model = 
-  ScalaTask ("val res = i * 2") set (
-    inputs  += i,
-    outputs += (i, res)
+val process = 
+  ScalaTask ("""
+    val outputFile = newFile()
+    outputFile < inputFile.content.toUpperCase""") set (
+    inputs  += inputFile,
+    outputs += outputFile,
+    (inputs, outputs) += fileName
   )
   
-val env = EGIEnvironment("biomed")
+val copy = CopyFileHook(outputFile, workDirectory / "results/${fileName}")
 
-val ex = exploration -< (model on env) start
-        </code></pre><br>
-        <div>That's what we call usable <b>HPC</b> :)</div>
+val biomed = EGIEnvironment("biomed")
+
+exploration -< (process hook copy on biomed)</code></pre>
     </section>
     
     <section>
-        <h1><a href="https://localhost:37035/">Demo time?</a></h1>
-        
-    </section>
-                    
-    <section>
-        <img src="./images/omGal.png"/>
-    </section>
-            
-   <section>
-         <h2>OpenMOLE for all communities, for all languages</h2>
-         <br>
-         <br>
-		 <div class="title"> OpenMOLE is neither dedicated to a <b>scientific field </b> nor to a <b>language</b></div><br><br>
-		 <ul>
-        <li>Chromosome structuring: <b class="blue">Neuro Sciences</b>, <b class="red">C++</b></li>
-        <li>The SimTRAP project: <b class="blue">Social Sciences</b>, <b class="red">Netlogo</b></li>
-        <li>The SimPOP project: <b class = "blue">Geography</b>, <b class="red">Scala</b></li>
-        <li>The BioEmergence project: <b class="blue">Biology</b>, <b class="red">C</b></li>
-        </ul>
-    </section>
+      <h2>Native code</h2>
+        <pre><code>care -o hello.tgz.bin python hello.py 42 test.txt</code></pre>
+        <pre style="brush: scala; margin-top: 40px"><code style="max-height: 600px">val arg = Val[Int]
+val output = Val[File]
+
+val pythonTask =
+  CARETask(
+      workDirectory / "hello.tgz.bin",
+      "python hello.py ${arg} output.txt") set (
+    inputs += arg,
+    outputFiles += ("output.txt", output),
+    outputs += arg
+  )
+
+val exploration = ExplorationTask(arg in (0 to 10))
+
+val copy = CopyFileHook(output, workDirectory / "hello${arg}.txt")
+
+exploration -< (pythonTask hook copy)</code></pre> 
+    </section>      
                 
     <section>
       <h2>Useful Links</h2>
@@ -273,10 +314,6 @@ val ex = exploration -< (model on env) start
         <tr>
           <td>Documentation</td>
           <td><a href="http://www.openmole.org">www.openmole.org</a></td>
-        </tr>
-        <tr>
-          <td>Mailing-list</td>
-          <td><a href="http://list.openmole.org">list.openmole.org</a></td>
         </tr>
         <tr>
           <td>Development version</td>
