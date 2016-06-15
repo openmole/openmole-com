@@ -76,12 +76,10 @@
 
     <section>
         <h2>Context</h2>
-        <ul>
-            <li>Complex-system community</li>
-            <li>Various scientific fields</li>
-            <li>No standard practices, language, plateform..</li>
-            <li>Thematician PhDs (Geographers, Biologist, Scociologist...) with no technical support</li>
-        </ul>
+        <div>Complex-system community</div>
+        <div>Various scientific fields</div>
+        <div>Thematician PhDs (Geographers, Biologist, Scociologist...) with no technical support</div>
+        <div>No standard practices, language, plateform..</div>
     </section>
     
     <section>
@@ -106,7 +104,7 @@
     <section>
         <div>OpenMOLE articulate 3 orthogonal concepts</div>
         <img src="./images/openmoleGalRaw.png" width="135%"><br>
-        <div>... and an expressive workflow formalism for distributed computing.</div>
+        <div>Tied by an expressive workflow formalism for distributed computing.</div>
     </section>
     
     <section>
@@ -118,11 +116,9 @@
               
     <section>
         <h2><b>Zero deployment</b> approach</h2>
-        <ul>
-          <li>User code is automatically deployed at runtime</li>
-          <li>No prior knowledge of remote environment needed</li>
-          <li>No installation required on any machine</li>
-        </ul>
+        <div>User code is automatically deployed at runtime</div>
+        <div>No installation is required on the execution environment</div>
+        <div>No prior knowledge of the execution environment is needed</div>
     </section>
              
     <section>
@@ -136,7 +132,6 @@
       <ul>
         <li>Shared libraries</li>
         <li>Packages (Python, R, ...)</li>
-        <li>Low level system calls</li>
         <li>Environment variables</li>
         <li>...</li>
       </ul>
@@ -144,14 +139,14 @@
       <b>Capture</b> these dependencies and <b>transfer</b> along with the application from Linux to Linux
     </section>  
                 
-    <section>
+    <!--<section>
         <div>Distributed execution of (almost) any program to (pretty much) any computing environment in 3 simple steps</div>
         <ul>
             <li>Package it with CARE &#8658; execute it on linux</li>
             <li>Write your OpenMOLE workflow</li>
             <li>Click the run button</li>
         </ul>
-    </section> 
+    </section>-->
              
     <section>
         <div>2 - Method?</div>
@@ -209,9 +204,9 @@
                               
     <section>
         <h2>Transparent access</h2>
-        <p>Access as the user would do it</p>
-        <p>Use user credential</p>
         <p>No preliminary step</p>
+        <p>Access as the user would do it</p>
+        <p>With user credential</p>
     </section>
                 
     <section>
@@ -234,15 +229,9 @@
                 
     <section>
       <h2>A workflow</h2>
-        <pre style="brush: scala"><code style="max-height: 600px">val input   = Val[File] 
-val inputFile   = Val[File] 
+        <pre style="brush: scala"><code style="max-height: 600px">val inputFile   = Val[File] 
 val fileName    = Val[String]
 val outputFile  = Val[File]        
-
-val exploration = 
-  ExplorationTask ( 
-    inputFile in (workDirectory / "files") withName fileName 
-  )
 
 val process = 
   ScalaTask ("""
@@ -251,6 +240,11 @@ val process =
     inputs  += inputFile,
     outputs += outputFile,
     (inputs, outputs) += fileName
+  )
+
+val exploration = 
+  ExplorationTask ( 
+    inputFile in (workDirectory / "files") withName fileName 
   )
   
 val copy = CopyFileHook(outputFile, workDirectory / "results/${fileName}")
@@ -260,15 +254,9 @@ exploration -< (process hook copy)</code></pre>
         
         
     <section>
-        <pre style="brush: scala"><code style="max-height: 700px">val input   = Val[File] 
-val inputFile   = Val[File] 
+        <pre style="brush: scala"><code style="max-height: 700px">val inputFile   = Val[File] 
 val fileName    = Val[String]
 val outputFile  = Val[File]        
-
-val exploration = 
-  ExplorationTask ( 
-    inputFile in (workDirectory / "files") withName fileName 
-  )
 
 val process = 
   ScalaTask ("""
@@ -278,12 +266,17 @@ val process =
     outputs += outputFile,
     (inputs, outputs) += fileName
   )
+
+val exploration = 
+  ExplorationTask ( 
+    inputFile in (workDirectory / "files") withName fileName 
+  )
   
 val copy = CopyFileHook(outputFile, workDirectory / "results/${fileName}")
 
-val biomed = EGIEnvironment("biomed")
+val biomed = EGIEnvironment("biomed") // Add requirements here
 
-exploration -< (process hook copy on biomed)</code></pre>
+exploration -< (process hook copy on biomed by 2)</code></pre>
     </section>
     
     <section>
@@ -307,6 +300,36 @@ val copy = CopyFileHook(output, workDirectory / "hello${arg}.txt")
 
 exploration -< (pythonTask hook copy)</code></pre> 
     </section>      
+        
+    <section>
+            <pre style="brush: scala"><code style="max-height: 600px"> val evolution =
+  SteadyStateEvolution(
+    algorithm =
+      NSGA2(
+        mu = 200,
+        genome =
+          Seq(
+            rMax in (2.0, 50000.0),
+            distanceDecay in (0.0, 4.0),
+            pCreation in (0.0, 0.01),
+            pDiffusion in (0.0, 0.01),
+            innovationImpact in (0.0, 2.0),
+            innovationLife in (1.0, 4001.0)
+          ),
+        objectives = Seq(ksValue, deltaPop, deltaTime)
+      ),
+    evaluation = evaluateModel,
+    termination = 15 minutes
+  )
+
+val island = IslandEvolution(evolution, parallelism = 1000, termination = 200000)
+
+val savePopulation = SavePopulationHook(island, workDirectory / "populations")
+
+val grid = EGIEnvironment("vo.complex-systems.eu")
+
+(island on grid hook savePopulation)</code></pre>
+    </section>
                 
     <section>
       <h2>Useful Links</h2>
