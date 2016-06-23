@@ -63,7 +63,7 @@
  
     <section>
         <img src="./images/openmole3.png"/>
-        <h2>Worflows for distributed computing</h2>
+        <h2>Workflows for model exploration</h2>
     </section>
  
     <section>
@@ -76,10 +76,12 @@
 
     <section>
         <h2>Context</h2>
-        <div>Complex-system community</div>
-        <div>Various scientific fields</div>
-        <div>Thematician PhDs (Geographers, Biologist, Scociologist...) with no technical support</div>
-        <div>No standard practices, language, plateform..</div>
+        <ul>
+            <li>Complex-system community</li>
+            <li>Various scientific fields</li>
+            <li>No standard practices, language, plateform..</li>
+            <li>Thematician PhDs (Geographers, Biologist, Scociologist...) with no technical support</li>
+        </ul>
     </section>
     
     <section>
@@ -104,7 +106,7 @@
     <section>
         <div>OpenMOLE articulate 3 orthogonal concepts</div>
         <img src="./images/openmoleGalRaw.png" width="135%"><br>
-        <div>Tied by an expressive workflow formalism for distributed computing.</div>
+        <div>... and an expressive workflow formalism for distributed computing.</div>
     </section>
     
     <section>
@@ -116,9 +118,11 @@
               
     <section>
         <h2><b>Zero deployment</b> approach</h2>
-        <div>User code is automatically deployed at runtime</div>
-        <div>No installation is required on the execution environment</div>
-        <div>No prior knowledge of the execution environment is needed</div>
+        <ul>
+          <li>User code is automatically deployed at runtime</li>
+          <li>No prior knowledge of remote environment needed</li>
+          <li>No installation required on any machine</li>
+        </ul>
     </section>
              
     <section>
@@ -132,6 +136,7 @@
       <ul>
         <li>Shared libraries</li>
         <li>Packages (Python, R, ...)</li>
+        <li>Low level system calls</li>
         <li>Environment variables</li>
         <li>...</li>
       </ul>
@@ -139,14 +144,14 @@
       <b>Capture</b> these dependencies and <b>transfer</b> along with the application from Linux to Linux
     </section>  
                 
-    <!--<section>
+    <section>
         <div>Distributed execution of (almost) any program to (pretty much) any computing environment in 3 simple steps</div>
         <ul>
             <li>Package it with CARE &#8658; execute it on linux</li>
             <li>Write your OpenMOLE workflow</li>
             <li>Click the run button</li>
         </ul>
-    </section>-->
+    </section> 
              
     <section>
         <div>2 - Method?</div>
@@ -204,9 +209,9 @@
                               
     <section>
         <h2>Transparent access</h2>
-        <p>No preliminary step</p>
         <p>Access as the user would do it</p>
-        <p>With user credential</p>
+        <p>Use user credential</p>
+        <p>No preliminary step</p>
     </section>
                 
     <section>
@@ -229,54 +234,44 @@
                 
     <section>
       <h2>A workflow</h2>
-        <code><pre style="brush: scala"><code style="max-height: 600px">val inputFile   = Val[File] 
-val fileName    = Val[String]
-val outputFile  = Val[File]        
+        <pre style="brush: scala"><code>
+val i   = Val[Double]        
+val res = Val[Double]        
 
-val process = 
-  ScalaTask ("""
-    val outputFile = newFile()
-    outputFile << inputFile.content.toUpperCase""") set (
-    inputs  += inputFile,
-    outputs += outputFile,
-    (inputs, outputs) += fileName
-  )
+val exploration = ExplorationTask ( i in (0.0 to 10.0 by 1.0) )
 
-val exploration = 
-  ExplorationTask ( 
-    inputFile in (workDirectory / "files") withName fileName 
+val model = 
+  ScalaTask ("val res = i * 2") set (
+    inputs  += i,
+    outputs += (i, res)
   )
   
-val copy = CopyFileHook(outputFile, workDirectory / "results/${fileName}")
+val env = LocalEnvironment(5)
 
-exploration -< (process hook copy)</code></pre>
+val ex = exploration -< (model on env) start
+        </code></pre><br>
     </section>
         
         
     <section>
-        <pre style="brush: scala"><code style="max-height: 700px">val inputFile   = Val[File] 
-val fileName    = Val[String]
-val outputFile  = Val[File]        
+      <h2>Same workflow <b>on the Grid !</b></h2>
+        <pre style="brush: scala"><code>
+val i   = Val[Double]        
+val res = Val[Double]        
 
-val process = 
-  ScalaTask ("""
-    val outputFile = newFile()
-    outputFile < inputFile.content.toUpperCase""") set (
-    inputs  += inputFile,
-    outputs += outputFile,
-    (inputs, outputs) += fileName
-  )
+val exploration = ExplorationTask ( i in (0.0 to 10.0 by 1.0) )
 
-val exploration = 
-  ExplorationTask ( 
-    inputFile in (workDirectory / "files") withName fileName 
+val model = 
+  ScalaTask ("val res = i * 2") set (
+    inputs  += i,
+    outputs += (i, res)
   )
   
-val copy = CopyFileHook(outputFile, workDirectory / "results/${fileName}")
+val env = EGIEnvironment("biomed")
 
-val biomed = EGIEnvironment("biomed") // Add requirements here
-
-exploration -< (process hook copy on biomed by 2)</code></pre>
+val ex = exploration -< (model on env) start
+        </code></pre><br>
+        <div>That's what we call usable <b>HPC</b> :)</div>
     </section>
     
     <section>
@@ -302,35 +297,76 @@ exploration -< (pythonTask hook copy)</code></pre>
     </section>      
         
     <section>
-            <pre style="brush: scala"><code style="max-height: 600px"> val evolution =
-  SteadyStateEvolution(
-    algorithm =
-      NSGA2(
-        mu = 200,
-        genome =
-          Seq(
-            rMax in (2.0, 50000.0),
-            distanceDecay in (0.0, 4.0),
-            pCreation in (0.0, 0.01),
-            pDiffusion in (0.0, 0.01),
-            innovationImpact in (0.0, 2.0),
-            innovationLife in (1.0, 4001.0)
-          ),
-        objectives = Seq(ksValue, deltaPop, deltaTime)
+            <pre style="brush: scala"><code style="max-height: 600px">val algorithm = 
+  NSGA2(
+    mu = 200,
+    genome =
+      Seq(
+        rMax in (2.0, 50000.0),
+        distanceDecay in (0.0, 4.0),
+        pCreation in (0.0, 0.01),
+        pDiffusion in (0.0, 0.01),
+        innovationImpact in (0.0, 2.0),
+        innovationLife in (1.0, 4001.0)
       ),
+    objectives = Seq(ksValue, deltaPop, deltaTime)
+  )
+                
+val evolution =
+  SteadyStateEvolution(
+    algorithm = algorithm,
     evaluation = evaluateModel,
     termination = 15 minutes
   )
 
-val island = IslandEvolution(evolution, parallelism = 1000, termination = 200000)
+val island = 
+  IslandEvolution(
+    evolution,
+    parallelism = 1000,
+    termination = 200000
+  )
 
-val savePopulation = SavePopulationHook(island, workDirectory / "populations")
+val savePopulation = 
+  SavePopulationHook(
+    island,
+    workDirectory / "populations"
+  )
 
 val grid = EGIEnvironment("vo.complex-systems.eu")
 
 (island on grid hook savePopulation)</code></pre>
-    </section>
-                
+    </section>      
+       
+    <section>
+         <h2>Advanced methods</h2>
+         <img src="./images/guided.jpg" width="70%"/><br/><br/>
+    </section> 
+       
+    <section>
+         <h2>Profiles</h2>
+         <img src="./images/PdiffusionZ.png" width="80%"/><br/><br/>
+    </section> 
+        
+    <section>
+         <img src="./images/profileAlgo.svg" height="750px"/>
+    </section>     
+    
+    <section>
+        <h2>Flat Profile</h2>
+        <img src="./images/flat.svg" width="80%"/><br/><br/>
+    </section> 
+    
+        <section>
+         <h2>PSE</h2>
+         <img src="./images/objpse.svg" width="70%"/><br/><br/>
+    </section> 
+    
+    <section>
+         <h2>PSE</h2>
+         <img src="./images/flockingvolumediscovered.svg" width="70%"/><br/><br/>
+    </section> 
+        
+        
     <section>
       <h2>Useful Links</h2>
       <table>
