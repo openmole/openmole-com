@@ -210,7 +210,7 @@
     </section>
                 
     <section>
-        <h2>Automatic data transfers</br> (+ Replica management)</h2>
+        <h2>Automatic data transfers<br/> (+ Replica management)</h2>
       <img src="./images/data_transfers.svg" width="110%">
       <div>Files and folders transfers are <b>handled transparently</b> by OpenMOLE</div>
     </section>   
@@ -229,7 +229,7 @@
                 
     <section>
       <h2>A workflow</h2>
-        <code><pre style="brush: scala"><code style="max-height: 600px">val inputFile   = Val[File] 
+        <pre style="brush: scala"><code style="max-height: 600px">val inputFile   = Val[File] 
 val fileName    = Val[String]
 val outputFile  = Val[File]        
 
@@ -254,7 +254,8 @@ exploration -< (process hook copy)</code></pre>
         
         
     <section>
-        <pre style="brush: scala"><code style="max-height: 700px">val inputFile   = Val[File] 
+        <pre style="brush: scala"><code style="max-height: 700px">
+val inputFile   = Val[File] 
 val fileName    = Val[String]
 val outputFile  = Val[File]        
 
@@ -276,13 +277,15 @@ val copy = CopyFileHook(outputFile, workDirectory / "results/${fileName}")
 
 val biomed = EGIEnvironment("biomed") // Add requirements here
 
-exploration -< (process hook copy on biomed by 2)</code></pre>
+exploration -< (process hook copy on biomed by 2)
+    </code></pre>
     </section>
     
     <section>
       <h2>Native code</h2>
         <pre><code>care -o hello.tgz.bin python hello.py 42 test.txt</code></pre>
-        <pre style="brush: scala; margin-top: 40px"><code style="max-height: 600px">val arg = Val[Int]
+        <pre style="brush: scala; margin-top: 40px"><code style="max-height: 600px">
+val arg = Val[Int]
 val output = Val[File]
 
 val pythonTask =
@@ -298,7 +301,8 @@ val exploration = ExplorationTask(arg in (0 to 10))
 
 val copy = CopyFileHook(output, workDirectory / "hello${arg}.txt")
 
-exploration -< (pythonTask hook copy)</code></pre> 
+exploration -< (pythonTask hook copy)
+    </code></pre> 
     </section>      
         
     <section>
