@@ -16,5 +16,15 @@ div.title{
 }
 
 .right{
-float: right;
+  float: right;
 }
+
+/* http://stackoverflow.com/a/489002/470341 */
+ol { counter-reset: item; }
+ol li { display: block; }
+ol li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: #8a0;
+}
+
