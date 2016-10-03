@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>OpenMOLE: a Workflow-based Exploration Platform</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="romain" >
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="js/reveal.js-min/css/reveal.min.css">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/white.css" id="theme">
+        <link rel="stylesheet" href="custom_css/theme.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+
+<!--        remove default borders around images-->
+        <style>
+          .reveal section img {
+            background:none;
+            border:none;
+            box-shadow:none;
+          }
+
+          #logos {
+            width: 960px; // Change this according to the width you want.
+            height: 500px; // Change this as well
+            margin: 0 auto 0 auto;
+            text-align: center; // Will center the images contained in the div
+          }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+    <section>
+        <img src="./images/openmole3.png"/>
+        <h2>Workflows for distributed computing</h2>
+    </section>
+
+    <section>
+        <div class="title">Mathieu Leclaire<br/>
+            Jonathan Passerat-Palmbach<br/>
+            Romain Reuillon<br/>
+        </div> <br/>
+            <img src="./images/allLogos.png" width="90%"/>
+    </section>
+
+    <!-- <section>
+        <h2>Context</h2>
+        <ul>
+            <li>Complex-system community</li>
+            <li>Various scientific fields</li>
+            <li>No standard practices, language, plateform..</li>
+            <li>Thematician PhDs (Geographers, Biologist, Sociologist...) with no technical support</li>
+        </ul>
+    </section> -->
+
+    <section>
+        <h2><b>Naturally parallel</b> methods</h2>
+        <ul>
+            <li>Data reconstruction</li>
+            <li>Parameter estimation</li>
+            <li>Sensitivity analysis</li>
+            <li>Optimisation</li>
+            <li>Replication</li>
+            <li>...</li>
+        </ul>
+        <div>Execution of the <b>same program</b> with <b>different parameters</b> and/or <b>datasets</b>.</div>
+    </section>
+
+    <section>
+      <h2>But it's slow...</h2>
+      <img src="./images/skeleton-computer.jpg" width="75%"><br>
+    </section>
+
+    <section>
+      <h2>Enters distributed computing / HPC!</h2>
+      <img src="./images/clones.jpg" width="75%"><br>
+    </section>
+
+    <section>
+      <h2>HPC user experience</h2>
+      <img src="./images/ravenrabbits.gif" width="75%"><br>
+    </section>
+              
+    <section>
+        <h2><b>Prototype</b> &rarr; <b>Scale-up</b> for Free</h2>
+        <img src="./images/scale.jpg" width="90%"/>
+    </section>
+
+    <section>
+        <div>OpenMOLE articulates around 3 orthogonal concepts</div>
+        <img src="./images/openmoleGalRaw.png" width="135%"><br>
+        <div>... and an expressive workflow formalism for distributed computing.</div>
+    </section>
+
+    <section>
+        <h2>1 - Model?</h2>
+        <img src="./images/modelIO.png"/> <br/><br/>
+        <p>Stuff you can <b>run</b>, taking <b>inputs</b> and producing <b>outputs</b></p>
+    </section>
+
+
+    <section>
+        <h2><b>Zero deployment</b> approach</h2>
+        <ul>
+          <li>User code is automatically deployed at runtime</li>
+          <li>No prior knowledge of remote environment needed</li>
+          <li>No installation required on any machine</li>
+        </ul>
+    </section>
+              
+    <section>
+        <h2><b>Transparent</b> access</h2>
+        <ul>
+          <li>No preliminary step</li>
+          <li>Access as the user would do it</li>
+          <li>With user credential</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Any application</h2>
+        <img src="./images/blackbox.png">
+    </section>
+
+    <section>
+      <h2>Packaging (non JVM) application with <b>Care*</b></h2>
+
+      <img src="./images/Packing.jpg" width="50%"><br>
+
+      <small><a href="https://github.com/proot-me/PRoot">*https://github.com/proot-me/PRoot</a></small>
+    </section>
+    <section data-transition="none">
+      <h2>Packaging (non JVM) application with <b>Care</b></h2>
+      Applications have dependencies:<br/>
+      <ul>
+        <li>Shared libraries</li>
+        <li>Packages (Python, R, ...)</li>
+        <li>Low level system calls</li>
+        <li>Environment variables</li>
+        <li>...</li>
+      </ul>
+      <br/>
+      <b>Capture</b> these dependencies and <b>transfer</b> along with the application from Linux to Linux
+    </section>
+
+    <section data-transition="none">
+      <h2>Packaging (non JVM) application with <b>Care</b></h2>
+        <div><b>Distributed execution</b> of (almost) <b>any program</b> to (pretty much) <b>any computing environment</b></div>
+        <ol>
+            <li>Package it with CARE</li>
+            <li>Write your OpenMOLE workflow</li>
+            <li>Click the run button</li>
+            <li>Write your paper</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>3 - Execution environments?</h2>
+        <img src="./images/openmoleGalRaw.png" width="135%"><br>
+    </section>
+
+    <section>
+        <h2>Today</h2>
+        <img src="./images/environments.png" />
+
+
+    </section>
+
+     <section>
+        <h2>Tomorrow</h2>
+
+        <img src="images/AWS.png" width="33%"/>
+        <img src="images/docker.png" width="33%"/>
+    </section>
+
+    <section>
+        <h2>And now: examples!</h2>
+        <img src="./images/doc.jpg" width="80%">
+    </section>
+
+    <section>
+      <h2>Useful Links</h2>
+      <table>
+        <tr>
+          <td>Documentation</td>
+          <td><a href="http://www.openmole.org">www.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Development version</td>
+          <td><a href="http://next.openmole.org">next.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Source code</td>
+          <td><a href="https://github.com/openmole/openmole">github.com/openmole</a></td>
+        </tr>
+        <tr>
+          <td>Market place</td>
+          <td><a href="https://github.com/openmole/openmole-market">github.com/openmole-market</a></td>
+        </tr>
+      </table>
+    </section>
+
+
+    <section>
+      <h1>Thanks!</h1>
+      <table>
+        <tr>
+          <td style="border-bottom: 0px"><img style="width: 100px" src="images/romain2.png" /></td>
+          <td style="vertical-align: middle; border-bottom: 0px"><a mailto="romain.reuillon@iscpif.fr">romain.reuillon@iscpif.fr</a></td>
+        </tr>
+        <tr>
+          <td style="border-bottom: 0px"><img style="width: 100px" src="images/mathieu.jpg" /></td>
+          <td style="vertical-align: middle; border-bottom: 0px"><a mailto="mathieu.leclaire@iscpif.fr">mathieu.leclaire@iscpif.fr</a></td>
+        </tr>
+        <tr valign="middle">
+          <td><img src="images/jo.jpg" /></td>
+          <td style="vertical-align: middle"><a href="mailto:j.passerat-palmbach@imperial.ac.uk">j.passerat-palmbach@imperial.ac.uk</a></td>
+        </tr>
+      </table>
+    </section>
+
+
+
+    <section>
+        <div>2 - Methods?</div>
+        <img src="./images/openmoleGalRaw.png" width="135%"><br>
+    </section>
+
+    <section>
+      <h2>Map/reduce</h2>
+      <p>Grid Search</p>
+      <p>Random sampling</p>
+      <p>Latin Hypercube</p>
+      <p>Parallel data processing</p>
+      <p>...</p>
+    </section>
+
+    <section>
+      <h2>Master/slave</h2>
+      <img src="./images/island.png" width="60%">
+      <p>Example: genetic algorithm</p>
+    </section>
+
+    <section>
+        <div class="title">
+            <h2>The terminology</h2>
+            <img src="./images/workflowExplained.png" width="120%"/><br/><br/>
+        </div>
+    </section>
+
+
+  </div>
+
+            <script src="js/reveal.js/lib/js/head.min.js"></script>
+            <script src="js/reveal.js-min/js/reveal.min.js"></script>
+
+            <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                slideNumber: true,
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+
+
+            </script>
+
+    </body>
+</html>
