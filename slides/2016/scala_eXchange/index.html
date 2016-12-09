@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>GridScale: a journey from Object-Oriented to (more) Functional Programming</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="romain" >
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="js/reveal.js-min/css/reveal.min.css">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/white.css" id="theme">
+        <link rel="stylesheet" href="custom_css/font-awesome.min.css" id="font-awesome">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="custom_css/theme.css" id="theme">
+
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+
+<!--        remove default borders around images-->
+        <style>
+
+          #logos {
+            width: 960px; // Change this according to the width you want.
+            height: 500px; // Change this as well
+            margin: 0 auto 0 auto;
+            text-align: center; // Will center the images contained in the div
+          }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+    <section>
+        <h2>GridScale: a journey from Object-Oriented to Functional Programming</h2>
+    </section>
+
+    <section>
+        <div class="title">Mathieu Leclaire<br/>
+            Jonathan Passerat-Palmbach<br/>
+            Romain Reuillon<br/>
+        </div> <br/>
+            <img src="./images/allLogos.png" width="90%"/>
+    </section>
+
+     <section>
+        <h2>Context</h2>
+        <img src="./images/openmole3.png"/>
+    </section> 
+              
+     <section data-background="images/omGal.png" data-background-size="contain">
+
+    </section>               
+
+   <section>
+     <h2>Need a library to submit jobs</h2>
+     <img src="images/OpenMOLEArch.png" />
+   </section>
+              
+
+  <section>
+    <h2>How does it look? <i class="fa fa-search" aria-hidden="true"></i>
+</h2>
+<pre class="brush: scala">
+<code data-trim data-noescape style="word-wrap: break-word" class="stretch">
+    val slurmService = new SLURMJobService 
+                       with SSHPrivateKeyAuthentication {
+      def host: String = "server.domain"
+      def user = "user"
+      def password = "password"
+      def privateKey = new File("/path/to/key/file")
+    }
+
+    val description = new SLURMJobDescription {
+      def executable = "/bin/echo"
+      def arguments = "success > test_success.txt"
+      def workDirectory = "/home/user"
+      def walltime = 10 minutes
+    }
+
+    val j = slurmService.submit(description)
+</code>
+</pre>
+  </section>            
+              
+  <section>
+    
+    <h2>Design</h2>
+    <img src="images/GridScaleArch.png" />
+    
+  </section>               
+              
+        
+<section data-background="images/cake.jpg">
+  <h2 style="color:#ffffff">Cake pattern <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+ / Mix-ins </h2>
+<pre class="brush: scala">
+<code>
+trait SLURMJobService extends JobService
+                      with SSHHost 
+                      with SSHStorage 
+                      with BashShell
+</code>
+</pre>
+</section>
+  
+<section>
+<h2>Problems</h2>  
+<pre class="brush: scala">
+<code>
+trait SLURMJobService extends JobService
+                      with SSHHost 
+                      with SSHStorage 
+                      with SSHSimpleConnection
+                      with SSHCachedConnection
+                      with BashShell
+</code>
+</pre>
+  <ul>
+<li> Which Connection is used?</li>
+<li> Implementation leaks in type</li>
+<ul>
+<li> SSH</li>
+<li> Bash</li>
+</ul>
+</ul>
+
+</section>              
+         
+<section> 
+  <h2>I just want to submit a job!</h2>
+  <h3><i> f: jd => js => job</i></h3>
+  <pre class="brush: scala"><code>def submit[D, S](desc: D, jobService: S)</code></pre>
+</section>
+
+<section>
+<h1>Functional patterns in GridScale</h1>
+</section>
+              
+<section>
+<h2>Type classes</h2>
+<pre class="brush: scala">
+<code data-trim data-noescape style="word-wrap: break-word" class="stretch">
+trait SSHAuthentication[T] {
+  def authenticate(...): ...
+}
+
+case class PrivateKey(...)
+case class LoginPassword(...)
+
+implicit def privateKeySSH = new SSHAuthentication[PrivateKey] {
+  def authenticate(...) = ...
+}
+
+def submit[A](a: A, d: Description)
+             (implicit c: SSHAuthentication[T])
+</code>
+</pre>
+</section>
+      
+<section>
+<h2>Reader Monad</h2>
+    <ul>
+   <li>Dependency injection => connection</li>  
+   <li>Pollutes call stack</li>
+   <li>Side effects appear explicitly all the way down the call stack</li>
+      </ul>              
+</section>              
+              
+              
+<section>
+<h2>Free Monad <i class="fa fa-heart" aria-hidden="true"></i></h2>
+  <ul>
+ <li>Focus on API</li>
+ <li>Highly composable DSLs</li>
+ <li>Push side-effects to the boundaries of the program</li>
+ <li>Change behaviour using different interpreters</li>
+ <li>Overall pattern contains still a lot of boilerplate (use Freek at the very least)</li>
+  </ul>
+  
+<a href="https://github.com/ProjectSeptemberInc/freek">github.com/ProjectSeptemberInc/freek</a>
+  
+</section>
+    
+              
+<section>
+  <h2>FreeMonad - concrete example</h2>
+  <ul>
+   <li>You've seen the logger already :)</li>
+   <li>Pseudo-Random Number Generation</li>
+  </ul>
+
+</section>
+
+<section>
+  <h2>A Random FreeMonad... </h2>
+  <pre class="brush: scala">
+  <code data-trim data-noescape style="word-wrap: break-word" class="stretch">
+object Random {
+
+  def interpreter(random: util.Random) = new Interpreter[Id] {
+    def interpret[_] = {
+      case nextDouble() => Right(random.nextDouble)
+      case nextInt(n) => Right(random.nextInt(n))
+      case shuffle(s) => Right(random.shuffle(s))
+    }
+  }
+
+  def interpreter(seed: Long): Interpreter[Id] = 
+    interpreter(new util.Random(seed))
+
+}
+
+@dsl trait Random[M[_]] {
+  def nextDouble: M[Double]
+  def nextInt(n: Int): M[Int]
+  def shuffle[A](s: Seq[A]): M[Seq[A]]
+} 
+  </code>
+  </pre>
+</section>                 
+
+              
+<section>
+<h2> FreeDSL</h2>
+  <ul>
+ <li>Macro generating boilerplate on top of Freek</li>
+ <li>Runtime merge function</li>
+    <li>Highly composable DSL</li>
+  </ul>
+  
+<a href="https://github.com/ISCPIF/freedsl">github.com/ISCPIF/freedsl</a>
+
+</section>
+           
+              
+<section>  
+  <h2>How will it look? - WIP</h2>
+  <pre class="brush: scala">
+  <code data-trim data-noescape style="word-wrap: break-word" class="stretch">
+def interpreter(client: util.Either[ConnectionError, SSHClient]) = 
+  new Interpreter[Id] {
+
+  lazy val sFTPClient = client.map(_.newSFTPClient)
+
+  def interpret[_] = {
+    case execute(s) ⇒ for {
+        c ← client
+        r ← SSHClient.exec(c)(s).toEither.leftMap(t ⇒ ExecutionError(t))
+      } yield r
+    case fileExists(path) ⇒
+      sFTPClient.map(_.exists(path))
+    case readFile(path, f) ⇒
+      sFTPClient.map { c ⇒
+          val is = c.readAheadFileInputStream(path)
+          try f(is) finally is.close
+      }
+  }
+}
+
+@dsl trait SSH[M[_]] {
+    def execute(s: String): M[ExecutionResult]
+    def fileExists(path: String): M[Boolean]
+    def readFile[T](path: String, f: java.io.InputStream ⇒ T): M[T]
+  }
+  </code>
+  </pre>
+</section>
+
+<section>
+<h2>Usage (merge with UUID)</h2>              
+  <pre class="brush: scala">
+  <code data-trim data-noescape style="word-wrap: break-word" class="stretch">  
+import freek._
+import cats.implicits._
+import freedsl.random._
+import freedsl.util._
+
+val c = freedsl.dsl.merge(Util, SSH, Random)
+import c._
+
+def randomData[M[_]](implicit randomM: Random[M]) = randomM.shuffle(Seq(1, 2, 2, 3, 3, 3))
+
+def job(data: String) =
+  SSHJobDescription(
+    command = s"echo -n $data",
+    workDirectory = "/tmp/")
+
+val prg =
+  for {
+    sData ← randomData[M]
+    jobId ← submit[M](job(sData.mkString(", ")))
+    _ ← implicitly[Util[M]].sleep(2 second)
+    s ← state[M](jobId)
+    out ← stdOut[M](jobId)
+  } yield s"""Job status is $s, stdout is "$out"."""
+  </code>
+  </pre>
+</section>
+
+<section>
+<h2>Summary</h2>
+<ul>
+<li>Object didn't work for us</li>  
+<li>Initial design impacts future enhancements</li>
+<li>Learnt it the hard way...</li>  
+<li>Functional patterns provide (more?) powerful abstractions</li>  
+</ul>  
+</section>              
+              
+<section>
+<h2>So what's next?</h2>
+  <ul>
+<li>Massive refactor :)</li>
+<li>API will change (road to 2.0)</li>
+<li>Come learn better design with us!</li>
+<li>Check the issues list to contribute ;)</li>
+  </ul>
+</section>              
+              
+              
+    <section>
+      <h2>Useful Links</h2>
+      <table>
+        
+        <tr>
+          <td>GridScale Source code</td>
+          <td><a href="https://github.com/openmole/gridscale"><i class="fa fa-github" aria-hidden="true"></i> openmole/gridscale</a></td>
+        </tr>
+
+        <tr>
+          <td>FreeDSL Source code</td>
+          <td><a href="https://github.com/ISCPIF/freedsl"><i class="fa fa-github" aria-hidden="true"></i> ISCPIF/freedsl</a></td>
+        </tr>
+        
+        <tr>
+          <td>OpenMOLE (parent project)</td>
+          <td><a href="https://github.com/openmole/openmole"><i class="fa fa-github" aria-hidden="true"></i> openmole/openmole</a></td>
+        </tr>
+        
+        <tr>
+          <td>Announcements</td>
+          <td><a href="https://twitter.com/openmole"><i class="fa fa-twitter" aria-hidden="true"></i>@OpenMOLE</a></td>
+        </tr>
+        
+      </table>
+    </section>
+
+
+    <section>
+      <h1>Thanks!</h1>
+      <table>
+        <tr>
+          <td style="border-bottom: 0px"><img style="width: 100px" src="images/romain2.png" /></td>
+          <td style="vertical-align: middle; border-bottom: 0px"><a mailto="romain.reuillon@iscpif.fr">romain.reuillon@iscpif.fr</a></td>
+        </tr>
+        <tr>
+          <td style="border-bottom: 0px"><img style="width: 100px" src="images/mathieu.jpg" /></td>
+          <td style="vertical-align: middle; border-bottom: 0px"><a mailto="mathieu.leclaire@iscpif.fr">mathieu.leclaire@iscpif.fr</a></td>
+        </tr>
+        <tr valign="middle">
+          <td><img src="images/jo.jpg" /></td>
+          <td style="vertical-align: middle"><a href="mailto:j.passerat-palmbach@imperial.ac.uk">j.passerat-palmbach@imperial.ac.uk</a></td>
+        </tr>
+      </table>
+    </section>
+
+  </div>
+
+            <script src="js/reveal.js/lib/js/head.min.js"></script>
+            <script src="js/reveal.js-min/js/reveal.min.js"></script>
+
+            <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                slideNumber: true,
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+
+
+            </script>
+
+    </body>
+</html>

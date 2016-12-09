@@ -28,3 +28,12 @@ ol li:before {
   color: #8a0;
 }
 
+.reveal section img {
+  background:none;
+  border:none;
+  box-shadow:none;
+}
+
+.reveal pre {
+  max-width: 100% !important;
+}
