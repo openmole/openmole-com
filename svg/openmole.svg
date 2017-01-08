@@ -16,7 +16,10 @@
    id="svg8490"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="openmole.svg">
+   sodipodi:docname="openmole.svg"
+   inkscape:export-filename="/home/mathieu/ownCloud/audition/openmole"
+   inkscape:export-xdpi="51"
+   inkscape:export-ydpi="51">
   <defs
      id="defs8492">
     <linearGradient
@@ -1537,13 +1540,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.43095728"
-     inkscape:cx="442.12597"
+     inkscape:cx="-117.09419"
      inkscape:cy="76.538113"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1301"
-     inkscape:window-height="744"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
      inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
