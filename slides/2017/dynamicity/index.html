@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>OpenMOLE: a Workflow-based Exploration Platform</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="romain" >
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="js/reveal.js-min/css/reveal.min.css">
+  <link rel="stylesheet" href="js/reveal.js/css/theme/openmole.css" id="theme">
+  <link rel="stylesheet" href="custom_css/theme.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+  if( window.location.search.match( /print-pdf/gi ) ) {
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'css/print/pdf.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  }
+  </script>
+
+  <!--        remove default borders around images-->
+  <style>
+  .reveal section img {
+    background:none;
+    border:none;
+    box-shadow:none;
+  }
+
+  #logos {
+    width: 960px; // Change this according to the width you want.
+    height: 500px; // Change this as well
+    margin: 0 auto 0 auto;
+    text-align: center; // Will center the images contained in the div
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section>
+        <img src="./images/openmole3.png"/>
+        <h2>State-of-the-art, scalable, model evaluation</h2>
+      </section>
+
+      <section>
+        <div class="title">Mathieu Leclaire<br/>
+          Jonathan Passerat-Palmbach<br/>
+          Romain Reuillon<br/>
+        </div> <br/>
+        <img src="./images/allLogos.png" width="90%"/>
+      </section>
+
+      <section>
+        <h3>Purpose</h3>
+        <ul>
+          <li>Provide state-of-the-art exploration methods</li>
+          <li>Tackle scalability using distributed computing</li>
+          <li>Is not intrusive in the model logic</li>
+        </ul>
+      </section>
+
+      <section>
+        <img src="./images/openmoleGalRaw.png" width="120%"><br>
+      </section>
+
+      <section>
+        <h3>1 - Model?</h3>
+        <img src="./images/modelIO.png"/> <br/><br/>
+        <p>Stuff that you can launch, taking inputs and producing outputs</p>
+      </section>
+
+      <section>
+        <h3><b>Zero deployment</b> approach</h3>
+        <ul>
+          <li>User code is automatically deployed at runtime</li>
+          <li>No prior knowledge of remote environment needed</li>
+          <li>No installation required on any machine</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Packaging</h3>
+        <ul>
+          <li><b>JVM</b> => transparent</li>
+          <li><b>Native</b> => packaged with CARE</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Packaging with <b>Care</b></h3>
+        Applications have dependencies:<br/>
+        <ul>
+          <li>Shared libraries</li>
+          <li>Packages (Python, R, ...)</li>
+          <li>Low level system calls</li>
+          <li>Environment variables</li>
+          <li>Network ports</li>
+          <li>...</li>
+        </ul>
+        <br/>
+        <b>Capture</b> these dependencies and <b>transfer</b> along with the application from Linux to Linux
+      </section>
+
+      <section>
+        <div>Works with almost any language / plateform running on Linux</div>
+        <img src="./images/blackbox.png">
+      </section>
+
+      <section>
+        <h3>3 steps</h3>
+        <ul>
+          <li>Package it with CARE &#8658; execute it on linux</li>
+          <li>Write your OpenMOLE workflow</li>
+          <li>Click the run button</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Work in the project</h3>
+        <ul>
+          <li>Docker tasks, for docker enabled environments.</li>
+          <li>In user land: Singularity, UDocker, Vaga?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>2 - Method?</h3>
+        <img src="./images/openmoleGalRaw.png" width="135%"><br>
+      </section>
+
+      <section>
+        <ul>
+          <li>Data reconstruction</li>
+          <li>Parameter estimation</li>
+          <li>Sensitivity analysis</li>
+          <li>Robustness assessment</li>
+          <li>Optimisation</li>
+          <li>Diversity research</li>
+          <li>Hybrid, ex: optimisation + diversity</li>
+        </ul>
+        <div style="margin-top:40px">Designed in a <b>scalable</b> manner, handle <b>stochasticity</b>, is usable on <b>any models and environments</b>.</div>
+      </section>
+
+      <section>
+        <h2>Master/slave</h2>
+        <img src="./images/island.png" width="60%">
+        <p>Example: genetic algorithm</p>
+      </section>
+
+      <section>
+        <h2>Genetic Algorithm</h2>
+        <img src="./images/ga.png" width="90%">
+      </section>
+
+      <section>
+        <h2>Diversity research</h2>
+        <img src="./images/flockingvolumediscovered.svg" width="70%">
+      </section>
+
+      <section>
+        <h3>Work in the project</h3>
+        <ul>
+          <li>Adapt / design methods to explore / understand / simplify the models?</li>
+          <li>Machine learning to speedup the exploration of scenarii in the production plateform?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>3 - Execution environment?</h3>
+        <img src="./images/openmoleGalRaw.png" width="135%"><br>
+      </section>
+
+      <section>
+        <img src="./images/scale.jpg" width="90%"/>
+        <div>Prototype Small, Scale for Free</div>
+      </section>
+
+      <section>
+        <h3>Transparent access</h3>
+        <ul>
+          <li>Access as the user would do it</li>
+          <li>Use user credential</li>
+          <li>No preliminary step</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Automatic data transfers</br> (+ Replica management)</h2>
+        <img src="./images/data_transfers.svg" width="110%">
+        <div>Files and folders transfers are <b>handled transparently</b> by OpenMOLE</div>
+      </section>
+
+      <section>
+        <h2>Today</h2>
+
+        Multi-thread<br/>
+        Delegation through SSH<br/>
+        PBS (on ssh)<br/>
+        SLURM (on ssh)<br/>
+        Condor (on ssh)<br/>
+        SGE (on ssh)<br/>
+        OAR (on ssh)<br/>
+        EGI Grid (trough DIRAC)<br/>
+        Adhoc Desktop Grid<br/>
+      </section>
+
+      <section>
+        <h2>Grid Computing</h2>
+        <img src="./images/egi2.jpg" width="50%">
+        <p>4000 cores, but some technical and legal limitations</p>
+      </section>
+
+
+      <section>
+        <h3>In the project</h3>
+        <ul>
+          <li>Academic cloud?</li>
+          <li>Kubernetes?</li>
+          <li>Commercial docker engines?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>And now: examples!</h2>
+        <img src="./images/doc.jpg" width="80%">
+      </section>
+
+      <section>
+        <div class="title">
+          <h2>The terminology</h2>
+          <img src="./images/workflowExplained.png" width="120%"/><br/><br/>
+        </div>
+      </section>
+
+      <section>
+        <div class="title">
+          <h2>The interface</h2>
+          <img src="./images/interface.png" width="100%"/><br/><br/>
+        </div>
+      </section>
+
+      <section>
+        <h3>A workflow</h3>
+        <pre style="brush: scala"><code>val i   = Val[Double]
+val res = Val[Double]
+
+val exploration = ExplorationTask ( i in (0.0 to 10.0 by 1.0) )
+
+val model =
+  ScalaTask ("val res = i * 2") set (
+    inputs  += i,
+    outputs += (i, res)
+  )
+
+val env = LocalEnvironment(5)
+
+exploration -< (model on env)</code></pre>
+      </section>
+
+
+      <section>
+        <h3>Scale Up!</h3>
+        <pre style="brush: scala"><code>val i   = Val[Double]
+val res = Val[Double]
+
+val exploration = ExplorationTask ( i in (0.0 to 10.0 by 1.0) )
+
+val model =
+  ScalaTask ("val res = i * 2") set (
+    inputs  += i,
+    outputs += (i, res)
+  )
+
+val env = EGIEnvironment("biomed")
+
+exploration -< (model on env)</code></pre>
+      </section>
+
+      <section>
+        <h3>Native code</h3>
+        <pre><code>care -o hello.tgz.bin python hello.py 42 test.txt</code></pre>
+        <pre style="brush: scala; margin-top: 40px"><code style="max-height: 600px">val arg = Val[Int]
+val output = Val[File]
+
+val pythonTask =
+  CARETask(
+    workDirectory / "hello.tgz.bin",
+    "python hello.py ${arg} output.txt") set (
+    inputs += arg,
+    outputFiles += ("output.txt", output),
+    outputs += arg
+  )
+
+val exploration = ExplorationTask(arg in (0 to 10))
+
+val copy = CopyFileHook(output, workDirectory / "hello${arg}.txt")
+
+exploration -< (pythonTask hook copy)</code></pre>
+      </section>
+
+      <section>
+        <h2>Optimisation</b></h2>
+        <pre style="brush: scala"><code>val optimisation =
+  SteadyStateEvolution(
+    algorithm =
+      NSGA2(
+        mu = 1000,
+        genome = Seq(x in (0.0, 1.0), y in (0.0, 1.0)),
+        objectives = Seq(o1, o2),
+        replication = Replication(seed = seed, max = 100)
+      ),
+    evaluation = model,
+    termination = 10 hours
+  )
+
+val cloud = GoogleContainerEngine(....)
+
+(optimisation on cloud)</code></pre>
+      </section>
+
+      <section>
+        <h3>Integrate with 4City plateform</h3>
+        <ul>
+          <li>Docker support</li>
+          <li>Commercial docker engines environment</li>
+          <li>REST API</li>
+          <li>Something else?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Useful Links</h2>
+        <table>
+          <tr>
+            <td>Documentation</td>
+            <td><a href="http://www.openmole.org">www.openmole.org</a></td>
+          </tr>
+          <tr>
+            <td>Development version</td>
+            <td><a href="http://next.openmole.org">next.openmole.org</a></td>
+          </tr>
+          <tr>
+            <td>Source code</td>
+            <td><a href="https://github.com/openmole/openmole">github.com/openmole</a></td>
+          </tr>
+          <tr>
+            <td>Market place</td>
+            <td><a href="https://github.com/openmole/openmole-market">github.com/openmole-market</a></td>
+          </tr>
+          <tr>
+            <td>Demo instance</td>
+            <td><a href="http://demo.openmole.org">demo.openmole.org</a></td>
+          </tr>
+        </table>
+      </section>
+
+
+      <section>
+        <h1>Thanks!</h1>
+        <table>
+          <tr>
+            <td style="border-bottom: 0px"><img style="width: 100px" src="images/romain2.png" /></td>
+            <td style="vertical-align: middle; border-bottom: 0px"><a mailto="romain.reuillon@iscpif.fr">romain.reuillon@iscpif.fr</a></td>
+          </tr>
+          <tr>
+            <td style="border-bottom: 0px"><img style="width: 100px" src="images/mathieu.jpg" /></td>
+            <td style="vertical-align: middle; border-bottom: 0px"><a mailto="mathieu.leclaire@iscpif.fr">mathieu.leclaire@iscpif.fr</a></td>
+          </tr>
+          <tr valign="middle">
+            <td><img src="images/jo.jpg" /></td>
+            <td style="vertical-align: middle"><a href="mailto:j.passerat-palmbach@imperial.ac.uk">j.passerat-palmbach@imperial.ac.uk</a></td>
+          </tr>
+        </table>
+      </section>
+
+
+    </div>
+
+    <script src="js/reveal.js/lib/js/head.min.js"></script>
+    <script src="js/reveal.js-min/js/reveal.min.js"></script>
+
+    <script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      slideNumber: true,
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+          return !document.body.classList;
+        }},
+        {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }},
+        {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }},
+        {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+          hljs.initHighlightingOnLoad();
+        }},
+        {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+          return !!document.body.classList;
+        }},
+        {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+          return !!document.body.classList;
+        }}
+      ]
+    });
+
+
+    </script>
+
+  </body>
+  </html>

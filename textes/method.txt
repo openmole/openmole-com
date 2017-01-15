@@ -1,0 +1,10 @@
+
+- Sensibilité: est-ce que tout les parametres / méchanismes mobilisé sont nécéssaires, peut on mieux les contraindre
+- Robustesse: est-ce que mon modele produit des pattern stables pour de petite variations / incertitudes (sur les entrées ou les méchanismes)
+- Optimisation: est-ce possible de trouve des parametres du modele pour produire un pattern donné
+- Diversité: quelles sont tous patterns que mon modele peut générer
+- Hybrides: exemple optimisation + diversitée, quel sont les entrées qui permettent d'optenir certains patterns
+
+Exemple diversité sur les boids. plan direct et PSE.
+
+
