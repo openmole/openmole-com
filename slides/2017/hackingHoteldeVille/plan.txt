@@ -1,0 +1,34 @@
+
+Intro
+
+	- qui sommes nous ?
+
+OpenMOLE
+
+
+
+Résultat d'une collaboration entre l'ISC et l'IGN (logos) :
+
+
+
+SimPLU : gif 
+Un PLU : des règles qui contraignent le placement et la dimension des bâtiments en zone urbaine.
+
+OpenMOLE explore la diversité des résultats du modèle 
+
+Dans notre cas avec SimPLU : la diversité des morphologies des bâtiments constructibles dans un îlot urbain 
+
+OpenMOLE explore et trouve les scénarios possibles (pour autant qu'on ait des mesures pertinentes).
+
+Scénario mitoyen / pas mitoyen 
+
+
+Dense pas dense 
+
+
+Cour intérieure 
+
+
+Pour finir si vous voulez étendre l'expressivité et la confiance de vos modèles numériques , contactez l'équipe openMOLE de l'ISC-PIF
+
+Si vous voulez utiliser la simulation pour envisager l'allure des quartiers d'une ville, contactez le COGIT de l'IGN .
