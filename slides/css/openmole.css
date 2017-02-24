@@ -264,3 +264,12 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #2a76dd; }
+
+
+.footer{
+  position: fixed;
+  width: 250px;
+  z-index: 30;
+  left: -200px;
+  bottom: -20px;
+}
