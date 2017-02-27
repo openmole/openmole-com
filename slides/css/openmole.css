@@ -268,8 +268,8 @@ body {
 
 .footer{
   position: fixed;
-  width: 250px;
+  width: 200px;
   z-index: 30;
-  left: -200px;
+  left: -150px;
   bottom: -20px;
 }
