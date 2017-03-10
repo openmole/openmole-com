@@ -1,0 +1,65 @@
+
+
+Entrées de Simplu : 
+contraintes sur le placement et les dimensions  des bâtiments
+règles d'urbanisme
+jeu de paramètres (des règles du PLU)
+version d'un PLU à tester
+
+
+Sorties de Simplu : 
+
+ scénarios d'occupation du sol
+configurations bâties
+formes de quartier
+quartiers
+enveloppe constructible du quartier 
+
+
+Parler d'îlot, de quartier plutôt que de parcellaire (parcellaire = ville entière)
+
+======================================================
+Slide 11
+configurations de quartier distinctEs
+
+=======================================================
+
+Slide 12 : 
+
+vous vous dites : mais moi je fais pas d'urbanisme , est ce que ça marcherait quand même pour mon modèle ? 
+
+Changer la deuxième objections en question ? e.g. est c e que ça marche aussi en biologie , en économie ? est-ce que ça se limite à l'urbanisme ? 
+================================================
+
+Slide 13
+hé bien NON car openMole est LA solution universelle , pensée pour s'adapter à vos modèles numériques, algorithmes, quel que soit le langage.
+
+La plateforme openMOLE intègre des méthodes innovantes pour 
+ - valider
+ - explorer
+ - optimiser
+ - révéler le potentiel
+ - gagner en confiance
+ - confronter
+ - répondre aux questions que vous vous posez sur 
+ - évaluer 
+ - calibrer 
+
+======================================
+
+ Slides Perspectives :
+
+ L'une des perspectives de se travail, ça serait de se servir de l'INVENTAIRE DES FORMES de quartier révélées par la méthode PSE pour trouver celles dont on ne veut pas. 
+ PUIS IDENTIFIER les paramètres / les règles qui ont mené à ces formes de quartiers indésirables pour MODIFIER LE PLU dans le bon sens et ainsi disposer de BONNES PRATIQUES
+
+==================================
+ Slide de conclusion
+
+ ajouter Logo COGIT 
+
+julien.perret@ign.fr
+mickael.brasebin@ign.fr
+
+
+discours : Si vous voulez révéler le potentiel de vos modèles numériques, contactez l'ISCPIF et l'équipe d'OpenMOLE 
+si vous voulez utiliser les outils numériques de l'urbanisme du futur de demain, contactez l'IGN et l'équipe COGIT
