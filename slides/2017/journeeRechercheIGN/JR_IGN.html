@@ -58,35 +58,156 @@
     <div class="slides">
 
       <section>
-        <img src="./images/hackingPage1.png" width="75%"/>
+        <img src="./images/jr_ign_titre.png" width="75%" style=" margin-top: -4%;" />
+        <p style="font-size: 50%">
+Paul Chapron
+        <br>
+        Journée de la recherche IGN, 23 mars 2017
       </section>
 
       <section>
-        <h2>Les modèles numériques</h2>
-        <img src="./images/modelIO.png" width="55%" style=""/>
+        <h2>Contexte du travail</h2>
+       <img src="./images/iscpif_cogit.png" width="30%"/>
+  
+     <ul>
+       <li>Collaboration ISCPIF - COGIT</li>
+       <li>Axe DYSPA : <b>évolution territoriale</b> & mobilité individuelle</li>
+        <li>Plateforme <b>OpenMOLE</b> & Simulateur <b>SimPLU3D</b></li>
+     </ul>
+
       </section>
         
+     
+
         <section>
-        <h2>Le modèle simplu3D (IGN)</h2>
-            <h4><i>Un modèle qui génère des bâtiments respectant la règlementation en vigueur (PLU)</i></h4>
-            <br/>
-        <img src="./images/simplu3D.png" width="85%" style=""/>
+        <h2>Le modèle simplu3D </h2>
+
+<p align="left" style="font-size: 70%">
+        SimPLU3D simule le placement et la construction de bâtiments compatibles avec un PLU
+            
+            <ul align="left" style="font-size: 70%">
+            <li>optimise le volume (algorithme TDSA)</li>  
+            <li>assemble des cuboïdes</li>
+            </ul>
+            
+</p>
+
+            
+        <img src="./images/simplu3D.png" width="85%" />
       </section>
     
-        
-          <section>
-        <h2>Une question:</h2><br/><br/>
-            <h3><i>Pour un parcellaire donné, quelles sont toutes les configurations bâties différentes respectant la réglementation ?</i></h3>
-        <img src="./images/confused.jpg" width="45%" style="margin-top:60px; margin-left: 500px;"/>
+
+
+<section>
+
+
+ <video width="80%" height="50%" autoplay controls>
+                <source src="visu_interactives/simplu_demo.webm" type="video/webm">
+</video>
+</section>
+
+
+
+
+<section>
+      <h2>  Plan Local d'Urbanisme </h2>
+
+      Articles 6,7,8 et 10 
+<br>
+<p align="justify">
+         Position des bâtiments relativement aux autres bâtiments,
+aux limites de parcelles ou à la voirie, hauteur maximale.
+
+
+</section>
+
+
+
+<section data-transition="fade-out">
+<h3>Formalisation du PLU</h3>
+<br>
+
+<p align="left">
+« La hauteur des façades mesurée à l’égout du toit <br>par rapport au terrain doit être inférieure à 12 m. »
+
+<br><br><br>
+<font color="white">
+En rouge, les objets géographiques, en bleu, les
+propriétés et en vert les relations
+<br><br>
+<p align="left" style="font-size: 60%">
+Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impact de la réglementation urbaine sur la morphologie du bâti. PhD thesis, Université Paris-Est.2014
+
+</font>
+
+</section>
+
+<section data-transition="fade-in slide-out">
+<h3>Formalisation du PLU</h3>
+<br>
+
+<p align="left">
+« La <font color="blue">hauteur</font> des <font color="red">façades</font> mesurée à l’<font color="red">égout du toit</font> <font color="green"><br>par rapport</font> au <font color="red">terrain</font> doit être inférieure à 12 m. »
+<br><br><br>
+
+En rouge, les <font color="red">objets géographiques</font>, en bleu, les
+<font color="blue">propriétés</font> et en <font color="green">vert</font> les relations
+
+<br><br>
+<p align="left" style="font-size: 60%">
+Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impact de la réglementation urbaine sur la morphologie du bâti. PhD thesis, Université Paris-Est.2014
+</section>
+
+<section>
+  Contraintes de placement et dimensions des bâtiments
+  <br>
+  <br>
+  <img src="./images/schema_contraintesPLU.png" width="95%" style=""/>
+  <br>
+  <small>
+   + coefficient d'occupation du sol
+ </small>
+
+</section>
+
+
+
+
+
+<section>
+  <h3>Questions de recherche </h3>
+ <img src="./images/penseur_rodin.jpg" width="25%" style="z-index: 1; "/>
+      
+  <br>
+  <p align="left">
+
+    <b>Pour un PLU donné, quels sont les bâtiments constructibles ?</b>
+    <br><br>
+    <small>
+    Quel est l'effet de la variation d'une règle sur la constructibilité d'un îlot ?</small>
+</section>
+
+
+
+
+      <section>
+        <h2>Un modèle en général:</h2>
+        <br>
+        <img src="./images/modelIO.png" width="55%" style=""/>
+      <br> <br>
+      <p style="font-size: 85%">
+      Quels sont les bâtiments constructibles ?<br>=<br>Quelles sont les sorties (distinctes) que produit le modèle ?
+       
       </section>
 
-          <section>
-        <h2>Une réponse:</h2>
-            <h3><i>Testons toutes les valeurs que peuvent prendre chacun des paramètres et générons ainsi tous les scénarios possibles !</i></h3>
-        <img src="./images/handraised.jpg" width="35%" style=""/>
+   <section>
+        <h2>Réponse naïve</h2>
+            <h3><i> Testons toutes les combinaisons de paramètres !</i></h3>
+        <img src="./images/handraised.jpg" width="35%" style="margin-bottom:-175px"/>
       </section>
         
-                   <section>
+      
+     <section>
         <h2>Tous les scénarios ... ?</h2>
         <img src="./images/simplu3DNbConfigs.png" width="75%" style="left:-250px; top: 40px;position:relative;"/>
         <img src="./images/tempsCalculSimplu" width="50%" style="left: 250px; bottom: -80px; position: relative;"/>
@@ -101,7 +222,14 @@
          <section>
         <h2>Limitations de l'exploration systématique</h2>
             <br/>
-        <img src="./images/gridLimitation.png" width="75%" >
+        <img src="./images/gridLimitation1.png" width="75%" >
+             
+      </section>
+        
+         <section>
+        <h2>Limitations de l'exploration systématique</h2>
+            <br/>
+        <img src="./images/gridLimitation2.png" width="75%" >
              
       </section>
         
@@ -109,53 +237,206 @@
         <h2>Une autre approche</h2>
               <br/>
         <img src="./images/simpluOutputSpace.png" width="100%" style="margin-top:-20px;" >
-             
-      </section>
+         </section>
+
+
+
         
-         
+
+
+<section>
+<h3>  <b>Pattern Space Exploration</b></h3> 
+<br>
+<p align="left" style="font-size:70%">
+    
+    - Algorithme évolutionnaire d'exploration de l'espace <b>des sorties</b> d'un modèle
+    
+    <br>
+    - objectif : maximiser la <b>diversité</b>  des motifs découverts dans l'espace des sorties en échantillonnant l'espace d'entrée 
+    <br>
+    - heuristique : les entrées qui donnent des <b>motifs rares</b> sont plus souvent choisies et croisées pour en donner d'autres.  
+    <br><br>
+    - c-à-d : "on cherche astucieusement des motifs en sortie différents de ceux découverts jusque là"
+    <br>
+    - Motifs définis par des valeurs de <b>mesures</b>  
+    <br>
+    - PSE donne à voir l'<b>expressivité</b> du modèle (selon ces mesures)
+    <br>
+    
+<br>
+<p align="left" style="font-size: 70%">
+<small>
+Ref : <br>
+[Chérel et al. 2015] Beyond Corroboration: Strengthening Model Validation by Looking for Unexpected Patterns. PLOS One <a href="http://dx.doi.org/10.1371/journal.pone.0138212">http://dx.doi.org/10.1371/journal.pone.0138212 </a>
+</small>
+</section>
+
+
+
+<section>
+  
+        <img src="./images/pse_algo.png" width="100%" >
+  
+</section>
+
+     
           <section>
-        <h2>Pattern Space Exploration</h2>
+        <h2>Recherche de motifs avec PSE</h2>
         <img src="./images/flockingvolumediscovered.svg" width="60%" style="bottom: 50px;">
              
       </section>
-        
-       <section>
-        <img src="./images/comparatifPSE.png" width="60%" style="bottom: 50px;">   
-      </section>
-        
-         <section>
-             <h2>Objections</h2>
-            <br/><br/>  
-            <h3><i>65 ans de calcul, c'est encore très long !</i></h3><br/>
-            <h3><i>Ça marche que pour les urbanistes ?</i></h3>
-        <img src="./images/handsup.png" width="60%">   
-      </section>
-        
-         <section>
-        <img src="./images/omV3.png" sytle="z-index:20;">   
-      </section>
-        
-         <section>
-        <img src="./images/comparatifPSEUrbaniste.png" style="width:55%;">   
-      </section>
+    
 
-      <section>
+
+<section>
+<h2>
+Sorties retenues</h2>
+<br>
+<p align="left" style="font-size: 85%">
+
+    <b>Indice de Gini</b> : inégalité de la distribution des volumes des bâtiments
+<br>
+    <b>Indice de Moran</b> : auto-corrélation spatiale des volumes des bâtiments dans l'îlot
+<br>
+    <b>Densité de plancher</b> : ratio surface disponible à chaque étage / surface de l'îlot
+<br>
+    <b>CoverageRatio</b> : ratio surface bâtie / surface de l'îlot
+
+<br>
+<p align="left" style="font-size: 70%">
+<small>
+Ref: <br>
+    [Tsai Yu-Hsin 2005 ] Quantifying urban form: compactness versus' sprawl' YH Tsai - Urban studies, 2005
+    <br>
+    [Fund Marina 2012] Usage d'indicateurs urbains et aménagement urbain : vers l'automatisation de l'analyse séquentielle.
+</small>
+</section>
+
+
+<section>
+<img src="./images/comparatifPSE2.png" width="60%" style="bottom: 50px;">   
+</section>
+
+<section>
+<img src="./images/omV3.png" sytle="z-index:20;">   
+</section>
+
+ <section>
+<img src="./images/comparatifPSEUrbaniste.png" style="width:55%;">   
+</section> 
+
+
+
+ <section>
           <h2> Un outil d'aide à la décision en urbanisme </h2>
           <br>
           <br>
-          <a href="http://demoapp.openmole.org:25000/visuPSE/" target="_blank"> Run the demo </a>
+          <a href="http://demoapp.openmole.org:25000/visuPSE/" target="_blank"> Demo </a>
       </section>
 
-
-      <section> 
-          <img src="./images/hackingPageEnd.png" width="85%" style="display : inline-block">
+     
+      <section>
+            <h4>Scénario 1 : Une cour intérieure</h4>
+       
+      <iframe src="visu_interactives/cour_interieure.html" style=" position: top; height: 80vh; width: 100%; " frameborder="0" name="targetframe" allowTransparency="true" scrolling="no"  >  
+      </iframe>
       </section>
-        
+
+      <section>
+            <h4>Scénario 2 : Des allées </h4>
+      <iframe src="visu_interactives/allees.html" style=" position: top; height: 80vh; width: 100%; " frameborder="0" name="targetframe" allowTransparency="true" scrolling="no"  >  
+       
+      </iframe>
+</section>
+
+   
         
          <section>
-          <h2> Perspectives </h2>
+      <h3>Perspectives: indiquer les bonnes pratiques </h3>
         <img src="./images/goodPracticesPLU.png" style="padding-top:30px;width:75%;">   
       </section>
+    
+     <section>
+      <h3>Perspectives: d'autres mesures à explorer</h3>
+   <p align="left">  
+<br><br>
+- Rythme des façades
+<br>
+- Régularité des formes bâties
+<br>
+- Similarité avec le bâti existant
+<br>
+...
+
+      </section>
+    
+
+
+         <section><h3>
+      Perspectives: problème inverse</h3>
+<br><br>
+Comment trouver les paramètres du PLU tels qu'une propriété de l'îlot soit vraie ?
+<br>
+<br>
+e.g. <i>Trouver les règles de PLU assurant l'autosuffisance énergétique de l'îlot si des panneaux photovoltaïques sont positionnés sur les toits.</i>
+
+      </section>
+
+
+
+<section>
+   Conclusion
+   <br><br>
+   <ul>
+    <li style="font-size:70% ">SimPLU3D: simulateur de <b>construction de bâtiments</b> à partir d'un PLU</li>
+     <li style="font-size: 70%">PSE: méthode pour révéler la <b>diversité des scénarios</b>  </li>
+     <li style="font-size: 70%">OpenMOLE: plateforme <b>d'exploration/calibration/optimisation</b> de modèles  </li>
+     <br>
+     <li style="font-size: 70%">Prototype d'outil pour la concertation citoyenne</li>
+     <li style="font-size: 70%">Prêt à passer à la production </li>
+     <br> 
+     <li  style="font-size: 70%">SimPLU3D & OpenMOLE : Technologies mûres et open-source, <b>interopérables</b></li>
+     <li style="font-size: 70%">Rstudio/Shiny/plotly et QGIS pour la visualisation de scénarios </li>
+   </ul>
+   <img src="images/logo_Rstudio.png" width="10%">
+   <img src="images/logo_shiny.png" width="10%">
+   <img src="images/logo_plotly.png" width="10%"> 
+   <img src="images/logo_QGIS.png" width="10%"> 
+   </p>
+</section>
+
+
+<section>
+  <p style="vertical-align: middle font-size:60%">
+  Merci 
+<p align="left" style="font-size: 45% ">  
+
+<br> 
+dépots github:
+<br>Transparents de la présentation: <a href="https://github.com/openmole/openmole-com/tree/master/slides/2017/journeeRechercheIGN">url</a> 
+<br>
+Simplu3D <a href="https://github.com/IGNF/simplu3D">https://github.com/IGNF/simplu3D</a>
+<br> 
+Simplu3D-OpenMOLE <a href="https://github.com/IGNF/simplu3D-openmole">https://github.com/IGNF/simplu3D-openmole </a> (branche visu_pse)
+<br>
+OpenMOLE : <a href="https://github.com/openmole">https://github.com/openmole</a>
+<br><br>
+Réferences : <br>
+
+    Chérel G, Cottineau C, Reuillon R (2015) Beyond Corroboration: Strengthening Model Validation by Looking for Unexpected Patterns. PLoS ONE 10(9)  <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138212">url </a>
+<br><br>
+Brasebin M, Perret, J, Reuillon R , Stochastic Buildings Generation to Assist in the Design of Right to Build Plans, Advances in 3D Geoinformation,  Lecture Notes in Geoinformation and Cartography pp 373-384, 2017 <a href="http://link.springer.com/chapter/10.1007%2F978-3-319-25691-7_21">url</a>
+
+    <br><br>
+    Romain Reuillon, Mathieu Leclaire, Sebastien Rey-Coyrehourcq, OpenMOLE, a workflow engine specifically tailored for the distributed exploration of simulation models published. Future Generation Computer Systems, 2013B <a href="http://www.openmole.org/files/FGCS2013.pdf">url</a>
+    <br><br>
+    Yu-Hsin Tsai , Quantifying urban form: compactness versus sprawl,  Urban studies 42(1), 2005 <a href="https://www.researchgate.net/publication/228985804_Quantifying_Urban_Form_Compactness_versus_%27Sprawl%27">url</a>
+    <br><br>
+    Marina Fund, Usage d'indicateurs urbains et aménagement urbain : vers l'automatisation de l'analyse séquentielle. Mémoire de master 2012 <a href="http://recherche.ign.fr/labos/util_basilic/publicDownload.php?id=3198">url</a>
+
+
+
+</section>
 
 
     </div>
