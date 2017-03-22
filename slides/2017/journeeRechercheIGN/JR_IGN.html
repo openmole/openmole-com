@@ -57,7 +57,7 @@
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
 
-      <section>
+      <section data-transition="fade-out">
         <img src="./images/jr_ign_titre.png" width="75%" style=" margin-top: -4%;" />
         <p style="font-size: 50%">
 Paul Chapron
@@ -65,7 +65,7 @@ Paul Chapron
         Journée de la recherche IGN, 23 mars 2017
       </section>
 
-      <section>
+      <section data-transition="fade-out">
         <h2>Contexte du travail</h2>
        <img src="./images/iscpif_cogit.png" width="30%"/>
   
@@ -79,7 +79,7 @@ Paul Chapron
         
      
 
-        <section>
+        <section data-transition="fade-out">
         <h2>Le modèle simplu3D </h2>
 
 <p align="left" style="font-size: 70%">
@@ -98,7 +98,7 @@ Paul Chapron
     
 
 
-<section>
+<section data-transition="fade-out">
 
 
  <video width="80%" height="50%" autoplay controls>
@@ -109,7 +109,7 @@ Paul Chapron
 
 
 
-<section>
+<section data-transition="fade-out">
       <h2>  Plan Local d'Urbanisme </h2>
 
       Articles 6,7,8 et 10 
@@ -122,8 +122,8 @@ aux limites de parcelles ou à la voirie, hauteur maximale.
 </section>
 
 
-
-<section data-transition="fade-out">
+<!--
+<section data-transition="fade-out" data-transition="fade-out">
 <h3>Formalisation du PLU</h3>
 <br>
 
@@ -142,7 +142,7 @@ Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impa
 
 </section>
 
-<section data-transition="fade-in slide-out">
+<section data-transition="fade-out" data-transition="fade-in slide-out">
 <h3>Formalisation du PLU</h3>
 <br>
 
@@ -157,8 +157,8 @@ En rouge, les <font color="red">objets géographiques</font>, en bleu, les
 <p align="left" style="font-size: 60%">
 Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impact de la réglementation urbaine sur la morphologie du bâti. PhD thesis, Université Paris-Est.2014
 </section>
-
-<section>
+-->
+<section data-transition="fade-out">
   Contraintes de placement et dimensions des bâtiments
   <br>
   <br>
@@ -174,14 +174,14 @@ Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impa
 
 
 
-<section>
+<section data-transition="fade-out">
   <h3>Questions de recherche </h3>
  <img src="./images/penseur_rodin.jpg" width="25%" style="z-index: 1; "/>
       
   <br>
   <p align="left">
 
-    <b>Pour un PLU donné, quels sont les bâtiments constructibles ?</b>
+    <b>Pour un PLU donné, quels sont les bâtiments constructibles dans un îlot ?</b>
     <br><br>
     <small>
     Quel est l'effet de la variation d'une règle sur la constructibilité d'un îlot ?</small>
@@ -190,7 +190,7 @@ Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impa
 
 
 
-      <section>
+      <section data-transition="fade-out">
         <h2>Un modèle en général:</h2>
         <br>
         <img src="./images/modelIO.png" width="55%" style=""/>
@@ -200,40 +200,40 @@ Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impa
        
       </section>
 
-   <section>
+   <section data-transition="fade-out">
         <h2>Réponse naïve</h2>
             <h3><i> Testons toutes les combinaisons de paramètres !</i></h3>
         <img src="./images/handraised.jpg" width="35%" style="margin-bottom:-175px"/>
       </section>
         
       
-     <section>
+     <section data-transition="fade-out">
         <h2>Tous les scénarios ... ?</h2>
         <img src="./images/simplu3DNbConfigs.png" width="75%" style="left:-250px; top: 40px;position:relative;"/>
         <img src="./images/tempsCalculSimplu" width="50%" style="left: 250px; bottom: -80px; position: relative;"/>
       </section>
         
-           <section>
+           <section data-transition="fade-out">
         <h2>Une meilleure réponse?</h2>
             <h3><i> Testons moins de valeurs pour chaque paramètre, ça ira plus vite !</i></h3>
         <img src="./images/handraised.jpg" width="35%" style="margin-bottom:-175px"/>
       </section>
         
-         <section>
+         <section data-transition="fade-out">
         <h2>Limitations de l'exploration systématique</h2>
             <br/>
         <img src="./images/gridLimitation1.png" width="75%" >
              
       </section>
         
-         <section>
+         <section data-transition="fade-out">
         <h2>Limitations de l'exploration systématique</h2>
             <br/>
         <img src="./images/gridLimitation2.png" width="75%" >
              
       </section>
         
-          <section>
+          <section data-transition="fade-out">
         <h2>Une autre approche</h2>
               <br/>
         <img src="./images/simpluOutputSpace.png" width="100%" style="margin-top:-20px;" >
@@ -244,7 +244,7 @@ Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impa
         
 
 
-<section>
+<section data-transition="fade-out">
 <h3>  <b>Pattern Space Exploration</b></h3> 
 <br>
 <p align="left" style="font-size:70%">
@@ -273,14 +273,14 @@ Ref : <br>
 
 
 
-<section>
+<section data-transition="fade-out">
   
         <img src="./images/pse_algo.png" width="100%" >
   
 </section>
 
      
-          <section>
+          <section data-transition="fade-out">
         <h2>Recherche de motifs avec PSE</h2>
         <img src="./images/flockingvolumediscovered.svg" width="60%" style="bottom: 50px;">
              
@@ -288,7 +288,7 @@ Ref : <br>
     
 
 
-<section>
+<section data-transition="fade-out">
 <h2>
 Sorties retenues</h2>
 <br>
@@ -313,36 +313,60 @@ Ref: <br>
 </section>
 
 
-<section>
+<section data-transition="fade-out">
 <img src="./images/comparatifPSE2.png" width="60%" style="bottom: 50px;">   
 </section>
 
-<section>
+<section data-transition="fade-out">
 <img src="./images/omV3.png" sytle="z-index:20;">   
 </section>
 
- <section>
+ <section data-transition="fade-out">
 <img src="./images/comparatifPSEUrbaniste.png" style="width:55%;">   
 </section> 
 
 
 
- <section>
+ <section data-transition="fade-out">
           <h2> Un outil d'aide à la décision en urbanisme </h2>
           <br>
           <br>
           <a href="http://demoapp.openmole.org:25000/visuPSE/" target="_blank"> Demo </a>
       </section>
 
+<section data-transition="fade-out">
+
+
+ <video width="80%" height="50%" autoplay controls>
+                <source src="visu_interactives/capture_visuPSE.webm" type="video/webm">
+</video>
+</section>
+
+
+<section data-transition="fade-out">
+  <h3>Questions de recherche </h3>
+ <img src="./images/penseur_rodin.jpg" width="25%" style="z-index: 1; "/>
+      
+  <br>
+  <p align="left">
+
+    <small>Pour un PLU donné, quels sont les bâtiments constructibles ?</small>
+    <br><br>
+    <b>
+    Quel est l'effet de la variation d'une règle sur la constructibilité d'un îlot ?</b>
+</section>
+
+
+
      
-      <section>
+      <section data-transition="fade-out">
             <h4>Scénario 1 : Une cour intérieure</h4>
        
       <iframe src="visu_interactives/cour_interieure.html" style=" position: top; height: 80vh; width: 100%; " frameborder="0" name="targetframe" allowTransparency="true" scrolling="no"  >  
       </iframe>
       </section>
 
-      <section>
+      <section data-transition="fade-out">
             <h4>Scénario 2 : Des allées </h4>
       <iframe src="visu_interactives/allees.html" style=" position: top; height: 80vh; width: 100%; " frameborder="0" name="targetframe" allowTransparency="true" scrolling="no"  >  
        
@@ -351,12 +375,12 @@ Ref: <br>
 
    
         
-         <section>
+         <section data-transition="fade-out">
       <h3>Perspectives: indiquer les bonnes pratiques </h3>
         <img src="./images/goodPracticesPLU.png" style="padding-top:30px;width:75%;">   
       </section>
     
-     <section>
+     <section data-transition="fade-out">
       <h3>Perspectives: d'autres mesures à explorer</h3>
    <p align="left">  
 <br><br>
@@ -372,7 +396,7 @@ Ref: <br>
     
 
 
-         <section><h3>
+         <section data-transition="fade-out"><h3>
       Perspectives: problème inverse</h3>
 <br><br>
 Comment trouver les paramètres du PLU tels qu'une propriété de l'îlot soit vraie ?
@@ -384,7 +408,7 @@ e.g. <i>Trouver les règles de PLU assurant l'autosuffisance énergétique de l'
 
 
 
-<section>
+<section data-transition="fade-out">
    Conclusion
    <br><br>
    <ul>
@@ -406,7 +430,7 @@ e.g. <i>Trouver les règles de PLU assurant l'autosuffisance énergétique de l'
 </section>
 
 
-<section>
+<section data-transition="fade-out">
   <p style="vertical-align: middle font-size:60%">
   Merci 
 <p align="left" style="font-size: 45% ">  
