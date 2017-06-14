@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>OpenMOLE: a Workflow-based Exploration Platform</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="romain" >
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="js/reveal.js-min/css/reveal.min.css">
+        <link rel="stylesheet" href="js/reveal.js/css/theme/white.css" id="theme">
+        <link rel="stylesheet" href="custom_css/theme.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+      
+      
+<!--        remove default borders around images-->
+        <style>
+          .reveal section img {
+            background:none; 
+            border:none; 
+            box-shadow:none;
+          }
+          
+          #logos { 
+            width: 960px; // Change this according to the width you want. 
+            height: 500px; // Change this as well 
+            margin: 0 auto 0 auto; 
+            text-align: center; // Will center the images contained in the div 
+          }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+ 
+    <section>
+        <img src="./images/openmole3.png"/>
+        <h2>State-of-the-art tools for modelling</h2>
+    </section>
+
+    <section>
+        <img src="./images/isccube.png" width="30%" style="float:left"/>
+        <div class="title">Paul Chapron<br/>
+            Guillaume Chérel<br/>
+            Mathieu Leclaire<br/>
+            Jonathan Passerat-Palmbach<br/>
+            Romain Reuillon<br/>
+        </div>
+    </section>
+
+    <section>
+        <div>Scientists use <b>naturally parallel methods</b> daily on their laptop:</div>
+        <ul>
+            <li>Parameter estimation</li>
+            <li>Sensitivity analysis</li>
+            <li>Replication</li>
+            <li>Monte Carlo simulation</li>
+            <li>Data reconstruction</li>
+            <li>...</li>
+        </ul>
+        <div>Execution on the <b>same program</b> with <b>different parameters</b> and/or <b>datasets</b>.</div>
+    </section>
+
+    <section>
+        <h3>Purpose</h3>
+        <ul>
+            <li>Provide state-of-the-art <b>sampling methods</b>, <b>experimental design</b></li>
+            <li>Tackle scalability using <b>distributed computing</b></li>
+            <li>Is <b>non intrusive</b> in the model logic</li>
+        </ul>
+    </section>
+
+    <section data-background="images/omV3.png" data-background-size="contain"></section>
+
+    
+    <section>
+        <h2>1 - Model?</h2>
+        <img src="./images/modelIO.png"/> <br/><br/>
+        <p>Stuff that you can launch, taking inputs and producing outputs</p>
+    </section>
+            
+              
+    <section>
+        <h2><b>Zero deployment</b> approach</h2>
+        <ul>
+          <li>User code is automatically deployed at runtime</li>
+          <li>No prior knowledge of remote environment needed</li>
+          <li>No installation required on any machine</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <div>Works with almost any language / plateform running on Linux</div>
+        <img src="./images/blackbox.png">
+    </section>
+
+
+    <section>
+        <h2>2 - Methods</h2>
+    </section>
+
+      
+    <section>
+      <h2>Direct sampling</h2>
+      <p>Full factorial sampling (Grid sampling)</p>
+      <p>Random sampling (Monte Carlo)</p>
+      <p>Latin Hypercube, Sobol sequence</p>
+      <p>List of inputs (CSV file)</p>
+      <p>Replication</p>
+      <p>Parallel data processing</p>
+      <p>...</p>
+    </section>
+
+
+    <section> 
+      <h2>Model calibration</h2>
+      <img src="./images/sensitivityAnalysis.png" width="90%">
+    </section>
+
+
+    <section> 
+      <h2>Model calibration progress</h2>
+      <img src="./images/fitnessEval.png" width="90%">
+    </section>
+
+    
+    <section> 
+      <h2>Profiles</h2>
+      <img src="./images/sensitivityAnalysis.png" width="90%">
+    </section>
+
+
+    <section> 
+      <h2>Profiles output</h2>
+      <!--
+      <img src="./images/profile_diffusion.png" width="48%">
+      <img src="./images/profile_evaporation.png" width="48%">
+      -->
+      <img src="./images/InnovationLife.png" width="48%">
+      <img src="./images/PdiffusionZ.png" width="48%">
+    </section>
+    
+    
+    <section> 
+      <h2>Diversity search</h2>
+      <img src="./images/diversitySearch.png" width="90%">
+    </section>
+    
+    
+    <section> 
+      <h2>Diversity search output</h2>
+      <img src="./images/flockingpatternsallmethods.png" width="90%">
+    </section>
+
+
+    <section>
+      <h2>Collaboration</h2>
+      <img src="./images/collab.jpeg" width="70%">
+    </section>
+    
+                
+    <section>
+        <h2>3 - Execution environment</h2>
+    </section>
+                     
+    <section>
+        <h2>Today</h2>
+        Local computer with multiple cpus<br/>
+        Distant computer through SSH<br/>
+        PBS (on ssh)<br/>
+        SLURM (on ssh)<br/>
+        Condor (on ssh)<br/>
+        SGE (on ssh)<br/>
+        OAR (on ssh)<br/>
+        EGI Grid (trough DIRAC)<br/>
+        Adhoc Desktop Grid<br/>
+    </section>
+    
+    
+    <section> 
+      <h2>Grid Computing</h2>
+      <img src="./images/egi2.jpg" width="70%">
+    </section>
+    
+              
+    <section>
+    <h2>Demo</h2>
+    </section>
+
+
+    <section>
+      <h2>6 juillet, 14h-18h</h2>
+      <img src="./images/jediHeader.png" width="80%">
+      <p>Inscription sur <url>iscpif.fr</url></p>
+    </section>
+    
+         
+    <section>
+      <h1>Thanks!</h1>
+      <table>
+        <tr>
+          <td></td>
+          <td><a href="http://www.openmole.org">www.openmole.org</a></td>
+        </tr>
+        <tr>
+          <td>Contact</td>
+          <td><a href="mailto:guillaume.cherel@iscpif.fr">guillaume.cherel@iscpif.fr</a></td>
+        </tr>
+      </table>
+    </section>  
+
+
+  </div>
+
+            <script src="js/reveal.js/lib/js/head.min.js"></script>
+            <script src="js/reveal.js-min/js/reveal.min.js"></script>
+
+            <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                slideNumber: true,
+                
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                ]
+            });
+
+
+            </script>
+
+    </body>
+</html>

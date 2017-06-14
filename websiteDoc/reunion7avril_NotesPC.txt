@@ -1,0 +1,162 @@
+réunion Doc OpenMOLE V7
+Romain Mathieu Jo
+Vendredi 7 avril
+
+Correction de bugs assez vieux : gestion des fichiers générés par une tâche .
+Pour le moment on les laisse se balader sans les supprimer => ajout au garbage collector pour les supprimer dès qu'on déréférence  
+
+Pour les requêtes de BDD on met en cache ; si c'est gros , ça passe plus à l'échelle. e.g. 100 000 / 500 000 lignes
+C'est pas un problème de perfs pour le moment , mais pour plus tard , il faudra s'assurer que ça pète pas le cache.
+
+Ca allonge la phase de test si on l'inclut dans la V7 et en même temps comme dit Macron, on serait plus serein si y avait ce truc là dans la V7
+
+===============================================================
+Orga pour la doc : 
+
+Grandes lignes : 
+il faut passer sur une version orientée sur les trois axes
+
+1) Mettez votre modèle dans OpenMOLE => tout ce qui est tâche 
+
+2) Méthodes : doc plan d'expérience direct 
+
+3) Partie environnement
+
+
+
+=====================================
+Typologie de doc : doc technique et user guide
+======================================
+
+Comment on sépare la doc technique de la doc "Tuto" (user guide)
+
+Le truc le plus visible doit être le user guide.
+
+
+La doc technique ne doit pas se transformer en user guide !!
+SI on structure bien le truc, ça peut se limiter à une description de l'API
+
+
+Peut on capitaliser sur la scalaDoc pour les fonctions  ?
+
+
+Il faut toujours une entrée avec les étapes (user guide)
+Il y aura forcément des bouts de scripts dans l'user guide  et des pointeurs vers la doc technique 
+
+
+Mais on voulait pas trop retoucher la forme du site, or si on change de stratégie de communication sur l'outil, il faudra bidouiller le site.
+
+=> faire un proto dégueu avec le contenu organisé comme on voudrait dans le prochain site (comme ça ça donner au prochain gars qui fera le site un  truc pas vide)
+
+On a changé de point de vue sur la plateforme donc c'est pas grave si on perd de vue la façon précédente de fournir la doc pour les autres utilisateurs.
+
+
+
+Entrées haut niveau  avec des renvois 
+
+
+Enrichir la partie technique en rajoutant des infos , aérant les sections , mettre des exemples , les nouvelles méthodes pas incluses dans la vieille doc.
+
+
+Il faut un fil narratif , séquentiel next next next avec des embranchements pour creuser des exemples/ cas d'utilisations
+
+
+
+
+Il faut aussi des renvois vers la web interface  ou la démo 
+si on va vers des fonctionnalités qui génèrent du code, 
+
+Il faut faire simple et épuré car quelqu'un passera derrière
+
+=====================================================
+Ecrire le contenu / scénario de l'histoire
+=======================================================
+Repartir d'une feuille blanche , on arrivera pas à refactoriser la doc existante correctement
+
+
+
+Plusieurs histoires paralèlles : on démarre par le modèle :  R java netlogo Excel
+un thread narratif par type de modèle
+
+
+A la fin de l'histoire => on reconverge sur le choix méthode 
+
+
+Ca redevient parallèle : un fil narratif par méthode
+
+Ca converge vers le choix de l'environnement 
+ et reparalèllise un thread par environnement
+
+
+
+Scénario complet de ce qu'on veut et regarder comment faire ça niveau techno 
+
+=========================================================
+Techno du site
+==========================================================
+
+Séparer le site dans un premier temps
+
+On se fait un dépot avec le matos qui génère le site comme il faut sans dépendance à OpenmMOLE
++ les bons outils pour récupérer les bouts de code et les entrées ? tester les exemples (glu sbt)
+dépendre des artefacts openMOLE mais laisser le site externalisé
+
+
+D'abord injecter du texte brut en attendant de pouvoir y mettre des vrais trucs issus de la compil et de la version courrante / ancienne version
+
+
+Plus tard ; 
+réinjecter les infos obtenues dans le build d'openMOLE (plus long) => rechecker les test les exemple du market place
+
+
+
+Autre idée : proposer le format markdown pour les contributions externes à la doc (de façon automatique)
+
+
+Quitte à rédiger du texte, autant utiliser un truc qu'on puisse parser plus tard et le mettre dans une chaine de compil plus tard.
+
+Prob du markdown : on peut pas initialiser une variable et la réutiliser à plein d'endroits différentes facilement
+
+
+
+Le choix techno peut être repoussé mais pimper le user guide c'est assez urgent (pour la motiv" et la vitrine)
+
+
+========================================
+Faire plaisir à paul
+========================================
+On peut faire un schéma / croquis / mindmap !
+
+
+
+
+
+
+
+==================================
+Repartition des tâches
+======================================
+
+
+
+Mathieu : peut fournir coquille vide avec des éléments un peu fakes
+
+Kickstarter la mindmap 
+
+faire un tour des outils techno 
+
+Ligne morte à 2 semaines
+
+Lister les trous de  la doc technique 
+
+
+
+Niveau de détails du user guide 
+
+:Si l'user fait des copier coller ou next next next, à la fin ça doit tourner !
+
+Le faire dans la DOC ou dans la WebUI ? (plutôt webUI)
+
+
+
+la doc doit donner le fil mental 
