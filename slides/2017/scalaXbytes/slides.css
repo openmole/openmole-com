@@ -1,0 +1,15 @@
+@import url("custom_css/font-awesome.min.css");
+@import url("custom_css/theme.css");
+
+
+/* Slide-specific vertical centering override 
+initially was:
+.reveal .slides section[data-vertical-align-top]
+*/
+.toptitle {
+  top: 0 !important;
+}
+
+.reveal .slide.level2 h1 {
+  font-size: 48px;
+}

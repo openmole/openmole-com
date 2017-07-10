@@ -1,0 +1,508 @@
+---
+title: "Functional libraries in the OpenMOLE ecosystem"
+author: "Jonathan Passerat-palmbach\\ [&lt;j.passerat-palmbach@imperial.ac.uk&gt;](mailto:j.passerat-palmbach@imperial.ac.uk)"
+date: "\\ Scala X bytes - 10 Jul 2017"
+highlightjs: js/reveal.js/plugin/highlight
+highlightjs-theme: ../../../../custom_css/github
+output:
+  revealjs::revealjs_presentation:
+    theme: white
+    highlight: pygments
+    transition: none
+    self_contained: false
+    lib_dir: js
+    css: slides.css
+    center: true
+    reveal_plugins: ["notes"]
+    mathjax: null
+    includes:
+      in_header: inc_header.html
+    reveal_options:
+      slideNumber: true
+  
+---
+
+## Model?
+
+![](images/modelIO.png)
+
+Stuff that you can launch, taking inputs and producing outputs
+
+## Example?
+
+![](images/simplu3D_no_text.png)
+
+## Model / Parameter Exploration {.toptitle data-background="images/parameter_exploration.png"}
+
+
+## Limits of complete / systematic parameter exploration
+
+- very different parameter sets can lead to similar outputs
+
+![](images/gridLimitation1_notext.png)
+
+## Limits of complete / systematic parameter exploration
+
+- very close parameter sets can lead to very different outputs
+
+![](images/gridLimitation2_notext.png)
+
+## Another approach? {.toptitle data-background="images/confused.jpg" data-background-size="60%"}
+
+## Explore output space instead! {.toptitle data-background="images/handraised.jpg" data-background-size="40%"}
+
+## Pattern Space Exploration {.toptitle data-background="images/pse_algo.png" data-background-size="70%"}
+
+## MGO (Multi-Goal Optimisation)
+
+![](images/genetics2.jpeg)
+
+<small style="top: 100 !important">
+<a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138212">Beyond Corroboration: Strengthening Model Validation by Looking for Unexpected Patterns, Cherel et al., 2015</a>
+</small>
+
+<small style="top: 100 !important">
+<a href="http://jasss.soc.surrey.ac.uk/18/1/12.html">A New Method to Evaluate Simulation Models: The Calibration Profile (CP) Algorithm, Reuillon et al., 2015</a>
+</small>
+
+## From a user point of view
+
+```
+import algorithm.pse._
+
+val pse = PSE(
+  lambda = 10,
+  phenotype = zdt4.compute,
+  pattern =
+    boundedGrid(
+      lowBound = Vector(0.0, 0.0),
+      highBound = Vector(1.0, 200.0),
+      definition = Vector(10, 10)),
+  genomeSize = 10)
+```
+
+```scala
+val runResult = run(pse).
+                until(afterGeneration(1000)).
+                trace((s, is) => println(s.generation))
+
+runResult: mgo.RunResult[mgo.algorithm.pse.PSE,
+                         mgo.algorithm.pse.context.M,
+                         mgo.algorithm.pse.Individual,
+                         mgo.algorithm.pse.Genome,
+                         mgo.algorithm.EvolutionState[mgo.algorithm.pse.HitMap]]
+```
+
+## Data representation
+
+```scala
+package object pse {
+  ...
+  
+  case class PSE(
+    lambda: Int,
+    phenotype: Expression[Vector[Double], Vector[Double]],
+    pattern: Vector[Double] => Vector[Int],
+    genomeSize: Int,
+    operatorExploration: Double = 0.1)
+
+  case class Genome(values: Array[Double], operator: Option[Int])
+  case class Individual(genome: Genome, fitness: Array[Double], age: Long)
+
+}
+```
+
+```scala
+package object algorithm {  
+  
+    case class EvolutionState[S](
+    generation: Long = 0,
+    startTime: Long = System.currentTimeMillis(),
+    random: util.Random = newRNG(System.currentTimeMillis()),
+    s: S) // -> this is our HitMap
+}
+```
+
+## Using it?
+
+```scala
+val runResult = run(pse).
+                until(afterGeneration(1000)).
+                trace((s, is) => println(s.generation))
+
+val (finalState, finalPopulation) =
+  runResult.eval(new util.Random(42))
+```
+
+## Typeclass to guide future implementations
+
+```scala
+trait Algorithm[T, M[_], I, G, S] {
+  def initialState(t: T, rng: Random): S
+  def initialPopulation(t: T): M[Vector[I]]
+  def step(t: T): Kleisli[M, Vector[I], Vector[I]]
+  def state: M[S]
+  def run[A](m: M[A], s: S): A
+}
+```
+
+## Monadic style computation
+
+```scala
+package object mgo {
+    ...
+  case class RunResult[T, M[_], I, G, S](...) {
+  
+    def evolution = for {
+      initialPop <- algo.initialPopulation(t)
+      finalPop <- step.fold(initialPop)(stopCondition.getOrElse(never[M, I])) // until(afterGeneration(1000))
+      s <- algo.state
+    } yield (s, finalPop)
+  ...
+  }
+
+}
+```
+
+## Zooming in `step`..
+
+```scala
+  implicit def isAlgorithm = new Algorithm[PSE, M, Individual, Genome, EvolutionState[HitMap]] {
+  
+    def step(t: PSE) =
+      deterministicStep[M, Individual, Genome](
+        pse.breeding(t.lambda, t.pattern, t.operatorExploration),
+        pse.expression(t.phenotype),
+        pse.elitism(t.pattern))
+  }
+```
+```scala
+  def breeding[M[_]: Monad: Generation: Random, I, G](
+      fitness: I => Vector[Double],
+      genome: I => G,
+      genomeValues: G => Vector[Double],
+      genomeOperator: G => Option[Int],
+      buildGenome: (Vector[Double], Option[Int]) => G)
+}
+```
+
+## Decoupling without enforcing design
+
+```scala
+pseOperations.breeding[M, Individual, Genome](
+      Individual.genome.get,
+      vectorValues.get,
+      Genome.operator.get,
+      vectorPhenotype.get _ andThen pattern,
+      ...)
+```
+
+<pre><code data-trim data-noescape>
+<mark>@Lenses</mark> case class Genome(values: Array[Double], operator: Option[Int])
+<mark>@Lenses</mark> case class Individual(genome: Genome, fitness: Array[Double], age: Long)
+
+def vectorPhenotype = Individual.phenotype composeLens arrayToVectorLens
+def vectorValues = Genome.values composeLens arrayToVectorLens
+</code></pre>
+
+## What makes MGO
+
+- Typeclass (contract of what an `Algorithm` is)
+- Case classes (represent domain data structures)
+- Optics (Lenses to access a specific field as a function)
+- Monadic computations
+- Kleisli
+- FreeMonad
+
+
+## {data-background="images/methodIssues.png" data-background-size="80%"}
+
+## What do we have so far?
+
+- Reduced computation time from 2551 years to 65 years
+
+## Not bad.. 
+
+![](images/skeleton-computer.jpg)
+
+## But what if we had access to more machines?
+
+![](images/clones.jpg)
+
+## GridScale
+
+- High level access to various High Performance / Throughput Computing environments
+- Batch jobs
+
+## High Throughput Computing
+
+- Multi-thread
+- Delegation to SSH server
+- Batch schedulers (via SSH)
+    - PBS
+    - SLURM
+    - Condor
+    - SGE
+    - OAR
+- Grid Computing (EGI trough DIRAC)
+
+## {data-background="images/cake.jpg"}
+
+<h2 style="color:#ffffff">Cake pattern <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+ / Mix-ins </h2>
+
+```scala
+trait SLURMJobService extends JobService
+                      with SSHHost 
+                      with SSHStorage 
+                      with BashShell
+```
+
+## Problems
+
+```scala
+trait SLURMJobService extends JobService
+                      with SSHHost
+                      with SSHStorage
+                      with SSHSimpleConnection
+                      with SSHCachedConnection
+                      with BashShell
+```
+
+- Which `Connection` is used?
+- No connection?
+- Implementation leaks in type
+    - `SSH`
+    - `Bash`
+
+## Function composition
+
+```scala
+def submit[M[_]: Monad, S, D](
+    workDirectory: D ⇒ String,
+    buildScript: (D, String) ⇒ String,
+    scriptSuffix: ⇒ String,
+    submitCommand: String ⇒ String,
+    retrieveJobID: String ⇒ BatchJobID)
+    ( server: S, jobDescription: D )
+```
+
+## Guide the design with a TypeClass
+
+```scala
+trait BatchScheduler[D] {
+
+  def submit[M[_]: Monad, S](server: S, jobDescription: D)(implicit hn: HeadNode[S, M], system: System[M], errorHandler: ErrorHandler[M]): M[BatchJob]
+
+  def state[M[_]: Monad, S](server: S, job: BatchJob)(implicit hn: HeadNode[S, M], error: ErrorHandler[M]): M[JobState]
+
+  def clean[M[_]: Monad, S](server: S, job: BatchJob)(implicit hn: HeadNode[S, M]): M[Unit]
+
+  def stdOut[M[_], S](server: S, job: BatchJob)(implicit hn: HeadNode[S, M]): M[String] = BatchScheduler.stdOut[M, S](server, job)
+  
+  def stdErr[M[_], S](server: S, job: BatchJob)(implicit hn: HeadNode[S, M]): M[String] = BatchScheduler.stdErr[M, S](server, job)
+
+}
+```
+
+## Here comes this imperative style again..
+
+<pre><code data-trim data-noescape>
+for {
+  _ ← hn.execute(server, s"mkdir -p $workDir")
+  
+  <mark>uniqId ← system.randomUUID.map(_.toString)</mark>
+  
+  script = buildScript(jobDescription, uniqId)
+  sName = scriptName(scriptSuffix)(uniqId)
+  
+  _ ← hn.write(server, script.getBytes, scriptPath(workDir, scriptSuffix)(uniqId))
+  
+  cmdRet ← hn.execute(server, command)
+  ExecutionResult(ret, out, error) = cmdRet
+  
+  _ ← if (ret != 0) errorHandler.errorMessage(ExecutionResult.error(command, cmdRet)) 
+      else ().pure[M]
+  _ ← if (out == null) errorHandler.errorMessage(s"$submitCommand did not return a JobID")
+      else ().pure[M]
+  jobId = retrieveJobID(out)
+} yield BatchJob(uniqId, jobId, workDir)
+</code></pre>
+
+## Free Monad
+
+- Same pattern as in MGO
+- Express imperative style computation
+- Account for side effects
+- Distinct modules => separate DSLs
+
+## FreeDSL
+
+- Macro generating boilerplate on top of Freek
+- Runtime merge function
+- Highly composable DSL
+  - <a href="https://github.com/ISCPIF/freedsl"><i class="fa fa-github" aria-hidden="true"></i> ISCPIF/freedsl</a>
+- Because we can
+
+## FreeDSL applied to GridScale
+<pre><code data-trim data-noescape class="scala">
+val context = merge(SSH, System, ErrorHandler)
+
+import context.M
+import context.implicits._
+import gridscale.slurm.slurmDSL._
+
+val jobDescription = SlurmJobDescription(...)
+
+val res = for {
+  job ← submit[M, SSHServer](headNode, jobDescription)
+  s ← waitUntilEnded[M](state[M, SSHServer](headNode, job))
+  out ← stdOut[M, SSHServer](headNode, job)
+  _ ← clean[M, SSHServer](headNode, job)
+} yield (s, out)
+
+val interpreter = merge(SSH.interpreter, System.interpreter, ErrorHandler.interpreter)
+println(interpreter.run(res))
+</code></pre>
+
+## OO designs post-mortem
+- Object didn't work for us
+- Initial design impacts future enhancements
+- Learnt it the hard way...
+- Functional patterns provide (more?) powerful abstractions
+
+## What do we have so far?
+
+![](images/summary_time.png)
+
+## Usability?
+
+![](images/biologist.jpg)
+
+## Usability?
+
+![](images/no_idea.jpg)
+
+## {data-background="images/omV3.png"}
+
+## Scala as a tool to build DSLs
+
+## Parthenon Architecture
+
+![](images/parthenon_architecture.png)
+
+<small>Courtesy of Dean Wampler & Alex Paynem, "Programming Scala", Chap 23., 2nd edition, 2015</small>
+
+## Parthenon Architecture
+
+![](images/parthenon_architecture_openmole.png)
+
+ applied to the OpenMOLE ecosystem
+
+## OpenMOLE DSL
+
+```scala
+// simplified
+implicit class PuzzlePieceDecorator(puzzle: PuzzlePiece) {
+  def on(env: EnvironmentProvider) =
+    puzzle.copy(environment = Some(env))
+  
+  def hook(hooks: Hook*) =
+    puzzle.copy(hooks = puzzle.hooks.toList ::: hooks.toList)
+  
+  def by(strategy: Grouping) =
+    puzzle.copy(grouping = Some(strategy))
+}
+```
+
+## Demo Time
+
+![](images/doc.jpg)
+
+## Summary - OpenMOLE
+
+- Scientific platform to explore models
+- (Hyper)Parameter tuning
+- Transparent use of HTC / distributed computing (GridScale)
+- Genetic-Algorithm based optimisation methods (MGO)
+- Ecosystem of functional libraries:
+    - GridScale
+    - MGO
+    - FreeDSL
+
+## See also
+
+- Building bricks of the OpenMOLE web application
+- [Scaladget - <i class="fa fa-github" aria-hidden="true"></i> openmole/scaladget](https://github.com/openmole/scaladget)
+- [ScalaWUI - <i class="fa fa-github" aria-hidden="true"></i> openmole/scalawui](https://github.com/openmole/scalawui)
+
+## Thanks!
+<table>
+
+<tr>
+<td style="border-bottom: 0px"><img style="width: 100px" src="images/romc.png" /></td>
+<td style="vertical-align: middle; border-bottom: 0px"><a mailto="romain.reuillon@iscpif.fr">romain.reuillon@iscpif.fr</a></td>
+
+<td style="border-bottom: 0px"><img style="width: 100px" src="images/paulc.png" /></td>
+<td style="vertical-align: middle; border-bottom: 0px"><a mailto="paul.chapron@iscpif.fr">paul.chapron@iscpif.fr</a></td>
+
+</tr>
+
+<tr>
+<td style="border-bottom: 0px"><img style="width: 100px" src="images/mathc.png" /></td>
+<td style="vertical-align: middle; border-bottom: 0px"><a mailto="mathieu.leclaire@iscpif.fr">mathieu.leclaire@iscpif.fr</a></td>
+
+<td style="border-bottom: 0px"><img style="width: 100px" src="images/guic.png" /></td>
+<td style="vertical-align: middle; border-bottom: 0px"><a mailto="guillaume.cherel@iscpif.fr">guillaume.cherel@iscpif.fr</a></td>
+
+</tr>
+
+<tr valign="middle">
+<td><img src="images/jo.jpg" /></td>
+<td style="vertical-align: middle"><a href="mailto:j.passerat-palmbach@imperial.ac.uk">j.passerat-palmbach@imperial.ac.uk</a></td>
+
+<td><img src="images/who.png" /></td>
+<td style="vertical-align: middle">you?</td>
+
+</tr>
+
+</table>
+
+## Useful Links
+<table>
+
+<tr>
+<td>GridScale Source code</td>
+<td><a href="https://github.com/openmole/gridscale"><i class="fa fa-github" aria-hidden="true"></i> openmole/gridscale</a></td>
+</tr>
+
+<tr>
+<td>MGO Source code</td>
+<td><a href="https://github.com/openmole/mgo"><i class="fa fa-github" aria-hidden="true"></i> openmole/mgo</a></td>
+</tr>
+
+
+<tr>
+<td>FreeDSL Source code</td>
+<td><a href="https://github.com/ISCPIF/freedsl"><i class="fa fa-github" aria-hidden="true"></i> ISCPIF/freedsl</a></td>
+</tr>
+
+<tr>
+<td>OpenMOLE</td>
+<td><a href="https://github.com/openmole/openmole"><i class="fa fa-github" aria-hidden="true"></i> openmole/openmole</a></td>
+</tr>
+
+<tr>
+<td>Announcements</td>
+<td><a href="https://twitter.com/openmole"><i class="fa fa-twitter" aria-hidden="true"></i>@OpenMOLE</a></td>
+</tr>
+
+<tr>
+<td>Community blog</td>
+<td><a href="https://blog.openmole.org"><i class="fa fa-rss" aria-hidden="true"></i>
+blog.openmole.org</a></td>
+</tr>
+
+
+</table>
+
