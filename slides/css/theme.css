@@ -37,3 +37,7 @@ ol li:before {
 .reveal pre {
   max-width: 100% !important;
 }
+
+.reveal pre code {
+  max-height: none;
+}
