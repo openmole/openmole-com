@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Dessine-moi un quartier</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="romain" >
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="custom_css/openmole.css" id="theme">
+  <link rel="stylesheet" href="custom_css/theme.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+  if( window.location.search.match( /print-pdf/gi ) ) {
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'css/print/pdf.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  }
+  </script>
+
+  <!--        remove default borders around images-->
+  <style>
+  .reveal section img {
+    background:none;
+    border:none;
+    box-shadow:none;
+  }
+
+  #logos {
+    width: 960px; // Change this according to the width you want.
+    height: 500px; // Change this as well
+    margin: 0 auto 0 auto;
+    text-align: center; // Will center the images contained in the div
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section data-transition="fade-out">
+        <img src="./images/hackingPage1.png" width="75%"/>
+      </section>
+
+      
+
+      <section data-transition="fade-out">
+        <h2>Qui sommes nous ?</h2>
+       <img src="./images/iscpif_cogit.png" width="30%"/>
+      <h3>Information géographique &  modèles numériques</h3>
+        
+      </section>
+        
+      
+<section data-transition="fade-out">
+        <h2>Du PLU au projet d'urbanisme</h2>
+</section>
+
+<section data-transition="fade-out">
+
+       <img src="./images/PLUprojettexte.svg" width="40%"/>
+<br>
+
+
+
+Il faut combler l'écart ! 
+
+Le texte est trop complexe pour être appréhendé dans sa <b>globalité</b>
+<!--
+Il nous faut des exemples, des poitns de comparaisons pour comprendre le lien entre <b> texte reglementaire </b>  et <b> Morphologie urbaine </b>
+
+
+Il faut donner à voir les conséquences des éléments du PLU (les choix des usagers! ) sur les bâtiments autorisés.
+-->
+</section>
+
+<section data-transition="fade-out">
+
+       <img src="./images/PLUprojettexte2.svg" width="100%"/>
+<br>
+Les projets <b> respectent</b> la réglementation.
+D'autres projets étaient possibles. Selon quels critères ont-ils été écartés?
+
+</section>
+
+<section data-transition="fade-out">
+
+       <img src="./images/PLUprojettexte3.svg" width="100%"/>
+
+
+
+<div style="text-align: left">
+<ul>
+<li>
+Couvrir l'ensemble des bâtiments compatibles <b> possibles</b> et les caractériser par des mesures.
+</li>
+<li>
+Rendre <b>comparable</b> les morphologies bâties
+</li>
+</ul>
+<div>
+
+
+
+</section>
+
+
+
+                    
+      <section data-transition="fade-out">
+        <h2>Le modèle simplu3D </h2>
+
+<p align="left" style="font-size: 70%">
+        SimPLU3D simule le <b>placement</b> et la <b>construction</b> de bâtiments compatibles avec un PLU
+            
+            <ul align="left" style="font-size: 70%">
+            <li>optimise le volume </li>  
+            <li>assemble des cubes</li>
+            </ul>
+            
+</p>
+
+            
+        <img src="./images/simplu3D.png" width="85%" />
+      </section>
+    
+
+
+
+<section data-transition="fade-out">
+
+
+ <video width="80%" height="50%" autoplay controls>
+                <source src="./visu_interactives/simplu_demo.webm" type="video/webm">
+</video>
+</section>
+
+
+
+
+<section data-transition="fade-out">
+      <h2>  Plan Local d'Urbanisme </h2>
+
+      Articles 6,7,8 et 10 
+<br>
+<p align="justify">
+         Position des bâtiments relativement aux autres bâtiments,
+aux limites de parcelles ou à la voirie, hauteur maximale.
+
+
+
+<section data-transition="fade-out" data-transition="fade-out">
+<h3>Formalisation du PLU</h3>
+<br>
+
+<p align="left">
+« La hauteur des façades mesurée à l’égout du toit <br>par rapport au terrain doit être inférieure à 12 m. »
+
+<br><br><br>
+<font color="white">
+En rouge, les objets géographiques, en bleu, les
+propriétés et en vert les relations
+<br><br>
+<p align="left" style="font-size: 60%">
+Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impact de la réglementation urbaine sur la morphologie du bâti. PhD thesis, Université Paris-Est.2014
+
+</font>
+
+</section>
+<section  data-transition="fade-in slide-out">
+<h3>Formalisation du PLU</h3>
+<br>
+
+<p align="left">
+« La <font color="blue">hauteur</font> des <font color="red">façades</font> mesurée à l’<font color="red">égout du toit</font> <font color="green"><br>par rapport</font> au <font color="red">terrain</font> doit être inférieure à 12 m. »
+<br><br><br>
+
+En rouge, les <font color="red">objets géographiques</font>, en bleu, les
+<font color="blue">propriétés</font> et en <font color="green">vert</font> les relations
+
+<br><br>
+<p align="left" style="font-size: 60%">
+Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impact de la réglementation urbaine sur la morphologie du bâti. PhD thesis, Université Paris-Est.2014
+</section>
+
+<section data-transition="fade-out">
+  Contraintes (<b>paramétriques</b>) de placement et dimensions des bâtiments
+  <br>
+  <br>
+  <img src="./images/schema_contraintesPLU.png" width="95%" style=""/>
+  <br>
+  <small>
+   + coefficient d'occupation du sol
+ </small>
+
+</section>
+
+
+
+
+
+</section>
+
+       <section data-transition="fade-out">
+        <h2>Tous les scénarios ... ?</h2>
+        <img src="./images/simplu3DNbConfigs.png" width="75%" style="left:-150px; top: 40px;position:relative;"/>
+        <img src="./images/tempsCalculSimplu" width="50%" style="left: 250px; bottom: -80px; position: relative;"/>
+      </section>
+                 
+<!--      <section data-transition="fade-out">
+        <h2>Pattern Space Exploration</h2>
+        <img src="./images/flockingvolumediscovered.svg" width="60%" style="bottom: 50px;">
+             
+      </section>
+-->        
+       <section data-transition="fade-out">
+        <img src="./images/comparatifPSE.png" width="60%" style="bottom: 50px;">   
+      </section>
+       
+         <section data-transition="fade-out">
+        <img src="./images/omV3.png" sytle="z-index:20;">   
+      </section>
+        
+         <section data-transition="fade-out">
+        <img src="./images/comparatifPSEUrbaniste.png" style="width:55%;">   
+      </section>
+
+
+
+
+
+
+
+
+      <section data-transition="fade-out">
+          <h5> Un (prototype d') outil d'aide à la décision en urbanisme </h5>
+      <br>
+      <div style="text-align: left; margin-left: 5%">
+                Exploration <b>interactive</b> du lien entre <b>réglementation</b> et <b>forme</b> du quartier bâti.
+</div>
+
+      </section>
+        
+          <section data-transition="fade-out">
+          <h2> Perspectives </h2>
+        <img src="./images/goodPracticesPLU.png" style="padding-top:30px;width:75%;">   
+      </section>
+
+
+          <section data-transition="fade-out">
+          <h2> Perspectives </h2>
+<br><br>
+<b>Réduire l'écart </b>   entre projet d'urbanisme et scénarios possibles : par les <b>mesures</b>
+<div style="text-align: left; margin-left: 10%">
+<br><br>
+  <ul>
+    <li>Accessibilité</li>
+    <li>Énergétique</li>
+    <li>Prescriptions du SCOT </li>
+  </ul>
+</div>
+      </section>
+
+
+
+      <section data-transition="fade-out"> 
+          <img src="./images/hackingPageEnd.png" width="85%" style="display : inline-block">
+      </section>       
+
+    </div>
+
+      
+      
+    </div>
+    <script src="js/reveal.js/lib/js/head.min.js"></script>
+    <script src="js/reveal.js-min/js/reveal.min.js"></script>
+
+    <script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      slideNumber: true,
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+          return !document.body.classList;
+        }},
+        {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }},
+        {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }},
+        {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+          hljs.initHighlightingOnLoad();
+        }},
+        {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+          return !!document.body.classList;
+        }},
+        {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+          return !!document.body.classList;
+        }}
+      ]
+    });
+
+
+    </script>
+
+  </body>
+  </html>
