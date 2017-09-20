@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Docker without Docker: How to run containers on HPC environments without any prerequisites!</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="js/reveal.js-3.3.0.1/css/reveal.css"/>
+
+<link rel="stylesheet"
+      href="js/reveal.js/plugin/highlight/../../../../custom_css/github.css"
+      />
+<script src="js/reveal.js/plugin/highlight/highlight.js"></script>
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="js/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="slides.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Docker without Docker: How to run containers on HPC environments without any prerequisites!</h1>
+    <h3 class="date"> HPC Summer Course - 15 Sep 2017</h3>
+</section>
+
+<section id="who-am-i" class="slide level2">
+<h2>Who am I?</h2>
+<p>Jonathan Passerat-Palmbach <a href="mailto:j.passerat-palmbach@imperial.ac.uk">&lt;j.passerat-palmbach@imperial.ac.uk&gt;</a></p>
+<p><img src="images/Biomedia_blue_M_IC.png" style="width:30.0%" style="height:30.0%" /> <img src="images/dHCP_official.png" style="width:20.0%" style="height:20.0%" /> <img src="images/openmole4.png" style="width:50.0%" style="height:50.0%" /></p>
+</section>
+<section id="computational-research-in-3-steps" class="slide level2">
+<h2>Computational research in 3 steps</h2>
+</section>
+<section id="idea" class="slide level2">
+<h2>Idea</h2>
+<p><img src="images/biologist.jpg" /></p>
+<aside class="notes">
+Fast forward to research =&gt; have an idea
+</aside>
+</section>
+<section id="experiment" class="slide level2">
+<h2>Experiment</h2>
+<p><img src="images/monkey.png" /></p>
+<aside class="notes">
+Implement it and run basic experiment
+</aside>
+</section>
+<section id="section" class="slide level2" data-background="images/codeworks.jpg" data-background-size="40%">
+<h2></h2>
+<aside class="notes">
+Prototype ok =&gt; full experiment
+</aside>
+</section>
+<section id="how-do-i-run-it-on-hpc" class="slide level2 toptitle" data-background="images/confused.jpg" data-background-size="50%">
+<h2>How do I run it on HPC?</h2>
+</section>
+<section id="ask-the-hpc-team" class="slide level2 toptitle" data-background="images/handraised.jpg" data-background-size="40%">
+<h2>Ask the HPC team!</h2>
+</section>
+<section id="here-comes-cluster-computing" class="slide level2">
+<h2>Here comes cluster computing</h2>
+<p><a href="https://wiki.imperial.ac.uk/display/HPC/HPC+downloads">(<em>from HPC team slides</em>)</a></p>
+<p>Python code</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> socket
+<span class="bu">print</span>(<span class="st">&quot;Hello, from </span><span class="sc">{}</span><span class="st">&quot;</span>.<span class="bu">format</span>(socket.gethostname()))</code></pre></div>
+<p>Submission script</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co">#!/bin/sh</span>
+<span class="co">#PBS -l walltime=0:10:00</span>
+<span class="co">#PBS -l select=1:ncpus=1:mem=600mb</span>
+<span class="co">#PBS -N class</span>
+
+<span class="ex">python</span> /work/jpassera/hellocx1.py</code></pre></div>
+<aside class="notes">
+btw you should definitely go to this course to understand how it works
+</aside>
+</section>
+<section id="easy" class="slide level2">
+<h2>Easy!!</h2>
+My laptop
+<pre><code data-trim data-noescape>
+python hellocx1.py
+>>> 5 / 2 == 2.5          
+<mark>True</mark>
+</code></pre>
+CX1
+<pre><code data-trim data-noescape>
+qsub hellocx1.pbs
+>>> 5 / 2 == 2.5          
+<mark>False</mark>
+</code></pre>
+<aside class="notes">
+<p>Any pythonist to guess what happened here?</p>
+Running python3 vs python2 (Yes I could have solved it without too much difficulty)
+</aside>
+</section>
+<section id="hpc-user-experience" class="slide level2">
+<h2>HPC user experience</h2>
+<p><img src="images/ravenrabbits.gif" style="width:75.0%" /></p>
+</section>
+<section id="classic-problems-when-porting-applications-to-hpc" class="slide level2">
+<h2>Classic problems when porting applications to HPC</h2>
+<ul>
+<li>Software tool missing</li>
+<li>Dependency missing (high-level package)</li>
+<li>Library missing (low-level shared library)</li>
+<li>Version incompatibility</li>
+<li><strong>Silent errors</strong> (numerically diverging results)</li>
+</ul>
+</section>
+<section id="how-do-i-make-sure-my-app-will-run-on-hpc" class="slide level2 toptitle" data-background="images/confused.jpg" data-background-size="50%">
+<h2>How do I make sure my app will run on HPC?</h2>
+</section>
+<section id="bring-all-my-dependencies-along-with-my-app" class="slide level2 toptitle" data-background="images/handraised.jpg" data-background-size="40%">
+<h2>Bring all my dependencies along with my app!</h2>
+</section>
+<section id="packaging-applications-with-docker" class="slide level2">
+<h2>Packaging applications with Docker</h2>
+</section>
+<section id="what-is-docker-again" class="slide level2 toptitle" data-background="images/whatisdocker.png" data-background-size="58%">
+<h2>What is Docker again?</h2>
+</section>
+<section id="section-1" class="slide level2" data-background="images/dockerstack.png" data-background-size="45%">
+<h2></h2>
+</section>
+<section id="demo-time" class="slide level2">
+<h2>Demo Time</h2>
+<p><img src="images/doc.jpg" /></p>
+<aside class="notes">
+<p>I have prepackaged a biomedical imaging pipeline Stitches together images</p>
+It’s made of C++ code using various libraries (VTK, …)
+</aside>
+</section>
+<section id="execution-in-docker" class="slide level2">
+<h2>Execution in Docker</h2>
+<video controls>
+<source src="videos/docker_biobank.webm" type="video/webm" />
+</video>
+</section>
+<section id="docker-on-hpc" class="slide level2">
+<h2>Docker on HPC</h2>
+<p>View from Imperial’s CX1:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">-bash-4.2</span>$ docker ps
+<span class="ex">-bash</span>: docker: command not found</code></pre></div>
+</section>
+<section id="lets-install-docker-then" class="slide level2">
+<h2>Let’s install docker then?</h2>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">-bash-4.2</span>$ sudo apt install docker
+
+<span class="ex">We</span> trust you have received the usual lecture from the local System
+<span class="ex">Administrator.</span> It usually boils down to these three things:
+
+    <span class="co">#1) Respect the privacy of others.</span>
+    <span class="co">#2) Think before you type.</span>
+    <span class="co">#3) With great power comes great responsibility.</span>
+
+[<span class="ex">sudo</span>] password for jpassera: </code></pre></div>
+<p><em>Spoiler alert: not happening</em></p>
+</section>
+<section id="section-2" class="slide level2" data-background="images/nodockerroothpc.jpg" data-background-size="55%">
+<h2></h2>
+</section>
+<section id="do-we-really-need-docker" class="slide level2 toptitle" data-background="images/dockerstack.png" data-background-size="45%">
+<h2>Do we really need Docker?</h2>
+</section>
+<section id="this-is-a-docker-image" class="slide level2 toptitle" data-background="images/docker_image_content.png" data-background-size="70%">
+<h2>This is a Docker image</h2>
+</section>
+<section id="how-does-it-work" class="slide level2">
+<h2>How does it work?</h2>
+<h3 id="merge-layers">Merge layers</h3>
+<p><img src="images/pinching-some-happiness-22945345.jpg" /></p>
+<h3 id="build-launcher-see-more-at-proot-me">Build launcher <a href="https://github.com/proot-me/PRoot">(see more at proot-me)</a></h3>
+<p><img src="images/launcher_logo.png" /></p>
+</section>
+<section id="demo-time-1" class="slide level2">
+<h2>Demo Time</h2>
+<p><img src="images/doc.jpg" /></p>
+</section>
+<section id="docker-on-hpc-cx1" class="slide level2">
+<h2>Docker on HPC (cx1)</h2>
+<video controls>
+<source src="videos/udocker_openmole_biobank.webm" type="video/webm" />
+</video>
+</section>
+<section id="welcome-to-openmole" class="slide level2">
+<h2>Welcome to OpenMOLE</h2>
+<p><img src="images/pokemons.gif" /></p>
+</section>
+<section id="section-3" class="slide level2" data-background="images/omV3.png" data-background-size="70%">
+<h2></h2>
+</section>
+<section id="naturally-parallel-methods" class="slide level2">
+<h2><strong>Naturally parallel</strong> methods</h2>
+<ul>
+<li>Data reconstruction</li>
+<li>Parameter estimation</li>
+<li>Sensitivity analysis</li>
+<li>Optimisation</li>
+<li>Replication</li>
+<li>…</li>
+</ul>
+<p>Execution of the <strong>same program</strong> with <strong>different parameters</strong> and/or <strong>datasets</strong>.</p>
+</section>
+<section id="but-its-slow" class="slide level2">
+<h2>But it’s slow…</h2>
+<p><img src="images/skeleton-computer.jpg" style="width:75.0%" /></p>
+</section>
+<section id="enters-distributed-computing-hpc" class="slide level2">
+<h2>Enters distributed computing / HPC!</h2>
+<p><img src="images/clones.jpg" style="width:75.0%" /></p>
+</section>
+<section id="prototype-scale-up-for-free" class="slide level2">
+<h2><strong>Prototype</strong> → <strong>Scale-up</strong> for Free</h2>
+<p><img src="images/scale.jpg" style="width:90.0%" /></p>
+<p>OpenMOLE articulates around 3 orthogonal concepts</p>
+<p><img src="images/openmoleGalRaw.png" style="width:135.0%" /></p>
+<p>… and an expressive workflow formalism for distributed computing.</p>
+</section>
+<section id="model" class="slide level2">
+<h2>Model?</h2>
+<p><img src="images/modelIO.png" /></p>
+<p>Stuff you can <strong>run</strong>, taking <strong>inputs</strong> and producing <strong>outputs</strong></p>
+<aside class="notes">
+We call every app in OpenMOLE model, as it’s primarily intended to do Model Exploration
+</aside>
+</section>
+<section id="zero-deployment-approach" class="slide level2">
+<h2><strong>Zero deployment</strong> approach</h2>
+<ul>
+<li>User code is automatically deployed at runtime</li>
+<li>No prior knowledge of remote environment needed</li>
+<li>No installation required on any machine</li>
+</ul>
+</section>
+<section id="transparent-access" class="slide level2">
+<h2><strong>Transparent</strong> access</h2>
+<ul>
+<li>No preliminary step</li>
+<li>Access as the user would do it</li>
+<li>With user credential</li>
+</ul>
+</section>
+<section id="any-application" class="slide level2">
+<h2>Any application</h2>
+<p><img src="images/blackbox.png" /></p>
+</section>
+<section id="packaging-non-jvm-application-with-care" class="slide level2">
+<h2>Packaging (non JVM) application with <strong>Care</strong></h2>
+<p><img src="images/Packing.jpg" style="width:50.0%" /></p>
+<p><a href="https://github.com/proot-me/PRoot" class="uri">https://github.com/proot-me/PRoot</a></p>
+</section>
+<section id="packaging-non-jvm-application-with-care-1" class="slide level2">
+<h2>Packaging (non JVM) application with <strong>Care</strong></h2>
+<p>Applications have dependencies:</p>
+<ul>
+<li>Shared libraries</li>
+<li>Packages (Python, R, …)</li>
+<li>Low level system calls</li>
+<li>Environment variables</li>
+<li>…</li>
+</ul>
+<p><strong>Capture</strong> these dependencies and <strong>transfer</strong> along with the application from Linux to Linux</p>
+</section>
+<section id="packaging-non-jvm-application-with-care-2" class="slide level2">
+<h2>Packaging (non JVM) application with <strong>Care</strong></h2>
+<p><strong>Distributed execution</strong> of (almost) <strong>any program</strong> to (pretty much) <strong>any computing environment</strong></p>
+<ol type="1">
+<li>Package it with CARE</li>
+<li>Write your OpenMOLE workflow</li>
+<li>Click the run button</li>
+<li>Write your paper</li>
+</ol>
+</section>
+<section id="native-code" class="slide level2">
+<h2>Native code</h2>
+<pre class="style"><code>care -o hello.tgz.bin python hello.py 42 test.txt</code></pre>
+<pre class="style"><code>val arg = Val[Int]
+val output = Val[File]
+
+val pythonTask =
+  CARETask(
+      workDirectory / &quot;hello.tgz.bin&quot;,
+      &quot;python hello.py ${arg} output.txt&quot;) set (
+    inputs += arg,
+    outputFiles += (&quot;output.txt&quot;, output),
+    outputs += arg
+  )
+
+val exploration = ExplorationTask(arg in (0 to 10))
+
+val copy = CopyFileHook(output, workDirectory / &quot;hello${arg}.txt&quot;)
+
+exploration -&lt; (pythonTask hook copy)
+      </code></pre>
+</section>
+<section id="execution-environments" class="slide level2">
+<h2>Execution environments?</h2>
+<p><img src="images/openmoleGalRaw.png" style="width:135.0%" /></p>
+</section>
+<section id="supported-today" class="slide level2">
+<h2>Supported Today</h2>
+<p><img src="images/environments.png" /></p>
+<aside class="notes">
+We’re working on making cloud environments first-class citizens
+</aside>
+</section>
+<section id="summary---openmole" class="slide level2">
+<h2>Summary - OpenMOLE</h2>
+<ul>
+<li><strong>Do you really need HPC?</strong></li>
+<li><p><strong>Or rather HTC instead?</strong></p></li>
+<li>Scientific platform to explore models</li>
+<li>(Hyper)Parameter tuning</li>
+<li>Transparent use of HTC / distributed computing (<a href="https://github.com/openmole/gridscale">GridScale</a>)</li>
+<li><p>Genetic-Algorithm based optimisation methods (<a href="https://github.com/openmole/mgo">MGO</a>)</p></li>
+</ul>
+</section>
+<section id="thanks" class="slide level2">
+<h2>Thanks!</h2>
+<table>
+<tr>
+<td style="border-bottom: 0px">
+<img style="width: 100px" src="images/romc.png" />
+</td>
+<td style="vertical-align: middle; border-bottom: 0px">
+<a mailto="romain.reuillon@iscpif.fr">romain.reuillon@iscpif.fr</a>
+</td>
+<td style="border-bottom: 0px">
+<img style="width: 100px" src="images/paulc.png" />
+</td>
+<td style="vertical-align: middle; border-bottom: 0px">
+<a mailto="paul.chapron@iscpif.fr">paul.chapron@iscpif.fr</a>
+</td>
+</tr>
+<tr>
+<td style="border-bottom: 0px">
+<img style="width: 100px" src="images/mathc.png" />
+</td>
+<td style="vertical-align: middle; border-bottom: 0px">
+<a mailto="mathieu.leclaire@iscpif.fr">mathieu.leclaire@iscpif.fr</a>
+</td>
+<td style="border-bottom: 0px">
+<img style="width: 100px" src="images/guic.png" />
+</td>
+<td style="vertical-align: middle; border-bottom: 0px">
+<a mailto="guillaume.cherel@iscpif.fr">guillaume.cherel@iscpif.fr</a>
+</td>
+</tr>
+<tr valign="middle">
+<td style="border-bottom: 0px">
+<img style="width: 100px" src="images/jo.png" />
+</td>
+<td style="vertical-align: middle">
+<a href="mailto:j.passerat-palmbach@imperial.ac.uk">j.passerat-palmbach@imperial.ac.uk</a>
+</td>
+<td style="border-bottom: 0px">
+<img style="width: 100px" src="images/who.png" />
+</td>
+<td style="vertical-align: middle">
+you?
+</td>
+</tr>
+</table>
+</section>
+<section id="useful-links" class="slide level2">
+<h2>Useful Links</h2>
+<table>
+<tr>
+<td>
+OpenMOLE
+</td>
+<td>
+<a href="https://github.com/openmole/openmole"><i class="fa fa-github" aria-hidden="true"></i> openmole/openmole</a>
+</td>
+</tr>
+<tr>
+<td>
+Announcements
+</td>
+<td>
+<a href="https://twitter.com/openmole"><i class="fa fa-twitter" aria-hidden="true"></i><span class="citation" data-cites="OpenMOLE">@OpenMOLE</span></a>
+</td>
+</tr>
+<tr>
+<td>
+Community blog
+</td>
+<td>
+<a href="https://blog.openmole.org"><i class="fa fa-rss" aria-hidden="true"></i> blog.openmole.org</a>
+</td>
+</tr>
+</table>
+</section>
+    </div>
+  </div>
+
+  <script src="js/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="js/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'js/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+        ]
+      });
+    </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

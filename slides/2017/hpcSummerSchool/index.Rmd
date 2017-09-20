@@ -1,0 +1,399 @@
+---
+title: "Docker without Docker: How to run containers on HPC environments without any prerequisites!"
+date: "\\ HPC Summer Course - 15 Sep 2017"
+highlightjs: js/reveal.js/plugin/highlight
+highlightjs-theme: ../../../../custom_css/github
+output:
+  revealjs::revealjs_presentation:
+    theme: white
+    highlight: pygments
+    transition: none
+    self_contained: false
+    lib_dir: js
+    css: slides.css
+    center: true
+    reveal_plugins: ["notes"]
+    mathjax: null
+    includes:
+      in_header: inc_header.html
+    reveal_options:
+      slideNumber: true
+  
+---
+
+## Who am I?
+
+Jonathan Passerat-Palmbach
+[&lt;j.passerat-palmbach@imperial.ac.uk&gt;](mailto:j.passerat-palmbach@imperial.ac.uk)
+
+
+![](images/Biomedia_blue_M_IC.png){height=30% width=30%}
+![](images/dHCP_official.png){height=20% width=20%}
+![](images/openmole4.png){height=50% width=50%}
+
+## Computational research in 3 steps
+
+## Idea
+
+![](images/biologist.jpg)
+
+<aside class="notes">
+Fast forward to research => have an idea
+</aside>
+
+## Experiment
+
+![](images/monkey.png)
+
+<aside class="notes">
+Implement it and run basic experiment
+</aside>
+
+## {data-background="images/codeworks.jpg" data-background-size="40%"}
+
+<aside class="notes">
+Prototype ok => full experiment
+</aside>
+
+## How do I run it on HPC? {.toptitle data-background="images/confused.jpg" data-background-size="50%"}
+
+## Ask the HPC team! {.toptitle data-background="images/handraised.jpg" data-background-size="40%"}
+
+## Here comes cluster computing
+
+[(*from HPC team slides*)](https://wiki.imperial.ac.uk/display/HPC/HPC+downloads)
+
+Python code
+```python
+import socket
+print("Hello, from {}".format(socket.gethostname()))
+```
+
+Submission script
+```bash
+#!/bin/sh
+#PBS -l walltime=0:10:00
+#PBS -l select=1:ncpus=1:mem=600mb
+#PBS -N class
+
+python /work/jpassera/hellocx1.py
+```
+
+<aside class="notes">
+btw you should definitely go to this course to understand how it works
+</aside>
+
+## Easy!!
+
+My laptop
+<pre><code data-trim data-noescape>
+python hellocx1.py
+>>> 5 / 2 == 2.5          
+<mark>True</mark>
+</code></pre>
+
+CX1
+<pre><code data-trim data-noescape>
+qsub hellocx1.pbs
+>>> 5 / 2 == 2.5          
+<mark>False</mark>
+</code></pre>
+
+<aside class="notes">
+Any pythonist to guess what happened here?
+
+Running python3 vs python2
+(Yes I could have solved it without too much difficulty)
+</aside>
+
+
+## HPC user experience
+
+![](./images/ravenrabbits.gif){width="75%"}
+
+## Classic problems when porting applications to HPC
+
+- Software tool missing
+- Dependency missing (high-level package)
+- Library missing (low-level shared library)
+- Version incompatibility
+- **Silent errors** (numerically diverging results)
+
+## How do I make sure my app will run on HPC? {.toptitle data-background="images/confused.jpg" data-background-size="50%"}
+
+## Bring all my dependencies along with my app! {.toptitle data-background="images/handraised.jpg" data-background-size="40%"}
+
+## Packaging applications with Docker
+
+## What is Docker again? {.toptitle data-background="images/whatisdocker.png" data-background-size="58%"}
+
+## {data-background="images/dockerstack.png" data-background-size="45%"}
+
+## Demo Time
+
+![](images/doc.jpg)
+
+<aside class="notes">
+I have prepackaged a biomedical imaging pipeline
+Stitches together images 
+
+It's made of C++ code using various libraries (VTK, ...)
+</aside>
+
+## Execution in Docker
+
+<video controls>
+  <source src="videos/docker_biobank.webm" type="video/webm" />
+</video>
+
+## Docker on HPC
+
+View from Imperial's CX1:
+
+```bash
+-bash-4.2$ docker ps
+-bash: docker: command not found
+```
+
+## Let's install docker then?
+
+```bash
+-bash-4.2$ sudo apt install docker
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for jpassera: 
+```
+
+*Spoiler alert: not happening*
+
+## {data-background="images/nodockerroothpc.jpg" data-background-size="55%"}
+
+## Do we really need Docker?{.toptitle data-background="images/dockerstack.png" data-background-size="45%"}
+
+
+## This is a Docker image {.toptitle data-background="images/docker_image_content.png" data-background-size="70%"}
+
+## How does it work?
+
+### Merge layers
+![](images/pinching-some-happiness-22945345.jpg)
+
+### Build launcher [(see more at proot-me)](https://github.com/proot-me/PRoot)
+![](images/launcher_logo.png)
+
+## Demo Time
+
+![](images/doc.jpg)
+
+## Docker on HPC (cx1)
+
+<video controls>
+  <source src="videos/udocker_openmole_biobank.webm" type="video/webm" />
+</video>
+
+## Welcome to OpenMOLE
+
+![](images/pokemons.gif)
+
+## {data-background="images/omV3.png" data-background-size="70%"}
+
+## **Naturally parallel** methods
+
+-   Data reconstruction
+-   Parameter estimation
+-   Sensitivity analysis
+-   Optimisation
+-   Replication
+-   ...
+
+Execution of the **same program** with **different parameters** and/or
+**datasets**.
+
+## But it's slow...
+
+![](./images/skeleton-computer.jpg){width="75%"}
+
+## Enters distributed computing / HPC!
+
+![](./images/clones.jpg){width="75%"}
+
+## **Prototype** → **Scale-up** for Free
+
+![](./images/scale.jpg){width="90%"}
+
+OpenMOLE articulates around 3 orthogonal concepts
+
+![](./images/openmoleGalRaw.png){width="135%"}
+
+... and an expressive workflow formalism for distributed computing.
+
+## Model?
+
+![](./images/modelIO.png)
+
+Stuff you can **run**, taking **inputs** and producing **outputs**
+
+<aside class="notes">
+We call every app in OpenMOLE model, as it's primarily intended to do Model Exploration
+</aside>
+
+
+## **Zero deployment** approach
+
+-   User code is automatically deployed at runtime
+-   No prior knowledge of remote environment needed
+-   No installation required on any machine
+
+## **Transparent** access
+
+-   No preliminary step
+-   Access as the user would do it
+-   With user credential
+
+## Any application
+
+![](./images/blackbox.png)
+
+## Packaging (non JVM) application with **Care**
+
+![](./images/Packing.jpg){width="50%"}
+
+[https://github.com/proot-me/PRoot](https://github.com/proot-me/PRoot)
+
+## Packaging (non JVM) application with **Care**
+
+Applications have dependencies:
+
+- Shared libraries
+- Packages (Python, R, ...)
+- Low level system calls
+- Environment variables
+- ...
+
+**Capture** these dependencies and **transfer** along with the
+application from Linux to Linux
+
+## Packaging (non JVM) application with **Care**
+
+**Distributed execution** of (almost) **any program** to (pretty much)
+**any computing environment**
+
+1.  Package it with CARE
+2.  Write your OpenMOLE workflow
+3.  Click the run button
+4.  Write your paper
+
+
+## Native code
+
+``` {style="brush: bash; margin-top: 40px"}
+care -o hello.tgz.bin python hello.py 42 test.txt
+```
+
+``` {style="brush: scala; margin-top: 40px"}
+val arg = Val[Int]
+val output = Val[File]
+
+val pythonTask =
+  CARETask(
+      workDirectory / "hello.tgz.bin",
+      "python hello.py ${arg} output.txt") set (
+    inputs += arg,
+    outputFiles += ("output.txt", output),
+    outputs += arg
+  )
+
+val exploration = ExplorationTask(arg in (0 to 10))
+
+val copy = CopyFileHook(output, workDirectory / "hello${arg}.txt")
+
+exploration -< (pythonTask hook copy)
+      
+```
+
+
+## Execution environments?
+
+![](./images/openmoleGalRaw.png){width="135%"}
+
+
+## Supported Today
+
+![](./images/environments.png)
+
+
+<aside class="notes">
+We're working on making cloud environments first-class citizens
+</aside>
+
+
+## Summary - OpenMOLE
+
+- **Do you really need HPC?**
+- **Or rather HTC instead?**
+
+- Scientific platform to explore models
+- (Hyper)Parameter tuning
+- Transparent use of HTC / distributed computing ([GridScale](https://github.com/openmole/gridscale))
+- Genetic-Algorithm based optimisation methods ([MGO](https://github.com/openmole/mgo))
+
+## Thanks!
+<table>
+
+<tr>
+<td style="border-bottom: 0px"><img style="width: 100px" src="images/romc.png" /></td>
+<td style="vertical-align: middle; border-bottom: 0px"><a mailto="romain.reuillon@iscpif.fr">romain.reuillon@iscpif.fr</a></td>
+
+<td style="border-bottom: 0px"><img style="width: 100px" src="images/paulc.png" /></td>
+<td style="vertical-align: middle; border-bottom: 0px"><a mailto="paul.chapron@iscpif.fr">paul.chapron@iscpif.fr</a></td>
+
+</tr>
+
+<tr>
+<td style="border-bottom: 0px"><img style="width: 100px" src="images/mathc.png" /></td>
+<td style="vertical-align: middle; border-bottom: 0px"><a mailto="mathieu.leclaire@iscpif.fr">mathieu.leclaire@iscpif.fr</a></td>
+
+<td style="border-bottom: 0px"><img style="width: 100px" src="images/guic.png" /></td>
+<td style="vertical-align: middle; border-bottom: 0px"><a mailto="guillaume.cherel@iscpif.fr">guillaume.cherel@iscpif.fr</a></td>
+
+</tr>
+
+<tr valign="middle">
+<td style="border-bottom: 0px"><img style="width: 100px" src="images/jo.png" /></td>
+<td style="vertical-align: middle"><a href="mailto:j.passerat-palmbach@imperial.ac.uk">j.passerat-palmbach@imperial.ac.uk</a></td>
+
+<td style="border-bottom: 0px"><img style="width: 100px" src="images/who.png" /></td>
+<td style="vertical-align: middle">you?</td>
+
+</tr>
+
+</table>
+
+## Useful Links
+<table>
+
+<tr>
+<td>OpenMOLE</td>
+<td><a href="https://github.com/openmole/openmole"><i class="fa fa-github" aria-hidden="true"></i> openmole/openmole</a></td>
+</tr>
+
+<tr>
+<td>Announcements</td>
+<td><a href="https://twitter.com/openmole"><i class="fa fa-twitter" aria-hidden="true"></i>@OpenMOLE</a></td>
+</tr>
+
+<tr>
+<td>Community blog</td>
+<td><a href="https://blog.openmole.org"><i class="fa fa-rss" aria-hidden="true"></i>
+blog.openmole.org</a></td>
+</tr>
+
+
+</table>
+
