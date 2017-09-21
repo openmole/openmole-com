@@ -1,0 +1,129 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.000
+You can start OpenMOLE from the command line
+
+2
+00:00:08.000 --> 00:00:12.000
+OpenMOLE is a web application
+
+3
+00:00:15.000 --> 00:00:18.000
+It automatically opens a new tab in your web browser
+
+4
+00:00:18.617 --> 00:00:20.617
+The menu on the left is your workspace
+
+5
+00:00:20.617 --> 00:00:22.610
+You can manage your files from there
+
+6
+00:00:22.610 --> 00:00:24.610
+OpenMOLE projects bear the .oms extension
+
+7
+00:00:28.383 --> 00:00:31.380
+Specify the docker image to fetch from Docker hub
+
+8
+00:00:33.284 --> 00:00:38.280
+And the parameters as you would on the command line
+
+9
+00:00:42.983 --> 00:00:45.980
+Let's now define the execution environment
+
+10
+00:00:49.110 --> 00:00:52.116
+Login and head node are compulsory
+
+11
+00:00:52.383 --> 00:00:54.383
+wallTime and other parameters are optional
+
+12
+00:00:54.783 --> 00:00:57.780
+click on the lock icon to open the authentication menu
+
+13
+00:00:59.784 --> 00:01:01.784
+Enter your login, head node and path to your SSH private key
+
+14
+00:01:01.784 --> 00:01:03.780
+The green OK denotes a successful authentication
+
+15
+00:01:11.283 --> 00:01:16.280
+We specify the task to run on the environment (PBS here)
+
+16
+00:01:18.150 --> 00:01:23.150
+And how many instances will be executed
+
+17
+00:01:26.850 --> 00:01:28.850
+Click Play to start the experiment
+
+18
+00:01:33.662 --> 00:01:36.660
+The execution panel pops up automatically
+
+19
+00:01:38.029 --> 00:01:42.020
+Click on Env for more information on the remote environments
+
+20
+00:01:45.395 --> 00:01:49.390
+And then details to dig into a specific environment (here PBS)
+
+21
+00:01:51.429 --> 00:01:55.420
+Number and size of uploaded files are updated on the fly
+
+22
+00:02:04.529 --> 00:02:07.520
+3 jobs have been submitted to the underlying PBS environment
+
+23
+00:02:09.929 --> 00:02:15.920
+We can verify that 3 jobs are in the queue of the cluster
+
+24
+00:02:20.552 --> 00:02:24.550
+The interface is refreshed when jobs start running
+
+25
+00:02:25.952 --> 00:02:32.950
+Let's verify on the cluster
+
+26
+00:02:43.370 --> 00:02:45.370
+Finished jobs are also automatically reported
+
+27
+00:02:46.270 --> 00:02:49.270
+Each job's output is automatically retrieved upon completion
+
+28
+00:02:51.603 --> 00:02:54.600
+And the cluster's queue is now empty!
+
+29
+00:03:02.128 --> 00:03:05.120
+Result files are downloaded from the cluster
+
+30
+00:03:07.894 --> 00:03:09.894
+And the whole execution is now finished
+
+31
+00:03:11.661 --> 00:03:15.660
+We can visualize each job's output
+
+32
+00:03:22.627 --> 00:03:27.620
+Results have been copied to the specified folder (hook)

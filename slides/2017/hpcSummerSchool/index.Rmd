@@ -1,6 +1,6 @@
 ---
 title: "Docker without Docker: How to run containers on HPC environments without any prerequisites!"
-date: "\\ HPC Summer Course - 15 Sep 2017"
+date: "\\ HPC Summer Course - 20 Sep 2017"
 highlightjs: js/reveal.js/plugin/highlight
 highlightjs-theme: ../../../../custom_css/github
 output:
@@ -142,8 +142,8 @@ It's made of C++ code using various libraries (VTK, ...)
 
 ## Execution in Docker
 
-<video controls>
-  <source src="videos/docker_biobank.webm" type="video/webm" />
+<video controls autoplay>
+  <source data-src="videos/docker_biobank.webm" type="video/webm" />
 </video>
 
 ## Docker on HPC
@@ -193,8 +193,9 @@ Administrator. It usually boils down to these three things:
 
 ## Docker on HPC (cx1)
 
-<video controls>
-  <source src="videos/udocker_openmole_biobank.webm" type="video/webm" />
+<video controls autoplay>
+  <source data-src="videos/udocker_openmole_biobank.webm" type="video/webm" />
+  <track src="videos/udocker_openmole_biobank.vtt" kind="subtitles" srclang="en" label="English" default />
 </video>
 
 ## Welcome to OpenMOLE
