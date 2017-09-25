@@ -7,7 +7,7 @@
 
   <title>COPIL Dynamicity</title>
 
-  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="description" content="COPIL Dynamicity">
   <meta name="author" content="romain" >
 
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -58,6 +58,20 @@
     <div class="slides">
 
       <section data-transition="fade-out">
+        Ce qui a été fait :<br><br>
+        <ul>
+          <li>Intégration de udocker dans OpenMOLE</li>
+          <li>Exécution de DeEMO dans OpenMOLE</li>
+            <ul>
+              <li>en local</li>
+              <li>sur la grille EGI</li>
+            </ul>
+          <li> </li>
+        </ul> 
+
+      </section>  
+
+      <section data-transition="fade-out">
   
         <img src="./images/dockerDeemo.svg" width="50%" style="float: left;" />
         <img src="./images/UdockerDeemoOM.svg" width="50%" style="float: left;"/>
@@ -67,31 +81,50 @@
       <section data-transition="fade-out">
         
         <h2>Analyse de sensibilité sur DeEMO</h2>
-
         <ul>
           <li>Faire varier le <b>nombre</b> et l'<b>épaisseur</b> des tranches d'âge</li>
-          <li>But: Trouver le <b>seuil</b> en dessous duquel il est inutile de discrétiser la population plus finement (s'il existe) </li>
-          <li> [ Résultats si ça marchait] </li>
-        </ul>
+          <li>But: Trouver le <b>seuil</b> en dessous duquel il est inutile de discrétiser plus finement</li>
+        </ul><br><br>
+        <div style="text-align: left; text-indent: 1cm ; ">
+        On a fait varier le nombre de classes de 10 à 120, leur épaisseur de 1 à 11 ans<br>
+          ⇒ Les résultats ne changent jamais,  DeEMO n'est pas sensible à ces paramètres
+
+          <p>
+                ... dans cette version.
+
+          </div>  
 
       </section>
 
-      <section>
-        <h2>Méthodes</h2>
+      <section data-transition="fade-out">
+        <h2>Méthodes d'OpenMOLE</h2>
         <div style="text-align: left">
-        <u><a href="http://www.openmole.org">www.openmole.org</a></u> a été mis à jour ! Y sont présentées les méthodes d'<i>exploration</i> de modèle
+        
         <br>
         <br>
-        Analyse de <b>sensibilité</b>    
+        
+<a href="http://www.openmole.org/Other+DoEs.html#SensitivityAnalysis">
+        Analyse de sensibilité</a>     
         <br><br>
-        <b>Calibration</b> mono et multi-objectifs
+        <a href="http://www.openmole.org/Calibration.html">Calibration mono et multi-objectifs</a>
         <br><br>
-        <b>Profils</b> de calibration<br><br>
-        Exploration de la <b>diversité des sorties (PSE)</b>
+        <a href="http://www.openmole.org/Profiles.html">Profils de calibration</a>
+        <br><br>
+        <a href="http://www.openmole.org/PSE.html">Exploration de la diversité des sorties (PSE)</a>
         <br><br>
 </div>
       </section>
       
+      <section data-transition="fade-out">
+
+        Une interface de modèles pratique:<br><br> 
+        <div style="text-align: left">
+        - pour fixer les paramètres des modèles en entrée, <br>
+        - pour récupérer les résultats d'éxécution en fichiers (attributs des entités), sans requêtage a posteriori de la DB
+        </div>
+      </section>
+
+
     </div>
 
       
