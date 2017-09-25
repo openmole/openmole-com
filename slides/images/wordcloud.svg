@@ -4,11 +4,11 @@
 <defs>
 <style type="text/css"> @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:normal); </style>
 </defs>
-<clipPath id="cp1">
+<clipPath id="cp2">
 <path d="M 0,0 L 1024,0 L1024,768 L 0,768 z M 0,0 L 1133,0 L 1133,847 L 0,847 z" fill-rule="evenodd">
 </path>
 </clipPath>
-<g clip-path="url(#cp1)">
+<g clip-path="url(#cp2)">
 </g>
 <rect x="0" y="0" width="1133" height="847" opacity="1" fill="#ffffff" stroke="none">
 </rect>
