@@ -136,19 +136,7 @@ A chaque étape :
     
 
 
-<section data-transition="fade-out">
-      <h2>  Plan Local d'Urbanisme </h2>
-
-      Articles 6,7,8 et 10 
-<br>
-<p align="justify">
-         Position des bâtiments relativement aux autres bâtiments,
-aux limites de parcelles ou à la voirie, hauteur maximale.
-
-</p>
-</section>
-
-<section data-transition="fade-out" data-transition="fade-out">
+<section data-transition="fade-out" >
 <h3>Formalisation du PLU</h3>
 <br>
 
@@ -194,26 +182,118 @@ Ref:<br>Brasebin, Mickaël. Les données géographiques 3D pour simuler l’impa
 
 </section>
 
+<section data-transition="fade-out">
+ Scénario de construction
+ <br>
+ <br>
+  <img src="./images/param_iau.png" width="85%" style=""/>
 
-
+</section>
 
 <section>
+    <iframe width= "100%" height= "500" src= "./visu_interactives/1_video_simplu.mp4" frameborder= "0" allowFullScreen="" ></iframe>
+</section>
+
+
+<section data-transition="fade-out">
+Couplage <b> OpenMOLE </b> & <b> SimPLU3D</b>
+</section>
+
+
+<section data-transition="fade-out">
   
-   <img src="./images/simplu3D.png" width="85%" />
+
+De la simulation d'une parcelle ...  
+<p align="left" style="font-size: 70%"">
+</p>
+<br><br>
+<img src="./images/simplu3D.png" width="85%" />
+
+
+<p align="left" style="font-size: 70%"">
+
+
+</section>
+
+
+<section data-transition="fade-out">
+  
+... à la simulation de la Seine et Marne
+
+<p align="left" style="font-size: 70%"">
+BD Carto PLU + 
+</p>
+
+
+<img src="./images/PLU_BDD.png" width="65%" />
+
+<img src="./images/IdFsimu.png" width="45%" />
+<img src="./images/legendIDFSimu.png" width="25%" />
+
+
+
+<p align="left" style="font-size: 80%"">
+
+
+
+5 minutes par parcelle, 1 400 000 parcelles : <b>nécessité de paralléliser</b>
      
 
 </section>
 
+ <section data-transition="fade-out">
+  Premier résultats 
+<p align="left"  style="font-size: 80%">
+<br>
+Différents tissus produits à partir d’un même paramétrage du générateur de formes
+<br>
+<br>
+19 ans de calcul sur une seule machine : 5 jours grâce à la distribution
 
-
-
+  <img src="./images/tissu_1.png" width="49%" style="left:-150px; top: 0px;position:relative;"/>
+  <img src="./images/tissu_2.png" width="50%" style="left: +50px; bottom: 0px; position: relative;"/>
 </section>
 
-       <section data-transition="fade-out">
-        <h2>Explorer les scénarios possibles</h2>
-        <img src="./images/simplu3DNbConfigs.png" width="75%" style="left:-150px; top: 40px;position:relative;"/>
-        <img src="./images/tempsCalculSimplu" width="50%" style="left: 250px; bottom: -80px; position: relative;"/>
-      </section>
+
+
+<section data-transition="fade-out">
+<p style="font-size: 90%">
+Pour identifier le potentiel foncier</p>
+
+<br>
+<br>
+  <img src="./images/gain_etages.png" width="49%" />
+<img src="./images/gain_construct.png" width="49%" />
+</section>
+ 
+
+
+
+
+
+
+<section data-transition="fade-out">
+Pour explorer les morphologies bâties possibles
+
+
+<br><br>
+  <img src="./images/limites_explo_grid.png" width="400%"  style="left:-0px; top: 0px;position:relative;" />
+</section>
+
+<section data-transition="fade-out">
+
+Méthode évolutionnaire d'exploration de l'espace des sorties d'un modèle 
+- Objectif : maximiser la diversité des motifs découverts dans l'espace des sorties en échantillonnant l'espace d'entrée 
+- Heuristique : les entrées qui donnent des motifs rares sont plus souvent choisies et croisées . 
+- Motifs = combinaisons de valeurs de mesures  
+<p align="left" style="font-size: 60%"">
+Ref: [Chérel et al. 2015] Beyond Corroboration: Strengthening Model Validation by Looking for Unexpected Patterns. 
+PLOS One http://dx.doi.org/10.1371/journal.pone.0138212
+</section>
+
+
+
+
                  
 <!--      <section data-transition="fade-out">
         <h2>Pattern Space Exploration</h2>
