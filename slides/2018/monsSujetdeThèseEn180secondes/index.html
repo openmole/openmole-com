@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Simuler la construction en Île de France</title>
+
+  <meta name="description" content="FOSS4Gfr 2018">
+  <meta name="author" content="paul" >
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="custom_css/openmole.css" id="theme">
+  <link rel="stylesheet" href="custom_css/theme.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+  if( window.location.search.match( /print-pdf/gi ) ) {
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'css/print/pdf.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  }
+  </script>
+
+  <!--        remove default borders around images-->
+  <style>
+  .reveal section img {
+    background:none;
+    border:none;
+    box-shadow:none;
+  }
+
+  #logos {
+    width: 960px; // Change this according to the width you want.
+    height: 500px; // Change this as well
+    margin: 0 auto 0 auto;
+    text-align: center; // Will center the images contained in the div
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+
+
+      <section data-transition="fade-out">
+        <span style="font-size:1.2em">
+      <b>SimPLU3D</b> et <b>OpenMOLE</b>
+      
+
+
+        </span> 
+      <br>  
+
+<img src="./images/img_titre.png" width="90%"/>
+
+<br>
+<small>
+Vendredi 18 mai 
+<br>
+<br>
+Paul Chapron , IGN
+</small>
+
+</section>
+        
+
+<section data-transition="fade-out">
+
+Nombreuses contraintes délimitent l'espace des possibles d'un projet urbain.
+
+<br>
+<br>
+Contraintes <b>Explicites</b> : réglementation(PLU), objectifs (nombre de logements, densité), intégration architecturale. 
+<br>
+Objectifs <b>Implicites</b> : intégration au tissu environnant, préservation des vues,   performance énergétique
+
+<br><br>
+Cette information spatiale est <b>intangible</b> et <b>complexe</b>,  un enchevêtrement de contraintes souvent <b>contradictoires</b> 
+</section>
+
+<section data-transition="fade-out">
+</section>
+
+
+<section data-transition="fade-out">
+
+
+la simulation , pour <b>donner à voir</b> ces projets possibles,  <b>itérer</b> au fil de l'eau la conception du projet si les contraites et objectifs bougent pendant la conception, et enfin
+<b> arbitrer</b> le compromis selon différents objectifs e.g. performance énergétique, densité de plancher.  
+</section> 
+
+
+
+<section data-transition="fade-out">
+
+
+
+Approche <b>«pleinement» 3D</b> : au-delà du rendu (agréable) et de la stylisation (ambiance urbaine, photos, ébauches crayonnées )
+ <br><br>
+          
+La 3D comme un moyen <b>d'exploration</b>  du "Design Performance Space" [Mahdavi & Gurtekin 2002] : 
+<br>
+indicateurs morphologiques de performance énergétique 
+<br>
+indicateurs "skyline" : vues conservées, ouverture de ciel  
+<br>
+indicateur mésoscopiques : ventilation urbaine, îlots de chaleur, auto-ombrage
+
+</section>
+
+
+
+
+<section data-transition="fade-out">
+<span align="left" style="font-size: 0.8em"  >          
+Cette thèse est :
+<ul><li>
+Proche de <b>l'expertise "maison" </b> du SR : 
+<ul><li>rendu et analyse des données 3D (iTowns)</li>
+<li> cartographie et sémiologie appliquée au SIG 3D</li>
+<li> </li>
+</ul>
+<li>Politiquement pertinente : 
+  <ul><li> aide à la décision/concertation</li>
+  <li> évaluation des politiques publiques</li>
+  <li> soutenabilité énergétique</li>
+</ul>
+<li>
+Scientifiquement originale :
+<ul>
+  <li>Design «sous contraintes» </li>
+  <li>Probleme inverse : quelles règles garantissent une propriété ? </li>
+  <li>Point de vue mésoscopique : influence mutuelle projet ⮂ tissu environnant </li>
+</ul>
+</li>
+</span>
+</section>
+
+    </div>
+
+      
+      
+    </div>
+    <script src="js/reveal.js/lib/js/head.min.js"></script>
+    <script src="js/reveal.js-min/js/reveal.min.js"></script>
+
+    <script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      slideNumber: true,
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+          return !document.body.classList;
+        }},
+        {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }},
+        {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }},
+        {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+          hljs.initHighlightingOnLoad();
+        }},
+        {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+          return !!document.body.classList;
+        }},
+        {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+          return !!document.body.classList;
+        }}
+      ]
+    });
+
+
+    </script>
+
+  </body>
+  </html>
