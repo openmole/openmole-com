@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Step By Step Doc</title>
+
+  <meta name="description" content="FOSS4Gfr 2018">
+  <meta name="author" content="paul" >
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="custom_css/openmole.css" id="theme">
+  <link rel="stylesheet" href="custom_css/theme.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="js/reveal.js/lib/css/zenburn.css">
+
+
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+  if( window.location.search.match( /print-pdf/gi ) ) {
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'css/print/pdf.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  }
+  </script>
+
+  <!--        remove default borders around images-->
+  <style>
+  .reveal section img {
+    background:none;
+    border:none;
+    box-shadow:none;
+  }
+
+  #logos {
+    width: 960px; // Change this according to the width you want.
+    height: 500px; // Change this as well
+    margin: 0 auto 0 auto;
+    text-align: center; // Will center the images contained in the div
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+
+
+      <section data-transition="fade-out">
+
+<h1>HomePage</h1>
+
+
+<ol>
+  <li> What is OpenMOLE ?</li>
+  <li> What can I use it for ? </li>
+  <li> Requirements : 
+  <ul>
+      <li>Model as a function of &#8477;<sup>n</sup> in &#8477;<sup>m</sup> </li>
+      <li>Input/Output Space , Image , Ancestors</li>  
+  </ul>
+  </li>
+</ol>  
+
+
+
+</section>
+        
+
+<section data-transition="fade-out">
+
+<h1>Tutorial 1</h1>
+<h2>
+Install and Execution
+</h2>
+<br><br>
+(lots of screenshots)
+
+</section>
+
+
+<section data-transition="fade-out">
+
+<h1>Tutorial 2</h1>
+<h2>
+Load Ants Model </h2>
+<ol>
+<li>
+  NetlogoTask
+</li>
+<li>Run !</li>
+<li>See results</li>
+</ol>
+</section>
+
+
+<section data-transition="fade-out">
+<h3>Checkpoint !</h3>
+<br><br>
+
+I can now explore my model !
+
+</section>
+
+<section data-transition="fade-out">
+
+
+<h1>Tutorial 3</h1>
+<h2> Sampling of one parameter <h2>
+<ol>
+<li>
+  NetlogoTask
+</li>
+<li>Run !</li>
+<li>See results</li>
+</ol>
+</section>
+<section data-transition="fade-out">
+</section>
+<section data-transition="fade-out">
+</section>
+
+    </div>
+
+      
+      
+    </div>
+    <script src="js/reveal.js/lib/js/head.min.js"></script>
+    <script src="js/reveal.js-min/js/reveal.min.js"></script>
+
+    <script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      slideNumber: true,
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        {src: 'js/reveal.js/lib/js/classList.js', condition: function() {
+          return !document.body.classList;
+        }},
+        {src: 'js/reveal.js/plugin/markdown/marked.js', condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }},
+        {src: 'js/reveal.js/plugin/markdown/markdown.js', condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }},
+        {src: 'js/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+          hljs.initHighlightingOnLoad();
+        }},
+        {src: 'js/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+          return !!document.body.classList;
+        }},
+        {src: 'js/reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+          return !!document.body.classList;
+        }}
+      ]
+    });
+
+
+    </script>
+
+  </body>
+  </html>
